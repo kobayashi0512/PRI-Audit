@@ -1,0 +1,12 @@
+Cohort,Modality,Frozen role,Independent unit,Raw GEO header samples,PRI-Audit use
+GSE117239,bulk,paired treatment/baseline context,patient,324,context / provenance only; not a classifier fold
+GSE136757,bulk,paired treatment/baseline context,patient,105,context / provenance only; not a classifier fold
+GSE151177,single-cell RNA-seq,primary strict sample-level benchmark,sample,—,18 source samples; leave-one-sample-out
+GSE153007,bulk,independent paired LS/NL disease context,patient,75,context / provenance only; not a classifier fold
+GSE173706,single-cell RNA-seq,primary strict paired-donor benchmark,donor,—,22 PP/PN samples from 11 paired donors; leave-one-donor-out
+GSE182740,bulk,independent paired LS/NL disease context,patient,75,context / provenance only; not a classifier fold
+GSE206391,spatial transcriptomics,primary strict paired-patient spatial benchmark,patient,—,48 LS/NL samples from 12 paired patients; leave-one-patient-out
+GSE24767,bulk perturbation,cytokine perturbation prior; not a patient prediction cohort,in-vitro perturbation sample,22,context / provenance only; not a classifier fold
+GSE51440,bulk,paired treatment/baseline context,patient,59,context / provenance only; not a classifier fold
+GSE57225,bulk,independent paired LS/NL disease context,patient,62,context / provenance only; not a classifier fold
+GSE85034,bulk,independent longitudinal treatment replication,patient,179,context / provenance only; not a classifier fold

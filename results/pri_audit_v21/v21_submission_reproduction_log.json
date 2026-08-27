@@ -1,0 +1,181 @@
+{
+  "started_utc": "2026-08-21T09:35:29.079135+00:00",
+  "mode": "submission",
+  "commands": [
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_pri_audit_v21_pipeline.py",
+        "--permutations",
+        "500",
+        "--bootstrap",
+        "2000"
+      ],
+      "started_utc": "2026-08-21T09:35:29.079236+00:00",
+      "returncode": 0,
+      "stdout_tail": "build_features  legacy_samples  legacy_features  sample_metadata_exact_match  count_matrix_exact_match  maximum_absolute_count_difference\nGSE151177               18             33538              18            33538                         True                      True                                0.0\nGSE173706               33             33538              33            33538                         True                      True                                0.0\nGSE206391               66             16685              66            16685                         True                      True                                0.0\n\n[PRI-Audit v21] /Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python /Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_v21_evaluate_dataset.py --dataset gse151177 --permutations 500 --bootstrap 2000\nStarting GSE151177: 18 samples, 18 independent groups\nCompleted GSE151177; wrote v21_gse151177_strict_loose_result.json\n\n[PRI-Audit v21] /Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python /Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_v21_evaluate_dataset.py --dataset gse173706 --permutations 500 --bootstrap 2000\nStarting GSE173706: 22 samples, 11 independent groups\nCompleted GSE173706; wrote v21_gse173706_strict_loose_result.json\n\n[PRI-Audit v21] /Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python /Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_v21_evaluate_dataset.py --dataset gse206391 --permutations 500 --bootstrap 2000\nStarting GSE206391: 48 samples, 12 independent groups\nCompleted GSE206391; wrote v21_gse206391_strict_loose_result.json\n\n[PRI-Audit v21] /Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python /Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_v21_evaluate_dataset.py --dataset gse47751 --permutations 500 --bootstrap 2000\nStarting GSE47751: 12 samples, 6 independent groups\nCompleted GSE47751; wrote v21_gse47751_strict_loose_result.json\n\n[PRI-Audit v21] /Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python /Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/finalize_pri_audit_v21.py\n  dataset               arm    auroc  incremental_auroc_vs_strict_expression\nGSE151177 strict_expression 0.946429                                0.000000\nGSE151177        strict_pca 0.964286                                0.017857\nGSE151177        strict_nmf 0.982143                                0.035714\nGSE151177  loose_expression 0.946429                                0.000000\nGSE151177         loose_pca 0.928571                               -0.017857\nGSE151177         loose_nmf 0.910714                               -0.035714\nGSE173706 strict_expression 1.000000                                0.000000\nGSE173706        strict_pca 1.000000                                0.000000\nGSE173706        strict_nmf 1.000000                                0.000000\nGSE173706  loose_expression 1.000000                                0.000000\nGSE173706         loose_pca 0.991736                               -0.008264\nGSE173706         loose_nmf 0.991736                               -0.008264\nGSE206391 strict_expression 0.907986                                0.000000\nGSE206391        strict_pca 0.909722                                0.001736\nGSE206391        strict_nmf 0.871528                               -0.036458\nGSE206391  loose_expression 0.914931                                0.006944\nGSE206391         loose_pca 0.885417                               -0.022569\nGSE206391         loose_nmf 0.815972                               -0.092014\n GSE47751 strict_expression 1.000000                                0.000000\n GSE47751        strict_pca 1.000000                                0.000000\n GSE47751  loose_expression 1.000000                                0.000000\n GSE47751         loose_pca 1.000000                                0.000000\n",
+      "stderr_tail": "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_pri_audit_v21.py:64: DeprecationWarning: The default value for `spmatrix` is changing to `False` in v1.20.\n             That means the default return type will be a sparse array.\n             Unless you use * instead of @, ** for matrix power, or you depend\n             on 2D shapes from e.g. `A.sum(axis=0)` it may not matter to you.\n             See the spmatrix to sparray migration guide for details.\n             https://docs.scipy.org/doc/scipy/reference/sparse.migration_to_sparray.html\n             \n  matrix = mmread(handle).tocsr().astype(np.float32)\n/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_pri_audit_v21.py:64: DeprecationWarning: The default value for `spmatrix` is changing to `False` in v1.20.\n             That means the default return type will be a sparse array.\n             Unless you use * instead of @, ** for matrix power, or you depend\n             on 2D shapes from e.g. `A.sum(axis=0)` it may not matter to you.\n             See the spmatrix to sparray migration guide for details.\n             https://docs.scipy.org/doc/scipy/reference/sparse.migration_to_sparray.html\n             \n  matrix = mmread(handle).tocsr().astype(np.float32)\n"
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_v21_mismatched_reference.py",
+        "--bootstrap",
+        "5000"
+      ],
+      "started_utc": "2026-08-21T09:49:54.797498+00:00",
+      "returncode": 0,
+      "stdout_tail": "  dataset candidate_arm     mismatched_reference                                    formal_role  candidate_auroc  mismatched_reference_auroc  apparent_increment_vs_mismatched_reference  paired_group_bootstrap_ci95_low  paired_group_bootstrap_ci95_high  paired_group_bootstrap_probability_increment_ge_0_05  n_bootstrap\nGSE151177    strict_pca strict_expression_16_HVG didactic_mismatched_reference_sensitivity_only         0.964286                    1.000000                                   -0.035714                    -1.558442e-01                      0.000000e+00                                                0.0000         4951\nGSE151177    strict_nmf strict_expression_16_HVG didactic_mismatched_reference_sensitivity_only         0.982143                    1.000000                                   -0.017857                    -1.071429e-01                      0.000000e+00                                                0.0000         4937\nGSE173706    strict_pca strict_expression_16_HVG didactic_mismatched_reference_sensitivity_only         1.000000                    0.991736                                    0.008264                     0.000000e+00                      7.438017e-02                                                0.0694         5000\nGSE173706    strict_nmf strict_expression_16_HVG didactic_mismatched_reference_sensitivity_only         1.000000                    0.991736                                    0.008264                     0.000000e+00                      7.438017e-02                                                0.0672         5000\nGSE206391    strict_pca strict_expression_16_HVG didactic_mismatched_reference_sensitivity_only         0.909722                    0.828125                                    0.081597                     1.736111e-03                      2.187500e-01                                                0.6884         5000\nGSE206391    strict_nmf strict_expression_16_HVG didactic_mismatched_reference_sensitivity_only         0.871528                    0.828125                                    0.043403                    -4.340278e-02                      1.631944e-01                                                0.4106         5000\n GSE47751    strict_pca strict_expression_16_HVG didactic_mismatched_reference_sensitivity_only         1.000000                    1.000000                                    0.000000                    -1.110223e-16                      1.110223e-16                                                0.0000         5000\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_v21_nested_neighborhood.py",
+        "--clusters",
+        "8",
+        "16",
+        "32",
+        "--bootstrap",
+        "5000",
+        "--cell-shuffles",
+        "500"
+      ],
+      "started_utc": "2026-08-21T09:50:36.744018+00:00",
+      "returncode": 0,
+      "stdout_tail": "  dataset  clusters  cells_per_sample_cap  hvg_per_fold  global_auroc  fully_nested_strict_auroc  global_minus_fully_nested_optimism_gap  sample_bootstrap_ci95_low  sample_bootstrap_ci95_high  sample_bootstrap_probability_gap_ge_0_05  n_bootstrap  global_cell_shuffle_null_mean  global_cell_shuffle_null_ci95_low  global_cell_shuffle_null_ci95_high  global_cell_shuffle_p_ge_observed  n_cell_shuffle\nGSE151177         8                  1500          1000      0.982143                   0.910714                                0.071429                   0.000000                    0.222222                                  0.580879         4958                       0.453714                           0.017857                            0.902232                           0.001996             500\nGSE151177        16                  1500          1000      0.964286                   0.964286                                0.000000                  -0.088889                    0.088889                                  0.071906         4937                       0.476821                           0.089286                            0.928571                           0.015968             500\nGSE151177        32                  1500          1000      0.946429                   1.000000                               -0.053571                  -0.196607                    0.000000                                  0.000000         4959                       0.482036                           0.107143                            0.910714                           0.013972             500\n",
+      "stderr_tail": "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_v21_nested_neighborhood.py:50: DeprecationWarning: The default value for `spmatrix` is changing to `False` in v1.20.\n             That means the default return type will be a sparse array.\n             Unless you use * instead of @, ** for matrix power, or you depend\n             on 2D shapes from e.g. `A.sum(axis=0)` it may not matter to you.\n             See the spmatrix to sparray migration guide for details.\n             https://docs.scipy.org/doc/scipy/reference/sparse.migration_to_sparray.html\n             \n  raw = mmread(handle).tocsr().astype(np.float32)\n"
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_v21_matched_spatial_graph.py",
+        "--permutations",
+        "500",
+        "--bootstrap",
+        "5000"
+      ],
+      "started_utc": "2026-08-21T09:55:08.306816+00:00",
+      "returncode": 0,
+      "stdout_tail": "{\n  \"dataset\": \"GSE206391\",\n  \"n_samples\": 48,\n  \"n_patients\": 12,\n  \"outer_split\": \"paired-patient leave-one-patient-out\",\n  \"hvg_selection\": \"within outer patient fold\",\n  \"spatial_graph\": \"Moran-like neighbour agreement plus local contrast for 500 HVGs (1,000 features)\",\n  \"matched_references\": {\n    \"spatial_graph_1000\": \"expression_1000\",\n    \"expression_plus_spatial_1500\": \"expression_1500\"\n  },\n  \"methods\": {\n    \"expression_1000\": {\n      \"auroc\": 0.890625,\n      \"balanced_accuracy\": 0.8333333333333334,\n      \"patient_bootstrap_ci95\": [\n        0.7291666666666666,\n        1.0\n      ],\n      \"label_permutation_mean\": 0.4914131944444445,\n      \"label_permutation_ci95\": [\n        0.2238715277777778,\n        0.8454861111111112\n      ],\n      \"label_permutation_p_ge_observed\": 0.005988023952095809\n    },\n    \"spatial_graph_1000\": {\n      \"auroc\": 0.8697916666666666,\n      \"balanced_accuracy\": 0.8125,\n      \"patient_bootstrap_ci95\": [\n        0.6805555555555556,\n        1.0\n      ],\n      \"label_permutation_mean\": 0.48751388888888886,\n      \"label_permutation_ci95\": [\n        0.22625868055555556,\n        0.8220920138888889\n      ],\n      \"label_permutation_p_ge_observed\": 0.021956087824351298,\n      \"matched_reference\": \"expression_1000\",\n      \"incremental_auroc\": -0.02083333333333337,\n      \"increment_patient_bootstrap_ci95\": [\n        -0.08680555555555547,\n        0.03819444444444453\n      ],\n      \"increment_bootstrap_probability_ge_0_05\": 0.013\n    },\n    \"expression_1500\": {\n      \"auroc\": 0.9010416666666667,\n      \"balanced_accuracy\": 0.8541666666666667,\n      \"patient_bootstrap_ci95\": [\n        0.7517361111111112,\n        1.0\n      ],\n      \"label_permutation_mean\": 0.4897048611111111,\n      \"label_permutation_ci95\": [\n        0.22651909722222222,\n        0.8368923611111111\n      ],\n      \"label_permutation_p_ge_observed\": 0.003992015968063872\n    },\n    \"expression_plus_spatial_1500\": {\n      \"auroc\": 0.8750000000000001,\n      \"balanced_accuracy\": 0.8333333333333334,\n      \"patient_bootstrap_ci95\": [\n        0.6979166666666666,\n        1.0\n      ],\n      \"label_permutation_mean\": 0.48843055555555553,\n      \"label_permutation_ci95\": [\n        0.20833333333333331,\n        0.826388888888889\n      ],\n      \"label_permutation_p_ge_observed\": 0.017964071856287425,\n      \"matched_reference\": \"expression_1500\",\n      \"incremental_auroc\": -0.02604166666666663,\n      \"increment_patient_bootstrap_ci95\": [\n        -0.07291666666666652,\n        0.01388888888888895\n      ],\n      \"increment_bootstrap_probability_ge_0_05\": 0.0\n    }\n  }\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_v21_matched_spatial_coordinate_shuffle.py",
+        "--permutations",
+        "500"
+      ],
+      "started_utc": "2026-08-21T09:57:59.742190+00:00",
+      "returncode": 0,
+      "stdout_tail": "{\n  \"dataset\": \"GSE206391\",\n  \"n_coordinate_shuffles\": 500,\n  \"shuffle_unit\": \"coordinates independently permuted within each sample; counts, labels, folds and fold-specific HVGs fixed\",\n  \"observed\": {\n    \"spatial_graph_1000\": 0.8697916666666666,\n    \"expression_plus_spatial_1500\": 0.8750000000000001\n  },\n  \"null\": {\n    \"spatial_graph_1000\": {\n      \"mean\": 0.8702881944444444,\n      \"ci95\": [\n        0.8445746527777778,\n        0.8975694444444444\n      ],\n      \"p_ge_observed\": 0.562874251497006\n    },\n    \"expression_plus_spatial_1500\": {\n      \"mean\": 0.8794375,\n      \"ci95\": [\n        0.861111111111111,\n        0.8958333333333334\n      ],\n      \"p_ge_observed\": 0.6766467065868264\n    }\n  }\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_v21_measurement_split_diagnostic.py",
+        "--repeats",
+        "50"
+      ],
+      "started_utc": "2026-08-21T10:11:56.858443+00:00",
+      "returncode": 0,
+      "stdout_tail": "{\n  \"analysis\": \"v21 random cell/spot split diagnostic\",\n  \"seed\": 20260823,\n  \"repeats\": 50,\n  \"recipe\": \"global HVG selection + global normalisation/PCA + stratified random measurement split\",\n  \"warning\": \"This intentionally violates source-sample and patient independence. It is a diagnostic of an invalid estimand, not a primary performance estimate.\",\n  \"datasets\": [\n    {\n      \"dataset\": \"GSE151177\",\n      \"measurement_unit\": \"single cell\",\n      \"n_source_samples\": 18,\n      \"n_measurements\": 19868,\n      \"max_measurements_per_sample\": 1500,\n      \"n_global_hvgs\": 1000\n    },\n    {\n      \"dataset\": \"GSE206391\",\n      \"measurement_unit\": \"spatial spot\",\n      \"n_source_samples\": 48,\n      \"n_source_patients\": 12,\n      \"n_measurements\": 19567,\n      \"max_measurements_per_sample\": 600,\n      \"n_global_hvgs\": 1000\n    }\n  ],\n  \"summary\": [\n    {\n      \"dataset\": \"GSE151177\",\n      \"measurement_unit\": \"single cell\",\n      \"median_auroc\": 0.9987626592990384,\n      \"auroc_q025\": 0.9980111730416779,\n      \"auroc_q975\": 0.999273090927388,\n      \"source_sample_overlap\": 1.0,\n      \"measurement_overlap\": 1.0\n    },\n    {\n      \"dataset\": \"GSE206391\",\n      \"measurement_unit\": \"spatial spot\",\n      \"median_auroc\": 0.9702793628709565,\n      \"auroc_q025\": 0.9659447211356212,\n      \"auroc_q975\": 0.9738500583067843,\n      \"source_sample_overlap\": 1.0,\n      \"measurement_overlap\": 1.0\n    }\n  ]\n}\n",
+      "stderr_tail": "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_v21_measurement_split_diagnostic.py:59: DeprecationWarning: The default value for `spmatrix` is changing to `False` in v1.20.\n             That means the default return type will be a sparse array.\n             Unless you use * instead of @, ** for matrix power, or you depend\n             on 2D shapes from e.g. `A.sum(axis=0)` it may not matter to you.\n             See the spmatrix to sparray migration guide for details.\n             https://docs.scipy.org/doc/scipy/reference/sparse.migration_to_sparray.html\n             \n  raw = mmread(handle).tocsr().astype(np.float32)\n"
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_v21_gse202011_external.py",
+        "--permutations",
+        "500",
+        "--bootstrap",
+        "5000"
+      ],
+      "started_utc": "2026-08-21T10:12:12.842384+00:00",
+      "returncode": 0,
+      "stdout_tail": "{\n  \"dataset\": \"GSE202011\",\n  \"analysis_role\": \"independent high-resolution boundary replication\",\n  \"evaluation_unit\": \"10 samples from 5 paired PSO patients; leave-one-patient-out\",\n  \"selection_rule\": \"Pre-specified GEO series sample ledger; ST14 R1 lesion selected over R2 before expression inspection\",\n  \"raw_archive\": {\n    \"path\": \"data/raw/GSE202011_RAW.tar\",\n    \"sha256\": \"76ad74e0c38fefbebfdd4fb2e92cf2a3343e87c8cba322a7fe76abec25b6e5a0\"\n  },\n  \"spot_qc\": \"processed 10x filtered matrix; total counts >=500, detected genes >=300, mitochondrial fraction <=0.20\",\n  \"representation_scope\": \"HVG selection, scaling, PCA and classifier fit only in outer-patient training folds\",\n  \"spatial_graph_status\": \"not evaluated: GEO H5 matrix archive has no spot-coordinate files; this is not an external spatial-graph test\",\n  \"methods\": {\n    \"expression\": {\n      \"dataset\": \"gse202011_external\",\n      \"arm\": \"strict_expression\",\n      \"representation_fit_scope\": \"outer_group\",\n      \"formal_role\": \"primary\",\n      \"auroc\": 1.0,\n      \"balanced_accuracy\": 1.0,\n      \"group_bootstrap_ci95_low\": 1.0,\n      \"group_bootstrap_ci95_high\": 1.0,\n      \"n_bootstrap\": 5000,\n      \"permutation_mean\": 0.49504000000000004,\n      \"permutation_ci95_low\": 0.12,\n      \"permutation_ci95_high\": 1.0,\n      \"permutation_p_ge_observed\": 0.06387225548902195,\n      \"n_permutations\": 500,\n      \"reference_arm\": \"strict_expression\",\n      \"incremental_auroc_vs_strict_expression\": 0.0,\n      \"increment_bootstrap_ci95_low\": 0.0,\n      \"increment_bootstrap_ci95_high\": 0.0,\n      \"increment_bootstrap_probability_ge_0_05\": 0.0,\n      \"increment_ci95\": [\n        0.0,\n        0.0\n      ]\n    },\n    \"pca\": {\n      \"dataset\": \"gse202011_external\",\n      \"arm\": \"strict_pca\",\n      \"representation_fit_scope\": \"outer_group\",\n      \"formal_role\": \"primary\",\n      \"auroc\": 1.0,\n      \"balanced_accuracy\": 1.0,\n      \"group_bootstrap_ci95_low\": 1.0,\n      \"group_bootstrap_ci95_high\": 1.0,\n      \"n_bootstrap\": 5000,\n      \"permutation_mean\": 0.50288,\n      \"permutation_ci95_low\": 0.15999999999999998,\n      \"permutation_ci95_high\": 1.0,\n      \"permutation_p_ge_observed\": 0.06387225548902195,\n      \"n_permutations\": 500,\n      \"reference_arm\": \"strict_expression\",\n      \"incremental_auroc_vs_strict_expression\": 0.0,\n      \"increment_bootstrap_ci95_low\": 0.0,\n      \"increment_bootstrap_ci95_high\": 0.0,\n      \"increment_bootstrap_probability_ge_0_05\": 0.0,\n      \"increment_ci95\": [\n        0.0,\n        0.0\n      ]\n    }\n  },\n  \"n_permutations\": 500,\n  \"n_bootstrap\": 5000,\n  \"seed\": 20260819\n}\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/update_v21_external_audit.py"
+      ],
+      "started_utc": "2026-08-21T10:13:07.438423+00:00",
+      "returncode": 0,
+      "stdout_tail": "accession  independent_of_PRI_Audit_development                                                                               phenotype                                                              platform                                                                                                                  local_integrity                                                                                  eligible_for                             selection  n_selected_samples\n GSE47751                                  True                                                                   paired baseline PN/PP                                                       bulk microarray                                                                                         fresh official GEO matrix passes gzip -t                                                              external strict bulk replication                              selected                  12\nGSE261704                                  True psoriasis lesions versus atopic dermatitis / prurigo nodularis; no psoriasis NL pairing                                             NanoString 770-gene panel                                                                                                          series matrix available                                                           differential-diagnosis context only                              excluded                   0\nGSE223799                                 False                                                        lesional psoriasis versus eczema                                                          bulk RNA-seq                                                                                                        processed table available                                                           technical diagnostic transport only                              excluded                   0\n GSE36287                                  True                                                       cytokine-stimulated keratinocytes                                                       bulk microarray                                                                                                          series matrix available                                          mechanistic context only; not clinical lesion/normal                              excluded                   0\n  GSE6601                                  True                                   psoriasis versus atopic-dermatitis lesional epidermis                                                 two-colour microarray                                                                                                          series matrix available                                                           differential-diagnosis context only                              excluded                   0\nGSE202011                                  True                                    paired biologic-naive PSO lesional/non-lesional skin 10x Visium H5 matrices; coordinates absent from the retrieved archive official GSE202011_RAW.tar SHA-256 76ad74e0c38fefbebfdd4fb2e92cf2a3343e87c8cba322a7fe76abec25b6e5a0; 10 selected H5 files hashed strict patient-blocked expression/PCA high-resolution boundary replication; not spatial graph selected before expression inspection                  10\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/build_v21_all11_provenance.py"
+      ],
+      "started_utc": "2026-08-21T10:13:07.773640+00:00",
+      "returncode": 0,
+      "stdout_tail": "accession                modality                                              scientific_role             independent_unit  raw_header_samples  input_hashes_verified  series_header_opened                                                                 analysis_script  expected_artifacts_present  n_expected_artifacts\nGSE117239                    bulk                            paired treatment/baseline context                      patient               324.0                   True                  True                                     scripts/build_v9_expanded_trigger_matrix.py                        True                     2\nGSE136757                    bulk                            paired treatment/baseline context                      patient               105.0                   True                  True                                     scripts/build_v9_expanded_trigger_matrix.py                        True                     2\nGSE151177     single-cell RNA-seq                        primary strict sample-level benchmark                       sample                 NaN                   True                  True                                           scripts/run_pri_audit_v21_pipeline.py                        True                     2\nGSE153007                    bulk                     independent paired LS/NL disease context                      patient                75.0                   True                  True                                     scripts/build_v9_expanded_trigger_matrix.py                        True                     2\nGSE173706     single-cell RNA-seq                        primary strict paired-donor benchmark                        donor                 NaN                   True                  True                                           scripts/run_pri_audit_v21_pipeline.py                        True                     2\nGSE182740                    bulk                     independent paired LS/NL disease context                      patient                75.0                   True                  True                                     scripts/build_v9_expanded_trigger_matrix.py                        True                     2\nGSE206391 spatial transcriptomics              primary strict paired-patient spatial benchmark                      patient                 NaN                   True                  True scripts/run_pri_audit_v21_pipeline.py; scripts/run_v21_matched_spatial_graph.py                        True                     3\n GSE24767       bulk perturbation cytokine perturbation prior; not a patient prediction cohort in-vitro perturbation sample                22.0                   True                  True                                                      scripts/run_external_v1.py                        True                     1\n GSE51440                    bulk                            paired treatment/baseline context                      patient                59.0                   True                  True                                     scripts/build_v9_expanded_trigger_matrix.py                        True                     2\n GSE57225                    bulk                     independent paired LS/NL disease context                      patient                62.0                   True                  True                                     scripts/build_v9_expanded_trigger_matrix.py                        True                     2\n GSE85034                    bulk               independent longitudinal treatment replication                      patient               179.0                   True                  True                                                 scripts/evaluate_gse85034_v5.py                        True                     2\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/build_v21_manuscript_tables.py"
+      ],
+      "started_utc": "2026-08-21T10:13:10.248159+00:00",
+      "returncode": 0,
+      "stdout_tail": "Wrote 11 Table 1 rows, 10 Table 2 rows, and 7 Table 3 rows\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/plot_v21_strictness_figure.py"
+      ],
+      "started_utc": "2026-08-21T10:13:10.523519+00:00",
+      "returncode": 0,
+      "stdout_tail": "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/figures/paper_v21/fig11_v21_strictness_and_reference_audit.png\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/plot_v21_independence_and_spatial_null.py"
+      ],
+      "started_utc": "2026-08-21T10:13:11.966121+00:00",
+      "returncode": 0,
+      "stdout_tail": "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/figures/paper_v21/fig12_v21_independence_and_spatial_null.png\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/build_v21_figure_table_manifest.py"
+      ],
+      "started_utc": "2026-08-21T10:13:12.964727+00:00",
+      "returncode": 0,
+      "stdout_tail": "Wrote 19 figure/table source links\n",
+      "stderr_tail": ""
+    }
+  ],
+  "finished_utc": "2026-08-21T10:13:13.224618+00:00",
+  "output_sha256": {
+    "results/pri_audit_v21/reproducibility_manifest.json": "490a822d1c08779f283815b838afa30b6a78b2d4aecd86a8ed1daf89439eb0a3",
+    "results/pri_audit_v21/v21_rebuild_equivalence.csv": "bbc03dedc6a46e9c169c0d5f86e593e46c728e9bdf86c74116c45bbd30894f03",
+    "results/pri_audit_v21/v21_loose_vs_strict_summary.csv": "3f0d969982d95697e05b25b0d622932ceca3e7df5a3aaad4a9f09274760eeff8",
+    "results/pri_audit_v21/v21_mismatched_reference_sensitivity.csv": "bc5150c1eefa2d3038b546ccbda1bcd5e461c039e9c4315ce386564b0b9204ee",
+    "results/pri_audit_v21/v21_nested_neighborhood_strictness.csv": "440443eb18e3b7c9d70be36046a52558d744c6cd7a347f15da63485713c132ad",
+    "results/pri_audit_v21/gse206391_v21_matched_spatial_graph.json": "d72331271c4ac596295792c572b5811b0eec1c5bca7bef91e1cbf2942cdef8fc",
+    "results/pri_audit_v21/gse206391_v21_matched_spatial_coordinate_shuffle.json": "6bf90215cffa1232f7bf854dc3b4e6cce11dacda69b3a03f2b36c8461a2f2c9b",
+    "results/pri_audit_v21/v21_measurement_random_split_diagnostic.csv": "7bfe6e595a53728556effe0b111e424ee00fd85daf94dfdd1a9f70831393b7b2",
+    "results/pri_audit_v21/gse202011_v21_external_strict.json": "c95449748d700d0b3777722a8093a3b8bc33eba93aa2ca0c1244ebb3ce34bd19",
+    "results/pri_audit_v21/v21_all11_provenance_manifest.json": "a0c20804144485797fb774435f599c0935ed313c48b663d8c96200af8cf27d00",
+    "results/pri_audit_v21/v21_figure_table_source_manifest.json": "eedc8a731fedbb457be454f27d2590cea2f90e65602ce8546a2a22c5e838d5b5",
+    "figures/paper_v21/fig11_v21_strictness_and_reference_audit.png": "1dfb09ca811051e72d6e4012e140af13c1afd27551a8e5b29122f0b7e2b9d612",
+    "figures/paper_v21/fig12_v21_independence_and_spatial_null.png": "2812889abd6f84acb9547fc9f936c48a7f6be46691c289738669b9d5319a4602",
+    "results/paper_v21/table1_cohort_roles.csv": "17c21058071e2878e967076870c476e56e8af4e2d4e057de694d58d31b690bd4",
+    "results/paper_v21/table2_strict_matched_comparisons.csv": "30549cec7cf405959b686a6a7d0df5cec5ebbf3dc1cf480a9db89476f358d0bb",
+    "results/paper_v21/table3_audit_diagnostics.csv": "0a66841d0f63aa98fdd5a8bc278d70a32ae8a8a323be1c701513040b5d242bc0"
+  }
+}

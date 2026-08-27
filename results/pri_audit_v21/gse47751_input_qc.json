@@ -1,0 +1,6 @@
+{
+  "matrix_rows_after_nonfinite_filter": 54675,
+  "matrix_rows_before_nonfinite_filter": 54676,
+  "rows_removed_for_nonfinite_values": 1,
+  "source": "data/raw/GSE47751_series_matrix_fresh.txt.gz"
+}

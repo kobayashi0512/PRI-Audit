@@ -1,0 +1,56 @@
+# Local environments and interpreter caches
+.venv/
+.codex_python/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Public GEO downloads are retrieved by the reproduction workflow and are not
+# redistributed in the code archive.
+data/
+
+# Local rendering, document-template and PowerPoint inspection workspaces
+tmp/
+.tmp/
+.tmp_*/
+manuscript/render*/
+manuscript/rendered*/
+
+# Retain only the PRI-Audit release outputs in a public release. Historical
+# development outputs are intentionally excluded by the release builder.
+results/cone_v0/
+results/ccmac_v3/
+results/external_v1/
+results/isrc_v2/
+results/motifr_v6/
+results/paper/
+results/paper_v12/
+results/paper_v13/
+results/paper_v14/
+results/paper_v15/
+results/paper_v16/
+results/paper_v17/
+results/paper_v18/
+results/paper_v20/
+results/prismr_v7/
+results/singlecell_v10/
+results/trigger_v8/
+results/trigger_v9/
+figures/cone_v0/
+figures/ccmac_v3/
+figures/external_v1/
+figures/isrc_v2/
+figures/paper/
+figures/paper_v12/
+figures/paper_v13/
+figures/paper_v14/
+figures/paper_v15/
+figures/paper_v16/
+figures/paper_v17/
+figures/paper_v18/
+figures/paper_v20/
+ppt_figures_v1/**
+!ppt_figures_v1/PRI_Audit_data_integrated_figures_v2_audited.pptx
+
+# Generated staging bundle; build it outside the repository before release.
+PRI-Audit-v*/

@@ -1,0 +1,46 @@
+{
+  "analysis": "v21 random cell/spot split diagnostic",
+  "seed": 20260823,
+  "repeats": 50,
+  "recipe": "global HVG selection + global normalisation/PCA + stratified random measurement split",
+  "warning": "This intentionally violates source-sample and patient independence. It is a diagnostic of an invalid estimand, not a primary performance estimate.",
+  "datasets": [
+    {
+      "dataset": "GSE151177",
+      "measurement_unit": "single cell",
+      "n_source_samples": 18,
+      "n_measurements": 19868,
+      "max_measurements_per_sample": 1500,
+      "n_global_hvgs": 1000
+    },
+    {
+      "dataset": "GSE206391",
+      "measurement_unit": "spatial spot",
+      "n_source_samples": 48,
+      "n_source_patients": 12,
+      "n_measurements": 19567,
+      "max_measurements_per_sample": 600,
+      "n_global_hvgs": 1000
+    }
+  ],
+  "summary": [
+    {
+      "dataset": "GSE151177",
+      "measurement_unit": "single cell",
+      "median_auroc": 0.9987626592990384,
+      "auroc_q025": 0.9980111730416779,
+      "auroc_q975": 0.999273090927388,
+      "source_sample_overlap": 1.0,
+      "measurement_overlap": 1.0
+    },
+    {
+      "dataset": "GSE206391",
+      "measurement_unit": "spatial spot",
+      "median_auroc": 0.9702793628709565,
+      "auroc_q025": 0.9659447211356212,
+      "auroc_q975": 0.9738500583067843,
+      "source_sample_overlap": 1.0,
+      "measurement_overlap": 1.0
+    }
+  ]
+}

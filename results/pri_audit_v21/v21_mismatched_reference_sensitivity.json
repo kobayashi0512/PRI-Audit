@@ -1,0 +1,93 @@
+[
+  {
+    "dataset": "GSE151177",
+    "candidate_arm": "strict_pca",
+    "mismatched_reference": "strict_expression_16_HVG",
+    "formal_role": "didactic_mismatched_reference_sensitivity_only",
+    "candidate_auroc": 0.9642857142857143,
+    "mismatched_reference_auroc": 1.0,
+    "apparent_increment_vs_mismatched_reference": -0.0357142857142857,
+    "paired_group_bootstrap_ci95_low": -0.15584415584415579,
+    "paired_group_bootstrap_ci95_high": 0.0,
+    "paired_group_bootstrap_probability_increment_ge_0_05": 0.0,
+    "n_bootstrap": 4951
+  },
+  {
+    "dataset": "GSE151177",
+    "candidate_arm": "strict_nmf",
+    "mismatched_reference": "strict_expression_16_HVG",
+    "formal_role": "didactic_mismatched_reference_sensitivity_only",
+    "candidate_auroc": 0.9821428571428572,
+    "mismatched_reference_auroc": 1.0,
+    "apparent_increment_vs_mismatched_reference": -0.017857142857142794,
+    "paired_group_bootstrap_ci95_low": -0.1071428571428572,
+    "paired_group_bootstrap_ci95_high": 0.0,
+    "paired_group_bootstrap_probability_increment_ge_0_05": 0.0,
+    "n_bootstrap": 4937
+  },
+  {
+    "dataset": "GSE173706",
+    "candidate_arm": "strict_pca",
+    "mismatched_reference": "strict_expression_16_HVG",
+    "formal_role": "didactic_mismatched_reference_sensitivity_only",
+    "candidate_auroc": 1.0,
+    "mismatched_reference_auroc": 0.9917355371900827,
+    "apparent_increment_vs_mismatched_reference": 0.008264462809917328,
+    "paired_group_bootstrap_ci95_low": 0.0,
+    "paired_group_bootstrap_ci95_high": 0.07438016528925617,
+    "paired_group_bootstrap_probability_increment_ge_0_05": 0.0694,
+    "n_bootstrap": 5000
+  },
+  {
+    "dataset": "GSE173706",
+    "candidate_arm": "strict_nmf",
+    "mismatched_reference": "strict_expression_16_HVG",
+    "formal_role": "didactic_mismatched_reference_sensitivity_only",
+    "candidate_auroc": 1.0,
+    "mismatched_reference_auroc": 0.9917355371900827,
+    "apparent_increment_vs_mismatched_reference": 0.008264462809917328,
+    "paired_group_bootstrap_ci95_low": 0.0,
+    "paired_group_bootstrap_ci95_high": 0.07438016528925617,
+    "paired_group_bootstrap_probability_increment_ge_0_05": 0.0672,
+    "n_bootstrap": 5000
+  },
+  {
+    "dataset": "GSE206391",
+    "candidate_arm": "strict_pca",
+    "mismatched_reference": "strict_expression_16_HVG",
+    "formal_role": "didactic_mismatched_reference_sensitivity_only",
+    "candidate_auroc": 0.9097222222222222,
+    "mismatched_reference_auroc": 0.8281250000000001,
+    "apparent_increment_vs_mismatched_reference": 0.0815972222222221,
+    "paired_group_bootstrap_ci95_low": 0.0017361111111110494,
+    "paired_group_bootstrap_ci95_high": 0.21875,
+    "paired_group_bootstrap_probability_increment_ge_0_05": 0.6884,
+    "n_bootstrap": 5000
+  },
+  {
+    "dataset": "GSE206391",
+    "candidate_arm": "strict_nmf",
+    "mismatched_reference": "strict_expression_16_HVG",
+    "formal_role": "didactic_mismatched_reference_sensitivity_only",
+    "candidate_auroc": 0.8715277777777777,
+    "mismatched_reference_auroc": 0.8281250000000001,
+    "apparent_increment_vs_mismatched_reference": 0.04340277777777757,
+    "paired_group_bootstrap_ci95_low": -0.04340277777777779,
+    "paired_group_bootstrap_ci95_high": 0.1631944444444443,
+    "paired_group_bootstrap_probability_increment_ge_0_05": 0.4106,
+    "n_bootstrap": 5000
+  },
+  {
+    "dataset": "GSE47751",
+    "candidate_arm": "strict_pca",
+    "mismatched_reference": "strict_expression_16_HVG",
+    "formal_role": "didactic_mismatched_reference_sensitivity_only",
+    "candidate_auroc": 1.0,
+    "mismatched_reference_auroc": 1.0,
+    "apparent_increment_vs_mismatched_reference": 0.0,
+    "paired_group_bootstrap_ci95_low": -1.1102230246251565e-16,
+    "paired_group_bootstrap_ci95_high": 1.1102230246251565e-16,
+    "paired_group_bootstrap_probability_increment_ge_0_05": 0.0,
+    "n_bootstrap": 5000
+  }
+]

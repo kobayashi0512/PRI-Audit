@@ -1,0 +1,12 @@
+accession,modality,scientific_role,independent_unit,raw_header_samples,input_hashes_verified,series_header_opened,analysis_script,expected_artifacts_present,n_expected_artifacts
+GSE117239,bulk,paired treatment/baseline context,patient,324.0,True,True,scripts/build_v9_expanded_trigger_matrix.py,True,2
+GSE136757,bulk,paired treatment/baseline context,patient,105.0,True,True,scripts/build_v9_expanded_trigger_matrix.py,True,2
+GSE151177,single-cell RNA-seq,primary strict sample-level benchmark,sample,,True,True,scripts/run_pri_audit_v21_pipeline.py,True,2
+GSE153007,bulk,independent paired LS/NL disease context,patient,75.0,True,True,scripts/build_v9_expanded_trigger_matrix.py,True,2
+GSE173706,single-cell RNA-seq,primary strict paired-donor benchmark,donor,,True,True,scripts/run_pri_audit_v21_pipeline.py,True,2
+GSE182740,bulk,independent paired LS/NL disease context,patient,75.0,True,True,scripts/build_v9_expanded_trigger_matrix.py,True,2
+GSE206391,spatial transcriptomics,primary strict paired-patient spatial benchmark,patient,,True,True,scripts/run_pri_audit_v21_pipeline.py; scripts/run_v21_matched_spatial_graph.py,True,3
+GSE24767,bulk perturbation,cytokine perturbation prior; not a patient prediction cohort,in-vitro perturbation sample,22.0,True,True,scripts/run_external_v1.py,True,1
+GSE51440,bulk,paired treatment/baseline context,patient,59.0,True,True,scripts/build_v9_expanded_trigger_matrix.py,True,2
+GSE57225,bulk,independent paired LS/NL disease context,patient,62.0,True,True,scripts/build_v9_expanded_trigger_matrix.py,True,2
+GSE85034,bulk,independent longitudinal treatment replication,patient,179.0,True,True,scripts/evaluate_gse85034_v5.py,True,2

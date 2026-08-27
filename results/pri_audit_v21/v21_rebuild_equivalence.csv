@@ -1,0 +1,4 @@
+dataset,rebuild_samples,rebuild_features,legacy_samples,legacy_features,sample_metadata_exact_match,count_matrix_exact_match,maximum_absolute_count_difference
+GSE151177,18,33538,18,33538,True,True,0.0
+GSE173706,33,33538,33,33538,True,True,0.0
+GSE206391,66,16685,66,16685,True,True,0.0

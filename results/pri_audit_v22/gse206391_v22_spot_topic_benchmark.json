@@ -1,0 +1,63 @@
+{
+  "dataset": "GSE206391",
+  "n_samples": 48,
+  "n_patients": 12,
+  "outer_split": "paired-patient leave-one-patient-out",
+  "hvg_selection": "top 500 sample-pseudobulk HVGs fitted in each outer-patient fold",
+  "topic_model": "MiniBatchNMF fitted only on training-patient spots; transformed held-patient spots",
+  "n_topics": 8,
+  "max_spots_per_sample": 300,
+  "matched_dimension_contract": "topic 8 vs expression PCA 8; expression+topic 16 vs expression PCA 16",
+  "methods": {
+    "expression_pca_8": {
+      "auroc": 0.892361111111111,
+      "balanced_accuracy": 0.8125,
+      "patient_bootstrap_ci95": [
+        0.7395833333333334,
+        1.0
+      ],
+      "label_permutation_p_ge_observed": 0.005988023952095809
+    },
+    "spot_topic_8": {
+      "auroc": 0.8038194444444445,
+      "balanced_accuracy": 0.8125,
+      "patient_bootstrap_ci95": [
+        0.5989149305555554,
+        1.0
+      ],
+      "label_permutation_p_ge_observed": 0.007984031936127744,
+      "matched_reference": "expression_pca_8",
+      "incremental_auroc": -0.08854166666666652,
+      "increment_patient_bootstrap_ci95": [
+        -0.18576388888888895,
+        0.0
+      ],
+      "increment_bootstrap_probability_ge_0_05": 0.0
+    },
+    "expression_pca_16": {
+      "auroc": 0.8802083333333334,
+      "balanced_accuracy": 0.8125,
+      "patient_bootstrap_ci95": [
+        0.6909722222222223,
+        0.9930555555555555
+      ],
+      "label_permutation_p_ge_observed": 0.007984031936127744
+    },
+    "expression_plus_topic_16": {
+      "auroc": 0.795138888888889,
+      "balanced_accuracy": 0.8125,
+      "patient_bootstrap_ci95": [
+        0.5763888888888888,
+        1.0
+      ],
+      "label_permutation_p_ge_observed": 0.013972055888223553,
+      "matched_reference": "expression_pca_16",
+      "incremental_auroc": -0.08506944444444442,
+      "increment_patient_bootstrap_ci95": [
+        -0.1823350694444445,
+        0.006944444444444311
+      ],
+      "increment_bootstrap_probability_ge_0_05": 0.0006
+    }
+  }
+}

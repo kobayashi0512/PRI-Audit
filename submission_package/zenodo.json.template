@@ -1,0 +1,29 @@
+{
+  "title": "PRI-Audit: a falsification-first framework for testing patient-level gain from high-resolution transcriptomic representations",
+  "description": "Reproducible code, fixed analysis specifications, generated result tables, complete null distributions, and data-derived figures for the PRI-Audit public-data psoriasis study.",
+  "creators": [
+    {
+      "name": "[FAMILY NAME, GIVEN NAME]",
+      "affiliation": "[AFFILIATION]",
+      "orcid": "[OPTIONAL_ORCID]"
+    }
+  ],
+  "keywords": [
+    "psoriasis",
+    "transcriptomics",
+    "spatial transcriptomics",
+    "reproducibility",
+    "patient-level evaluation"
+  ],
+  "license": "[SELECTED_OSI_LICENSE_IDENTIFIER]",
+  "upload_type": "software",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/[ORGANISATION_OR_USERNAME]/PRI-Audit",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "notes": "The archive excludes GEO source files. Their public accessions, local retrieval paths and SHA-256 checksums are recorded in the included provenance manifests."
+}

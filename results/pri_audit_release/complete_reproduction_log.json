@@ -1,0 +1,40 @@
+{
+  "analysis": "PRI-Audit complete submission reproduction",
+  "started_utc": "2026-08-21T09:35:29.059581+00:00",
+  "python": "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+  "commands": [
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_v21_submission_reproduction.py"
+      ],
+      "started_utc": "2026-08-21T09:35:29.059695+00:00",
+      "returncode": 0,
+      "stdout_tail": "PRI-Audit v21 reproduction completed\n",
+      "stderr_tail": ""
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/scripts/run_v22_submission_reproduction.py",
+        "--replicates",
+        "400",
+        "--bootstrap",
+        "250",
+        "--population-patients",
+        "240",
+        "--workers",
+        "4"
+      ],
+      "started_utc": "2026-08-21T10:13:13.237893+00:00",
+      "returncode": 0,
+      "stdout_tail": "v22 submission-closure reproduction complete\n",
+      "stderr_tail": ""
+    }
+  ],
+  "finished_utc": "2026-08-21T10:27:12.247109+00:00",
+  "component_log_sha256": {
+    "results/pri_audit_v21/v21_submission_reproduction_log.json": "686a87ab4e0a2e597e5d42a06f1642e837c72e48ab4484b9c5373812090d4799",
+    "results/pri_audit_v22/v22_submission_reproduction_log.json": "9392b7ae173a48716527a95250d96f704d49213d7a1143b2ff403a4f16f51835"
+  }
+}

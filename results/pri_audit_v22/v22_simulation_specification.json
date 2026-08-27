@@ -1,0 +1,51 @@
+{
+  "analysis_version": "pri_audit_v22_simulation",
+  "seed": 20260824,
+  "replicates_per_condition": 400,
+  "patient_counts": [
+    12,
+    24,
+    48
+  ],
+  "paired_samples_per_patient": 2,
+  "repeated_measurements_per_sample": 40,
+  "bootstrap_draws": 250,
+  "population_patients_for_monte_carlo_target": 240,
+  "strict_gate": "increment >= 0.05 and patient-bootstrap lower 95% bound > 0",
+  "scenarios": [
+    {
+      "name": "null_increment",
+      "expression_effect": 0.85,
+      "spatial_effect": 0.0,
+      "source_fingerprint": 0.35,
+      "weak_reference": false
+    },
+    {
+      "name": "spatial_increment",
+      "expression_effect": 0.55,
+      "spatial_effect": 0.72,
+      "source_fingerprint": 0.35,
+      "weak_reference": false
+    },
+    {
+      "name": "source_overlap",
+      "expression_effect": 0.0,
+      "spatial_effect": 0.0,
+      "source_fingerprint": 2.3,
+      "weak_reference": false
+    },
+    {
+      "name": "mismatched_reference",
+      "expression_effect": 0.85,
+      "spatial_effect": 0.0,
+      "source_fingerprint": 0.35,
+      "weak_reference": true
+    }
+  ],
+  "interpretation": {
+    "null_increment": "strict gate rate is the empirical false-positive rate for a non-incremental spatial representation",
+    "spatial_increment": "strict gate rate is empirical power for a zero-mean coordinate-specific signal beyond pseudobulk expression",
+    "source_overlap": "random-cell AUROC is an invalid-estimand diagnostic because test cells have sources represented in training",
+    "mismatched_reference": "candidate and matched expression contain the same information; any weak-reference gain is manufactured by the comparator"
+  }
+}

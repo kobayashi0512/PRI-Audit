@@ -1,0 +1,141 @@
+{
+  "analysis": "PRI-Audit v22 submission-closure source manifest",
+  "entries": [
+    {
+      "identifier": "Figure 6",
+      "role": "known-truth hierarchy simulation",
+      "source_files": [
+        {
+          "path": "scripts/run_v22_pri_audit_simulations.py",
+          "sha256": "cf0a67346c27542c2431f857c06299784463e9967f7b16e1eecfc075ca847c57",
+          "bytes": 17999
+        },
+        {
+          "path": "scripts/plot_v22_simulation_figure.py",
+          "sha256": "87a6dbffd7c0c9e17c8add365e8c2440b019c3324b5f2a8d753dd648cd9fb099",
+          "bytes": 6855
+        },
+        {
+          "path": "docs/v22_submission_closure_protocol.md",
+          "sha256": "25d23b58dc571c0cd470b9618362bad1a4622d394b9e692270cbae3c0330bc5a",
+          "bytes": 4745
+        },
+        {
+          "path": "results/pri_audit_v22/v22_simulation_replicates.csv",
+          "sha256": "7d7fa5298930180e0850bb773fd3cd41f3cbbbb92b42fd04716a5287c326b71f",
+          "bytes": 1088015
+        },
+        {
+          "path": "results/pri_audit_v22/v22_simulation_summary.csv",
+          "sha256": "4e52e75aa8b66d3655e364904973ec6170aa9fdbd5e5ba1eb1f6a81027bb2673",
+          "bytes": 1799
+        },
+        {
+          "path": "results/pri_audit_v22/v22_simulation_specification.json",
+          "sha256": "ffd6345548fa3aa8b909ce4027efc7f79340540fdb309463655388cf11d7eecf",
+          "bytes": 1676
+        }
+      ],
+      "output_files": [
+        {
+          "path": "figures/paper_v22/fig6_v22_known_truth_simulation.png",
+          "sha256": "f394950e5c7c4187eaa4d1b1ffa6455ffd0412be651a216e4cbc690aa31d6c49",
+          "bytes": 277632
+        }
+      ],
+      "note": "Exact local rendering of the fixed-scenario simulation; no simulated quantity is hand-drawn."
+    },
+    {
+      "identifier": "Table 2 (v22 rows)",
+      "role": "fold-local spot-topic comparison",
+      "source_files": [
+        {
+          "path": "scripts/run_v22_spot_topic_benchmark.py",
+          "sha256": "ddb9ee58ba02fae3a8baebb0c10a838125b252906ec724ac671ef81fea642f61",
+          "bytes": 12294
+        },
+        {
+          "path": "results/pri_audit_v22/gse206391_v22_spot_topic_benchmark.json",
+          "sha256": "2c163ffe8c2a7fc6e7443b5ef1bda0ca1568f19520ed3858d9fe2eecbc548f4b",
+          "bytes": 2006
+        },
+        {
+          "path": "results/pri_audit_v22/gse206391_v22_spot_topic_predictions.csv",
+          "sha256": "deece290708e97b0a6791376b008555119cb0f0153e3feeea1b0f18f6ca8d7ea",
+          "bytes": 5714
+        },
+        {
+          "path": "results/pri_audit_v22/gse206391_v22_spot_topic_distributions.npz",
+          "sha256": "020f36db90879fc653b5380a6230ce710de717132aca5c393e8b32d4112f8a46",
+          "bytes": 67237
+        }
+      ],
+      "output_files": [
+        {
+          "path": "results/paper_v21/table2_strict_matched_comparisons.csv",
+          "sha256": "e3f53ef6214ccb1ee3a80ec6a5e55690f37e604ae6deb403695b9c80142c7766",
+          "bytes": 1389
+        }
+      ],
+      "note": "The topic representation is a fixed low-capacity comparator fitted only on training-patient spots in each fold."
+    },
+    {
+      "identifier": "Supplementary Table S1",
+      "role": "simulation numeric summary",
+      "source_files": [
+        {
+          "path": "scripts/build_v22_submission_tables.py",
+          "sha256": "855040e9e3ec0803ed1330629289f8e2b59b63cb6f3f0ccfbd8cf91a7d2c2211",
+          "bytes": 4166
+        },
+        {
+          "path": "results/pri_audit_v22/v22_simulation_summary.csv",
+          "sha256": "4e52e75aa8b66d3655e364904973ec6170aa9fdbd5e5ba1eb1f6a81027bb2673",
+          "bytes": 1799
+        }
+      ],
+      "output_files": [
+        {
+          "path": "results/paper_v21/tableS1_v22_known_truth_simulation.csv",
+          "sha256": "a03e19df7078aede2dd8cf3f19f45a45b3a7bb9b95bcab9e10882ad31e5ecb1f",
+          "bytes": 1723
+        }
+      ],
+      "note": "Machine-readable summary of all fixed simulated scenarios and independent-patient counts."
+    },
+    {
+      "identifier": "Supplementary Table S2",
+      "role": "spot-subsampling sensitivity",
+      "source_files": [
+        {
+          "path": "scripts/build_v22_submission_tables.py",
+          "sha256": "855040e9e3ec0803ed1330629289f8e2b59b63cb6f3f0ccfbd8cf91a7d2c2211",
+          "bytes": 4166
+        },
+        {
+          "path": "results/pri_audit_v22/gse206391_v22_spot_topic_benchmark_spots150.json",
+          "sha256": "f6bb2ceb35156fa1823ea9c1e862435d4fb08b8f9317c9afd98cdb556df1cde0",
+          "bytes": 1996
+        },
+        {
+          "path": "results/pri_audit_v22/gse206391_v22_spot_topic_benchmark.json",
+          "sha256": "2c163ffe8c2a7fc6e7443b5ef1bda0ca1568f19520ed3858d9fe2eecbc548f4b",
+          "bytes": 2006
+        },
+        {
+          "path": "results/pri_audit_v22/gse206391_v22_spot_topic_benchmark_spots450.json",
+          "sha256": "9962d2f57301c7eb8ddecdc74218520b7ca29b04225830b717e47e2e123b22d9",
+          "bytes": 2025
+        }
+      ],
+      "output_files": [
+        {
+          "path": "results/paper_v21/tableS2_v22_spot_topic_sensitivity.csv",
+          "sha256": "9ef97af74211235bbcbc0911afa67368adb4003d150f306a6ee152ba985139ad",
+          "bytes": 434
+        }
+      ],
+      "note": "The 150- and 450-spot analyses are predeclared robustness checks; the 300-spot result remains primary."
+    }
+  ]
+}

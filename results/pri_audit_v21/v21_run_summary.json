@@ -1,0 +1,107 @@
+{
+  "classifier": "L2 logistic regression (C=1, class_weight=balanced, solver=liblinear, max_iter=2000)",
+  "evaluation_result_files": [
+    "v21_gse151177_strict_loose_result.json",
+    "v21_gse173706_strict_loose_result.json",
+    "v21_gse206391_strict_loose_result.json",
+    "v21_gse47751_strict_loose_result.json"
+  ],
+  "external_selection": [
+    {
+      "accession": "GSE47751",
+      "eligible_for": "external strict bulk replication",
+      "independent_of_PRI_Audit_development": true,
+      "local_integrity": "fresh official GEO matrix passes gzip -t",
+      "n_selected_samples": 12,
+      "phenotype": "paired baseline PN/PP",
+      "platform": "bulk microarray",
+      "selection": "selected"
+    },
+    {
+      "accession": "GSE261704",
+      "eligible_for": "differential-diagnosis context only",
+      "independent_of_PRI_Audit_development": true,
+      "local_integrity": "series matrix available",
+      "n_selected_samples": 0,
+      "phenotype": "psoriasis lesions versus atopic dermatitis / prurigo nodularis; no psoriasis NL pairing",
+      "platform": "NanoString 770-gene panel",
+      "selection": "excluded"
+    },
+    {
+      "accession": "GSE223799",
+      "eligible_for": "technical diagnostic transport only",
+      "independent_of_PRI_Audit_development": false,
+      "local_integrity": "processed table available",
+      "n_selected_samples": 0,
+      "phenotype": "lesional psoriasis versus eczema",
+      "platform": "bulk RNA-seq",
+      "selection": "excluded"
+    },
+    {
+      "accession": "GSE36287",
+      "eligible_for": "mechanistic context only; not clinical lesion/normal",
+      "independent_of_PRI_Audit_development": true,
+      "local_integrity": "series matrix available",
+      "n_selected_samples": 0,
+      "phenotype": "cytokine-stimulated keratinocytes",
+      "platform": "bulk microarray",
+      "selection": "excluded"
+    },
+    {
+      "accession": "GSE6601",
+      "eligible_for": "differential-diagnosis context only",
+      "independent_of_PRI_Audit_development": true,
+      "local_integrity": "series matrix available",
+      "n_selected_samples": 0,
+      "phenotype": "psoriasis versus atopic-dermatitis lesional epidermis",
+      "platform": "two-colour microarray",
+      "selection": "excluded"
+    }
+  ],
+  "full_null_distribution_files": [
+    "GSE151177_strict_loose_nulls.npz",
+    "GSE173706_strict_loose_nulls.npz",
+    "GSE206391_strict_loose_nulls.npz",
+    "GSE47751_strict_loose_nulls.npz",
+    "LBFGS_STRESS151177_strict_loose_nulls.npz",
+    "LBFGS_TEST151177_strict_loose_nulls.npz",
+    "TEST151177_strict_loose_nulls.npz",
+    "TEST47751_strict_loose_nulls.npz",
+    "gse202011_external_strict_loose_nulls.npz"
+  ],
+  "n_evaluation_rows": 22,
+  "rebuild_equivalence": [
+    {
+      "count_matrix_exact_match": true,
+      "dataset": "GSE151177",
+      "legacy_features": 33538,
+      "legacy_samples": 18,
+      "maximum_absolute_count_difference": 0.0,
+      "rebuild_features": 33538,
+      "rebuild_samples": 18,
+      "sample_metadata_exact_match": true
+    },
+    {
+      "count_matrix_exact_match": true,
+      "dataset": "GSE173706",
+      "legacy_features": 33538,
+      "legacy_samples": 33,
+      "maximum_absolute_count_difference": 0.0,
+      "rebuild_features": 33538,
+      "rebuild_samples": 33,
+      "sample_metadata_exact_match": true
+    },
+    {
+      "count_matrix_exact_match": true,
+      "dataset": "GSE206391",
+      "legacy_features": 16685,
+      "legacy_samples": 66,
+      "maximum_absolute_count_difference": 0.0,
+      "rebuild_features": 16685,
+      "rebuild_samples": 66,
+      "sample_metadata_exact_match": true
+    }
+  ],
+  "specification": "docs/pri_audit_v21_experiment_spec.md",
+  "status": "complete"
+}

@@ -1,0 +1,84 @@
+{
+  "dataset": "GSE206391",
+  "n_samples": 48,
+  "n_patients": 12,
+  "outer_split": "paired-patient leave-one-patient-out",
+  "hvg_selection": "within outer patient fold",
+  "spatial_graph": "Moran-like neighbour agreement plus local contrast for 500 HVGs (1,000 features)",
+  "matched_references": {
+    "spatial_graph_1000": "expression_1000",
+    "expression_plus_spatial_1500": "expression_1500"
+  },
+  "methods": {
+    "expression_1000": {
+      "auroc": 0.890625,
+      "balanced_accuracy": 0.8333333333333334,
+      "patient_bootstrap_ci95": [
+        0.7291666666666666,
+        1.0
+      ],
+      "label_permutation_mean": 0.4914131944444445,
+      "label_permutation_ci95": [
+        0.2238715277777778,
+        0.8454861111111112
+      ],
+      "label_permutation_p_ge_observed": 0.005988023952095809
+    },
+    "spatial_graph_1000": {
+      "auroc": 0.8697916666666666,
+      "balanced_accuracy": 0.8125,
+      "patient_bootstrap_ci95": [
+        0.6805555555555556,
+        1.0
+      ],
+      "label_permutation_mean": 0.48751388888888886,
+      "label_permutation_ci95": [
+        0.22625868055555556,
+        0.8220920138888889
+      ],
+      "label_permutation_p_ge_observed": 0.021956087824351298,
+      "matched_reference": "expression_1000",
+      "incremental_auroc": -0.02083333333333337,
+      "increment_patient_bootstrap_ci95": [
+        -0.08680555555555547,
+        0.03819444444444453
+      ],
+      "increment_bootstrap_probability_ge_0_05": 0.013
+    },
+    "expression_1500": {
+      "auroc": 0.9010416666666667,
+      "balanced_accuracy": 0.8541666666666667,
+      "patient_bootstrap_ci95": [
+        0.7517361111111112,
+        1.0
+      ],
+      "label_permutation_mean": 0.4897048611111111,
+      "label_permutation_ci95": [
+        0.22651909722222222,
+        0.8368923611111111
+      ],
+      "label_permutation_p_ge_observed": 0.003992015968063872
+    },
+    "expression_plus_spatial_1500": {
+      "auroc": 0.8750000000000001,
+      "balanced_accuracy": 0.8333333333333334,
+      "patient_bootstrap_ci95": [
+        0.6979166666666666,
+        1.0
+      ],
+      "label_permutation_mean": 0.48843055555555553,
+      "label_permutation_ci95": [
+        0.20833333333333331,
+        0.826388888888889
+      ],
+      "label_permutation_p_ge_observed": 0.017964071856287425,
+      "matched_reference": "expression_1500",
+      "incremental_auroc": -0.02604166666666663,
+      "increment_patient_bootstrap_ci95": [
+        -0.07291666666666652,
+        0.01388888888888895
+      ],
+      "increment_bootstrap_probability_ge_0_05": 0.0
+    }
+  }
+}

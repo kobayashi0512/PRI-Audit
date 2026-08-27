@@ -1,0 +1,7 @@
+accession,independent_of_PRI_Audit_development,phenotype,platform,local_integrity,eligible_for,selection,n_selected_samples
+GSE47751,True,paired baseline PN/PP,bulk microarray,fresh official GEO matrix passes gzip -t,external strict bulk replication,selected,12
+GSE261704,True,psoriasis lesions versus atopic dermatitis / prurigo nodularis; no psoriasis NL pairing,NanoString 770-gene panel,series matrix available,differential-diagnosis context only,excluded,0
+GSE223799,False,lesional psoriasis versus eczema,bulk RNA-seq,processed table available,technical diagnostic transport only,excluded,0
+GSE36287,True,cytokine-stimulated keratinocytes,bulk microarray,series matrix available,mechanistic context only; not clinical lesion/normal,excluded,0
+GSE6601,True,psoriasis versus atopic-dermatitis lesional epidermis,two-colour microarray,series matrix available,differential-diagnosis context only,excluded,0
+GSE202011,True,paired biologic-naive PSO lesional/non-lesional skin,10x Visium H5 matrices; coordinates absent from the retrieved archive,official GSE202011_RAW.tar SHA-256 76ad74e0c38fefbebfdd4fb2e92cf2a3343e87c8cba322a7fe76abec25b6e5a0; 10 selected H5 files hashed,strict patient-blocked expression/PCA high-resolution boundary replication; not spatial graph,selected before expression inspection,10

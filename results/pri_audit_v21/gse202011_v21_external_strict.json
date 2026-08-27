@@ -1,0 +1,68 @@
+{
+  "dataset": "GSE202011",
+  "analysis_role": "independent high-resolution boundary replication",
+  "evaluation_unit": "10 samples from 5 paired PSO patients; leave-one-patient-out",
+  "selection_rule": "Pre-specified GEO series sample ledger; ST14 R1 lesion selected over R2 before expression inspection",
+  "raw_archive": {
+    "path": "data/raw/GSE202011_RAW.tar",
+    "sha256": "76ad74e0c38fefbebfdd4fb2e92cf2a3343e87c8cba322a7fe76abec25b6e5a0"
+  },
+  "spot_qc": "processed 10x filtered matrix; total counts >=500, detected genes >=300, mitochondrial fraction <=0.20",
+  "representation_scope": "HVG selection, scaling, PCA and classifier fit only in outer-patient training folds",
+  "spatial_graph_status": "not evaluated: GEO H5 matrix archive has no spot-coordinate files; this is not an external spatial-graph test",
+  "methods": {
+    "expression": {
+      "dataset": "gse202011_external",
+      "arm": "strict_expression",
+      "representation_fit_scope": "outer_group",
+      "formal_role": "primary",
+      "auroc": 1.0,
+      "balanced_accuracy": 1.0,
+      "group_bootstrap_ci95_low": 1.0,
+      "group_bootstrap_ci95_high": 1.0,
+      "n_bootstrap": 5000,
+      "permutation_mean": 0.49504000000000004,
+      "permutation_ci95_low": 0.12,
+      "permutation_ci95_high": 1.0,
+      "permutation_p_ge_observed": 0.06387225548902195,
+      "n_permutations": 500,
+      "reference_arm": "strict_expression",
+      "incremental_auroc_vs_strict_expression": 0.0,
+      "increment_bootstrap_ci95_low": 0.0,
+      "increment_bootstrap_ci95_high": 0.0,
+      "increment_bootstrap_probability_ge_0_05": 0.0,
+      "increment_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "pca": {
+      "dataset": "gse202011_external",
+      "arm": "strict_pca",
+      "representation_fit_scope": "outer_group",
+      "formal_role": "primary",
+      "auroc": 1.0,
+      "balanced_accuracy": 1.0,
+      "group_bootstrap_ci95_low": 1.0,
+      "group_bootstrap_ci95_high": 1.0,
+      "n_bootstrap": 5000,
+      "permutation_mean": 0.50288,
+      "permutation_ci95_low": 0.15999999999999998,
+      "permutation_ci95_high": 1.0,
+      "permutation_p_ge_observed": 0.06387225548902195,
+      "n_permutations": 500,
+      "reference_arm": "strict_expression",
+      "incremental_auroc_vs_strict_expression": 0.0,
+      "increment_bootstrap_ci95_low": 0.0,
+      "increment_bootstrap_ci95_high": 0.0,
+      "increment_bootstrap_probability_ge_0_05": 0.0,
+      "increment_ci95": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "n_permutations": 500,
+  "n_bootstrap": 5000,
+  "seed": 20260819
+}

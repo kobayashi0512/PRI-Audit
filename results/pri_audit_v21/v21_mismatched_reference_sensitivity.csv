@@ -1,0 +1,8 @@
+dataset,candidate_arm,mismatched_reference,formal_role,candidate_auroc,mismatched_reference_auroc,apparent_increment_vs_mismatched_reference,paired_group_bootstrap_ci95_low,paired_group_bootstrap_ci95_high,paired_group_bootstrap_probability_increment_ge_0_05,n_bootstrap
+GSE151177,strict_pca,strict_expression_16_HVG,didactic_mismatched_reference_sensitivity_only,0.9642857142857143,1.0,-0.0357142857142857,-0.15584415584415579,0.0,0.0,4951
+GSE151177,strict_nmf,strict_expression_16_HVG,didactic_mismatched_reference_sensitivity_only,0.9821428571428572,1.0,-0.017857142857142794,-0.1071428571428572,0.0,0.0,4937
+GSE173706,strict_pca,strict_expression_16_HVG,didactic_mismatched_reference_sensitivity_only,1.0,0.9917355371900827,0.008264462809917328,0.0,0.07438016528925617,0.0694,5000
+GSE173706,strict_nmf,strict_expression_16_HVG,didactic_mismatched_reference_sensitivity_only,1.0,0.9917355371900827,0.008264462809917328,0.0,0.07438016528925617,0.0672,5000
+GSE206391,strict_pca,strict_expression_16_HVG,didactic_mismatched_reference_sensitivity_only,0.9097222222222222,0.8281250000000001,0.0815972222222221,0.0017361111111110494,0.21875,0.6884,5000
+GSE206391,strict_nmf,strict_expression_16_HVG,didactic_mismatched_reference_sensitivity_only,0.8715277777777777,0.8281250000000001,0.04340277777777757,-0.04340277777777779,0.1631944444444443,0.4106,5000
+GSE47751,strict_pca,strict_expression_16_HVG,didactic_mismatched_reference_sensitivity_only,1.0,1.0,0.0,-1.1102230246251565e-16,1.1102230246251565e-16,0.0,5000

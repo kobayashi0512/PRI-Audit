@@ -1,0 +1,119 @@
+{
+  "started_utc": "2026-08-21T10:13:13.261409+00:00",
+  "python": "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+  "commands": [
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "scripts/run_v22_pri_audit_simulations.py",
+        "--replicates",
+        "400",
+        "--bootstrap",
+        "250",
+        "--population-patients",
+        "240",
+        "--workers",
+        "4"
+      ],
+      "returncode": 0,
+      "stdout": "completed 240/4800 simulation replicates\ncompleted 480/4800 simulation replicates\ncompleted 720/4800 simulation replicates\ncompleted 960/4800 simulation replicates\ncompleted 1200/4800 simulation replicates\ncompleted 1440/4800 simulation replicates\ncompleted 1680/4800 simulation replicates\ncompleted 1920/4800 simulation replicates\ncompleted 2160/4800 simulation replicates\ncompleted 2400/4800 simulation replicates\ncompleted 2640/4800 simulation replicates\ncompleted 2880/4800 simulation replicates\ncompleted 3120/4800 simulation replicates\ncompleted 3360/4800 simulation replicates\ncompleted 3600/4800 simulation replicates\ncompleted 3840/4800 simulation replicates\ncompleted 4080/4800 simulation replicates\ncompleted 4320/4800 simulation replicates\ncompleted 4560/4800 simulation replicates\ncompleted 4800/4800 simulation replicates\n            scenario  n_patients  replicates  strict_mean_increment  strict_mean_population_increment  strict_gate_rate  median_patient_loo_expression_auroc  median_random_measurement_split_auroc  mean_random_measurement_source_overlap  weak_reference_mean_increment  weak_reference_gate_rate  weak_reference_mean_population_increment\n      null_increment          12         400              -0.003160                         -0.002438            0.0000                             0.965278                               0.995049                                     1.0                            NaN                       NaN                                       NaN\n      null_increment          24         400              -0.000890                         -0.000879            0.0000                             0.984375                               0.988834                                     1.0                            NaN                       NaN                                       NaN\n      null_increment          48         400              -0.000373                         -0.000334            0.0000                             0.993273                               0.986372                                     1.0                            NaN                       NaN                                       NaN\n   spatial_increment          12         400               0.164670                          0.149636            0.7550                             0.840278                               0.969878                                     1.0                            NaN                       NaN                                       NaN\n   spatial_increment          24         400               0.111007                          0.103345            0.9025                             0.897569                               0.954295                                     1.0                            NaN                       NaN                                       NaN\n   spatial_increment          48         400               0.085833                          0.082653            0.8075                             0.916884                               0.936614                                     1.0                            NaN                       NaN                                       NaN\n      source_overlap          12         400              -0.002153                         -0.000167            0.0150                             0.506944                               1.000000                                     1.0                            NaN                       NaN                                       NaN\n      source_overlap          24         400               0.001940                         -0.000536            0.0275                             0.519097                               1.000000                                     1.0                            NaN                       NaN                                       NaN\n      source_overlap          48         400               0.000520                         -0.000361            0.0225                             0.507812                               0.999819                                     1.0                            NaN                       NaN                                       NaN\nmismatched_reference          12         400              -0.003750                         -0.002131            0.0000                             0.965278                               0.994935                                     1.0                       0.459028                       1.0                                  0.466695\nmismatched_reference          24         400              -0.000768                         -0.000852            0.0000                             0.986111                               0.988758                                     1.0                       0.480595                       1.0                                  0.485175\nmismatched_reference          48         400              -0.000307                         -0.000324            0.0000                             0.991536                               0.986124                                     1.0                       0.491742                       1.0                                  0.490513\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "scripts/run_v22_spot_topic_benchmark.py",
+        "--bootstrap",
+        "5000",
+        "--permutations",
+        "500"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"dataset\": \"GSE206391\",\n  \"n_samples\": 48,\n  \"n_patients\": 12,\n  \"outer_split\": \"paired-patient leave-one-patient-out\",\n  \"hvg_selection\": \"top 500 sample-pseudobulk HVGs fitted in each outer-patient fold\",\n  \"topic_model\": \"MiniBatchNMF fitted only on training-patient spots; transformed held-patient spots\",\n  \"n_topics\": 8,\n  \"max_spots_per_sample\": 300,\n  \"matched_dimension_contract\": \"topic 8 vs expression PCA 8; expression+topic 16 vs expression PCA 16\",\n  \"methods\": {\n    \"expression_pca_8\": {\n      \"auroc\": 0.892361111111111,\n      \"balanced_accuracy\": 0.8125,\n      \"patient_bootstrap_ci95\": [\n        0.7395833333333334,\n        1.0\n      ],\n      \"label_permutation_p_ge_observed\": 0.005988023952095809\n    },\n    \"spot_topic_8\": {\n      \"auroc\": 0.8038194444444445,\n      \"balanced_accuracy\": 0.8125,\n      \"patient_bootstrap_ci95\": [\n        0.5989149305555554,\n        1.0\n      ],\n      \"label_permutation_p_ge_observed\": 0.007984031936127744,\n      \"matched_reference\": \"expression_pca_8\",\n      \"incremental_auroc\": -0.08854166666666652,\n      \"increment_patient_bootstrap_ci95\": [\n        -0.18576388888888895,\n        0.0\n      ],\n      \"increment_bootstrap_probability_ge_0_05\": 0.0\n    },\n    \"expression_pca_16\": {\n      \"auroc\": 0.8802083333333334,\n      \"balanced_accuracy\": 0.8125,\n      \"patient_bootstrap_ci95\": [\n        0.6909722222222223,\n        0.9930555555555555\n      ],\n      \"label_permutation_p_ge_observed\": 0.007984031936127744\n    },\n    \"expression_plus_topic_16\": {\n      \"auroc\": 0.795138888888889,\n      \"balanced_accuracy\": 0.8125,\n      \"patient_bootstrap_ci95\": [\n        0.5763888888888888,\n        1.0\n      ],\n      \"label_permutation_p_ge_observed\": 0.013972055888223553,\n      \"matched_reference\": \"expression_pca_16\",\n      \"incremental_auroc\": -0.08506944444444442,\n      \"increment_patient_bootstrap_ci95\": [\n        -0.1823350694444445,\n        0.006944444444444311\n      ],\n      \"increment_bootstrap_probability_ge_0_05\": 0.0006\n    }\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "scripts/run_v22_spot_topic_benchmark.py",
+        "--max-spots-per-sample",
+        "150",
+        "--bootstrap",
+        "2000",
+        "--permutations",
+        "300",
+        "--tag",
+        "spots150"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"dataset\": \"GSE206391\",\n  \"n_samples\": 48,\n  \"n_patients\": 12,\n  \"outer_split\": \"paired-patient leave-one-patient-out\",\n  \"hvg_selection\": \"top 500 sample-pseudobulk HVGs fitted in each outer-patient fold\",\n  \"topic_model\": \"MiniBatchNMF fitted only on training-patient spots; transformed held-patient spots\",\n  \"n_topics\": 8,\n  \"max_spots_per_sample\": 150,\n  \"matched_dimension_contract\": \"topic 8 vs expression PCA 8; expression+topic 16 vs expression PCA 16\",\n  \"methods\": {\n    \"expression_pca_8\": {\n      \"auroc\": 0.892361111111111,\n      \"balanced_accuracy\": 0.8125,\n      \"patient_bootstrap_ci95\": [\n        0.7395833333333334,\n        1.0\n      ],\n      \"label_permutation_p_ge_observed\": 0.006644518272425249\n    },\n    \"spot_topic_8\": {\n      \"auroc\": 0.7829861111111112,\n      \"balanced_accuracy\": 0.8125,\n      \"patient_bootstrap_ci95\": [\n        0.5625,\n        1.0\n      ],\n      \"label_permutation_p_ge_observed\": 0.019933554817275746,\n      \"matched_reference\": \"expression_pca_8\",\n      \"incremental_auroc\": -0.10937499999999989,\n      \"increment_patient_bootstrap_ci95\": [\n        -0.2152777777777778,\n        0.0\n      ],\n      \"increment_bootstrap_probability_ge_0_05\": 0.0\n    },\n    \"expression_pca_16\": {\n      \"auroc\": 0.8802083333333334,\n      \"balanced_accuracy\": 0.8125,\n      \"patient_bootstrap_ci95\": [\n        0.6979166666666666,\n        0.9930555555555556\n      ],\n      \"label_permutation_p_ge_observed\": 0.006644518272425249\n    },\n    \"expression_plus_topic_16\": {\n      \"auroc\": 0.8125000000000001,\n      \"balanced_accuracy\": 0.8125,\n      \"patient_bootstrap_ci95\": [\n        0.6336805555555556,\n        1.0\n      ],\n      \"label_permutation_p_ge_observed\": 0.013289036544850499,\n      \"matched_reference\": \"expression_pca_16\",\n      \"incremental_auroc\": -0.06770833333333326,\n      \"increment_patient_bootstrap_ci95\": [\n        -0.13025173611111127,\n        0.0017361111111112715\n      ],\n      \"increment_bootstrap_probability_ge_0_05\": 0.0005\n    }\n  }\n}\n",
+      "stderr": "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/lib/python3.12/site-packages/sklearn/decomposition/_nmf.py:2309: ConvergenceWarning: Maximum number of iterations 600 reached. Increase it to improve convergence.\n  warnings.warn(\n/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/lib/python3.12/site-packages/sklearn/decomposition/_nmf.py:2309: ConvergenceWarning: Maximum number of iterations 600 reached. Increase it to improve convergence.\n  warnings.warn(\n/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/lib/python3.12/site-packages/sklearn/decomposition/_nmf.py:2309: ConvergenceWarning: Maximum number of iterations 600 reached. Increase it to improve convergence.\n  warnings.warn(\n/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/lib/python3.12/site-packages/sklearn/decomposition/_nmf.py:2309: ConvergenceWarning: Maximum number of iterations 600 reached. Increase it to improve convergence.\n  warnings.warn(\n/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/lib/python3.12/site-packages/sklearn/decomposition/_nmf.py:2309: ConvergenceWarning: Maximum number of iterations 600 reached. Increase it to improve convergence.\n  warnings.warn(\n/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/lib/python3.12/site-packages/sklearn/decomposition/_nmf.py:2309: ConvergenceWarning: Maximum number of iterations 600 reached. Increase it to improve convergence.\n  warnings.warn(\n"
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "scripts/run_v22_spot_topic_benchmark.py",
+        "--max-spots-per-sample",
+        "450",
+        "--bootstrap",
+        "2000",
+        "--permutations",
+        "300",
+        "--tag",
+        "spots450"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"dataset\": \"GSE206391\",\n  \"n_samples\": 48,\n  \"n_patients\": 12,\n  \"outer_split\": \"paired-patient leave-one-patient-out\",\n  \"hvg_selection\": \"top 500 sample-pseudobulk HVGs fitted in each outer-patient fold\",\n  \"topic_model\": \"MiniBatchNMF fitted only on training-patient spots; transformed held-patient spots\",\n  \"n_topics\": 8,\n  \"max_spots_per_sample\": 450,\n  \"matched_dimension_contract\": \"topic 8 vs expression PCA 8; expression+topic 16 vs expression PCA 16\",\n  \"methods\": {\n    \"expression_pca_8\": {\n      \"auroc\": 0.892361111111111,\n      \"balanced_accuracy\": 0.8125,\n      \"patient_bootstrap_ci95\": [\n        0.7395833333333334,\n        1.0\n      ],\n      \"label_permutation_p_ge_observed\": 0.006644518272425249\n    },\n    \"spot_topic_8\": {\n      \"auroc\": 0.798611111111111,\n      \"balanced_accuracy\": 0.7916666666666667,\n      \"patient_bootstrap_ci95\": [\n        0.59375,\n        0.9688368055555551\n      ],\n      \"label_permutation_p_ge_observed\": 0.013289036544850499,\n      \"matched_reference\": \"expression_pca_8\",\n      \"incremental_auroc\": -0.09375,\n      \"increment_patient_bootstrap_ci95\": [\n        -0.20138888888888895,\n        -0.00694444444444442\n      ],\n      \"increment_bootstrap_probability_ge_0_05\": 0.0\n    },\n    \"expression_pca_16\": {\n      \"auroc\": 0.8802083333333334,\n      \"balanced_accuracy\": 0.8125,\n      \"patient_bootstrap_ci95\": [\n        0.6979166666666666,\n        0.9930555555555556\n      ],\n      \"label_permutation_p_ge_observed\": 0.006644518272425249\n    },\n    \"expression_plus_topic_16\": {\n      \"auroc\": 0.8090277777777777,\n      \"balanced_accuracy\": 0.8125,\n      \"patient_bootstrap_ci95\": [\n        0.6023437500000001,\n        0.9895833333333334\n      ],\n      \"label_permutation_p_ge_observed\": 0.009966777408637873,\n      \"matched_reference\": \"expression_pca_16\",\n      \"incremental_auroc\": -0.07118055555555569,\n      \"increment_patient_bootstrap_ci95\": [\n        -0.1527777777777778,\n        0.0\n      ],\n      \"increment_bootstrap_probability_ge_0_05\": 0.0005\n    }\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "scripts/plot_v22_simulation_figure.py"
+      ],
+      "returncode": 0,
+      "stdout": "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/figures/paper_v22/fig6_v22_known_truth_simulation.png\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "scripts/build_v22_submission_tables.py"
+      ],
+      "returncode": 0,
+      "stdout": "Wrote 11 Table 1 rows, 10 Table 2 rows, and 7 Table 3 rows\nWrote updated Table 2 (12 rows), simulation Supplementary Table S1 (12 rows), and topic sensitivity Table S2 (6 rows).\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "scripts/build_v22_submission_source_manifest.py"
+      ],
+      "returncode": 0,
+      "stdout": "Wrote 4 v22 components and 16 source links\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger/.venv/bin/python",
+        "scripts/build_v9_submission_source_manifest.py"
+      ],
+      "returncode": 0,
+      "stdout": "Wrote v9 source manifest with 16 hash-bound files\n",
+      "stderr": ""
+    }
+  ],
+  "finished_utc": "2026-08-21T10:27:12.234215+00:00",
+  "output_sha256": {
+    "results/pri_audit_v22/v22_simulation_replicates.csv": "7d7fa5298930180e0850bb773fd3cd41f3cbbbb92b42fd04716a5287c326b71f",
+    "results/pri_audit_v22/v22_simulation_summary.csv": "4e52e75aa8b66d3655e364904973ec6170aa9fdbd5e5ba1eb1f6a81027bb2673",
+    "results/pri_audit_v22/v22_simulation_specification.json": "ffd6345548fa3aa8b909ce4027efc7f79340540fdb309463655388cf11d7eecf",
+    "results/pri_audit_v22/gse206391_v22_spot_topic_benchmark.json": "2c163ffe8c2a7fc6e7443b5ef1bda0ca1568f19520ed3858d9fe2eecbc548f4b",
+    "figures/paper_v22/fig6_v22_known_truth_simulation.png": "f394950e5c7c4187eaa4d1b1ffa6455ffd0412be651a216e4cbc690aa31d6c49",
+    "results/paper_v21/table2_strict_matched_comparisons.csv": "e3f53ef6214ccb1ee3a80ec6a5e55690f37e604ae6deb403695b9c80142c7766",
+    "results/paper_v21/tableS1_v22_known_truth_simulation.csv": "a03e19df7078aede2dd8cf3f19f45a45b3a7bb9b95bcab9e10882ad31e5ecb1f",
+    "results/paper_v21/tableS2_v22_spot_topic_sensitivity.csv": "9ef97af74211235bbcbc0911afa67368adb4003d150f306a6ee152ba985139ad",
+    "results/paper_v21/v9_submission_source_manifest.json": "b46210abb1eea1bc0321217277ea52bb862275bb70756774a5a0e61d10dfc484",
+    "manuscript/PRI_Audit_psoriasis_manuscript_v9_submission_ready.docx": "b48f3ce016046a75408c966529336c7e1608d3c8cd26ae49c527d4d821b3e38c"
+  }
+}

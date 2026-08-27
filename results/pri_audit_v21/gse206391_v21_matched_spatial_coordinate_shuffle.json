@@ -1,0 +1,27 @@
+{
+  "dataset": "GSE206391",
+  "n_coordinate_shuffles": 500,
+  "shuffle_unit": "coordinates independently permuted within each sample; counts, labels, folds and fold-specific HVGs fixed",
+  "observed": {
+    "spatial_graph_1000": 0.8697916666666666,
+    "expression_plus_spatial_1500": 0.8750000000000001
+  },
+  "null": {
+    "spatial_graph_1000": {
+      "mean": 0.8702881944444444,
+      "ci95": [
+        0.8445746527777778,
+        0.8975694444444444
+      ],
+      "p_ge_observed": 0.562874251497006
+    },
+    "expression_plus_spatial_1500": {
+      "mean": 0.8794375,
+      "ci95": [
+        0.861111111111111,
+        0.8958333333333334
+      ],
+      "p_ge_observed": 0.6766467065868264
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "dataset": "GSE206391",
+  "n_samples": 48,
+  "n_patients": 12,
+  "outer_split": "paired-patient leave-one-patient-out",
+  "hvg_selection": "top 500 sample-pseudobulk HVGs fitted in each outer-patient fold",
+  "topic_model": "MiniBatchNMF fitted only on training-patient spots; transformed held-patient spots",
+  "n_topics": 8,
+  "max_spots_per_sample": 450,
+  "matched_dimension_contract": "topic 8 vs expression PCA 8; expression+topic 16 vs expression PCA 16",
+  "methods": {
+    "expression_pca_8": {
+      "auroc": 0.892361111111111,
+      "balanced_accuracy": 0.8125,
+      "patient_bootstrap_ci95": [
+        0.7395833333333334,
+        1.0
+      ],
+      "label_permutation_p_ge_observed": 0.006644518272425249
+    },
+    "spot_topic_8": {
+      "auroc": 0.798611111111111,
+      "balanced_accuracy": 0.7916666666666667,
+      "patient_bootstrap_ci95": [
+        0.59375,
+        0.9688368055555551
+      ],
+      "label_permutation_p_ge_observed": 0.013289036544850499,
+      "matched_reference": "expression_pca_8",
+      "incremental_auroc": -0.09375,
+      "increment_patient_bootstrap_ci95": [
+        -0.20138888888888895,
+        -0.00694444444444442
+      ],
+      "increment_bootstrap_probability_ge_0_05": 0.0
+    },
+    "expression_pca_16": {
+      "auroc": 0.8802083333333334,
+      "balanced_accuracy": 0.8125,
+      "patient_bootstrap_ci95": [
+        0.6979166666666666,
+        0.9930555555555556
+      ],
+      "label_permutation_p_ge_observed": 0.006644518272425249
+    },
+    "expression_plus_topic_16": {
+      "auroc": 0.8090277777777777,
+      "balanced_accuracy": 0.8125,
+      "patient_bootstrap_ci95": [
+        0.6023437500000001,
+        0.9895833333333334
+      ],
+      "label_permutation_p_ge_observed": 0.009966777408637873,
+      "matched_reference": "expression_pca_16",
+      "incremental_auroc": -0.07118055555555569,
+      "increment_patient_bootstrap_ci95": [
+        -0.1527777777777778,
+        0.0
+      ],
+      "increment_bootstrap_probability_ge_0_05": 0.0005
+    }
+  }
+}

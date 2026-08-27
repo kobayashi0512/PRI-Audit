@@ -1,0 +1,14 @@
+| Dataset | Unit / split | Representation | Matched reference | Held-out AUROC | Incremental AUROC (95% CI) | Status |
+|---|---|---|---|---|---|---|
+| GSE151177 | 18 samples; LOO | PCA | Expr. (2k HVGs) | 0.964 | +0.018 (+0.000, +0.097) | primary |
+| GSE151177 | 18 samples; LOO | NMF | Expr. (2k HVGs) | 0.982 | +0.036 (+0.000, +0.156) | primary |
+| GSE173706 | 11 donors; LODO | PCA | Expr. (2k HVGs) | 1.0 | +0.000 (+0.000, +0.000) | primary |
+| GSE173706 | 11 donors; LODO | NMF | Expr. (2k HVGs) | 1.0 | +0.000 (+0.000, +0.000) | primary |
+| GSE206391 | 12 patients; LODO | PCA | Expr. (2k HVGs) | 0.91 | +0.002 (-0.024, +0.038) | primary |
+| GSE206391 | 12 patients; LODO | NMF | Expr. (2k HVGs) | 0.872 | -0.036 (-0.099, +0.003) | primary |
+| GSE47751 | 6 pairs; LOO | PCA | Expr. (2k HVGs) | 1.0 | +0.000 (+0.000, +0.000) | external bulk boundary; saturated |
+| GSE206391 | 12 patients; LODO | Spatial graph (1,000) | Expr. (1k HVGs) | 0.87 | -0.021 (-0.087, +0.038) | primary spatial test |
+| GSE206391 | 12 patients; LODO | Expression + spatial (1,500) | Expr. (1.5k HVGs) | 0.875 | -0.026 (-0.073, +0.014) | primary spatial test |
+| GSE202011 | 5 patients; LOO | PCA | Expr. (2k HVGs) | 1.0 | +0.000 (+0.000, +0.000) | external high-resolution expression/PCA boundary |
+| GSE206391 | 12 patients; LODO | Fold-local spot topics (8) | Expr. PCA (8) | 0.804 | -0.089 (-0.186, +0.000) | v22 fold-local high-resolution comparator |
+| GSE206391 | 12 patients; LODO | Expression + spot topics (16) | Expr. PCA (16) | 0.795 | -0.085 (-0.182, +0.007) | v22 fold-local high-resolution comparator |

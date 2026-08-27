@@ -1,0 +1,301 @@
+{
+  "analysis": "PRI-Audit v8 submission-assembly source manifest",
+  "entries": [
+    {
+      "identifier": "Figure 1",
+      "role": "descriptive data-derived atlas; no v21 performance estimate",
+      "source_files": [
+        {
+          "path": "ppt_figures_v1/PRI_Audit_data_integrated_figures_v2_audited.pptx",
+          "sha256": "c880318fc1e04014e8bd7e8057cee9861d74225876d9e37f33a077d6130275cb",
+          "bytes": 3977799
+        },
+        {
+          "path": "results/pri_audit_v21/v21_all11_input_registry.csv",
+          "sha256": "fefb2d5342757d8a58d9b3732125face516063c78a59876bfbf8aec2766d62f8",
+          "bytes": 1676
+        }
+      ],
+      "output_files": [
+        {
+          "path": "figures/paper_v19_fig1_dataset_atlas.png",
+          "sha256": "8bd47cffb47642cac8d29589816abf889a52bacdd634ca027d3631aebeebd7c3",
+          "bytes": 212012
+        }
+      ],
+      "note": "The visual is retained to show the 11 public-data inputs at their native scales. Its table-bound cohort labels and roles are cross-audited against the v21 registry."
+    },
+    {
+      "identifier": "Figure 2",
+      "role": "PRI-Audit framework diagram",
+      "source_files": [
+        {
+          "path": "ppt_figures_v1/PRI_Audit_data_integrated_figures_v2_audited.pptx",
+          "sha256": "c880318fc1e04014e8bd7e8057cee9861d74225876d9e37f33a077d6130275cb",
+          "bytes": 3977799
+        },
+        {
+          "path": "docs/pri_audit_v21_experiment_spec.md",
+          "sha256": "1eafe892ae08c3c024d2f22a491ce6a85655894a574190508e56509b43aad8b5",
+          "bytes": 7017
+        }
+      ],
+      "output_files": [
+        {
+          "path": "figures/paper_v20_fig2_overall_framework.png",
+          "sha256": "8c7d5bc0a40487b78c3a6fc33c522e9e03ca924767ef4651eade8428a3057a34",
+          "bytes": 478070
+        }
+      ],
+      "note": "Conceptual workflow only; implementation details and claim boundary are frozen in the v21 specification."
+    },
+    {
+      "identifier": "Figure 3",
+      "role": "PRI-Audit module architecture",
+      "source_files": [
+        {
+          "path": "ppt_figures_v1/PRI_Audit_data_integrated_figures_v2_audited.pptx",
+          "sha256": "c880318fc1e04014e8bd7e8057cee9861d74225876d9e37f33a077d6130275cb",
+          "bytes": 3977799
+        },
+        {
+          "path": "scripts/build_v21_submission_manuscript_docx.py",
+          "sha256": "c3f8dfe68a1a503c2833ea17f109cea103fdceb00ade750a0c6610b0c8e927cb",
+          "bytes": 22186
+        }
+      ],
+      "output_files": [
+        {
+          "path": "figures/paper_v20_fig3_algorithm_architecture.png",
+          "sha256": "1e22b47ee8a19648e3ea4c3ec3a4885f2fa655bbe1ca6a5c2f05d53d052f81c4",
+          "bytes": 447151
+        }
+      ],
+      "note": "Conceptual architecture; its module descriptions are audited against the v8 Methods source."
+    },
+    {
+      "identifier": "Figure 4",
+      "role": "strictness, matched-reference, and neighbourhood sensitivity audit",
+      "source_files": [
+        {
+          "path": "scripts/plot_v21_strictness_figure.py",
+          "sha256": "db965855e36fece2dbb6b171bfe9fadd7e99229ee7333dcdd54757683a9a2326",
+          "bytes": 6041
+        },
+        {
+          "path": "results/pri_audit_v21/v21_loose_vs_strict_summary.csv",
+          "sha256": "3f0d969982d95697e05b25b0d622932ceca3e7df5a3aaad4a9f09274760eeff8",
+          "bytes": 5998
+        },
+        {
+          "path": "results/pri_audit_v21/v21_mismatched_reference_sensitivity.csv",
+          "sha256": "bc5150c1eefa2d3038b546ccbda1bcd5e461c039e9c4315ce386564b0b9204ee",
+          "bytes": 1513
+        },
+        {
+          "path": "results/pri_audit_v21/v21_nested_neighborhood_strictness.csv",
+          "sha256": "440443eb18e3b7c9d70be36046a52558d744c6cd7a347f15da63485713c132ad",
+          "bytes": 990
+        }
+      ],
+      "output_files": [
+        {
+          "path": "figures/paper_v21/fig11_v21_strictness_and_reference_audit.png",
+          "sha256": "1dfb09ca811051e72d6e4012e140af13c1afd27551a8e5b29122f0b7e2b9d612",
+          "bytes": 252691
+        }
+      ],
+      "note": "Quantitative v21 primary/diagnostic display."
+    },
+    {
+      "identifier": "Figure 5",
+      "role": "random measurement-split and coordinate-null diagnostic",
+      "source_files": [
+        {
+          "path": "scripts/plot_v21_independence_and_spatial_null.py",
+          "sha256": "b0541c079022a92caf7c93bb926f66b6ca5f922e355b50522c9c5555df8a819e",
+          "bytes": 5351
+        },
+        {
+          "path": "results/pri_audit_v21/v21_measurement_random_split_diagnostic.csv",
+          "sha256": "7bfe6e595a53728556effe0b111e424ee00fd85daf94dfdd1a9f70831393b7b2",
+          "bytes": 19492
+        },
+        {
+          "path": "results/pri_audit_v21/gse206391_v21_matched_spatial_coordinate_shuffle.json",
+          "sha256": "6bf90215cffa1232f7bf854dc3b4e6cce11dacda69b3a03f2b36c8461a2f2c9b",
+          "bytes": 706
+        },
+        {
+          "path": "results/pri_audit_v21/gse206391_v21_matched_spatial_coordinate_shuffle_distributions.npz",
+          "sha256": "177e2e7ac86a9b26d7cc9fa7dfc7c1ec77028a8226c620a847037cbfe398aba2",
+          "bytes": 5281
+        }
+      ],
+      "output_files": [
+        {
+          "path": "figures/paper_v21/fig12_v21_independence_and_spatial_null.png",
+          "sha256": "2812889abd6f84acb9547fc9f936c48a7f6be46691c289738669b9d5319a4602",
+          "bytes": 208949
+        }
+      ],
+      "note": "Quantitative v21 counterfactual display."
+    },
+    {
+      "identifier": "Table 1",
+      "role": "cohort roles and independent units",
+      "source_files": [
+        {
+          "path": "scripts/build_v21_manuscript_tables.py",
+          "sha256": "1f34461ac6c6673fd93be9232a90c33f137cef3011dce0bc2a6871dabf0fc8a6",
+          "bytes": 9384
+        },
+        {
+          "path": "results/pri_audit_v21/v21_all11_input_registry.csv",
+          "sha256": "fefb2d5342757d8a58d9b3732125face516063c78a59876bfbf8aec2766d62f8",
+          "bytes": 1676
+        },
+        {
+          "path": "results/pri_audit_v21/v21_all11_provenance_manifest.json",
+          "sha256": "a0c20804144485797fb774435f599c0935ed313c48b663d8c96200af8cf27d00",
+          "bytes": 36033
+        }
+      ],
+      "output_files": [
+        {
+          "path": "results/paper_v21/table1_cohort_roles.csv",
+          "sha256": "17c21058071e2878e967076870c476e56e8af4e2d4e057de694d58d31b690bd4",
+          "bytes": 1463
+        }
+      ],
+      "note": "Generated from the frozen all-11 input registry."
+    },
+    {
+      "identifier": "Table 2",
+      "role": "strict matched representation comparisons",
+      "source_files": [
+        {
+          "path": "scripts/build_v21_manuscript_tables.py",
+          "sha256": "1f34461ac6c6673fd93be9232a90c33f137cef3011dce0bc2a6871dabf0fc8a6",
+          "bytes": 9384
+        },
+        {
+          "path": "results/pri_audit_v21/v21_loose_vs_strict_summary.csv",
+          "sha256": "3f0d969982d95697e05b25b0d622932ceca3e7df5a3aaad4a9f09274760eeff8",
+          "bytes": 5998
+        },
+        {
+          "path": "results/pri_audit_v21/gse206391_v21_matched_spatial_graph.json",
+          "sha256": "d72331271c4ac596295792c572b5811b0eec1c5bca7bef91e1cbf2942cdef8fc",
+          "bytes": 2580
+        },
+        {
+          "path": "results/pri_audit_v21/gse202011_v21_external_strict.json",
+          "sha256": "c95449748d700d0b3777722a8093a3b8bc33eba93aa2ca0c1244ebb3ce34bd19",
+          "bytes": 2582
+        }
+      ],
+      "output_files": [
+        {
+          "path": "results/paper_v21/table2_strict_matched_comparisons.csv",
+          "sha256": "30549cec7cf405959b686a6a7d0df5cec5ebbf3dc1cf480a9db89476f358d0bb",
+          "bytes": 1109
+        }
+      ],
+      "note": "Generated from strict held-out estimates; saturated cohorts are labelled as such."
+    },
+    {
+      "identifier": "Table 3",
+      "role": "reproducibility and counterfactual diagnostics",
+      "source_files": [
+        {
+          "path": "scripts/build_v21_manuscript_tables.py",
+          "sha256": "1f34461ac6c6673fd93be9232a90c33f137cef3011dce0bc2a6871dabf0fc8a6",
+          "bytes": 9384
+        },
+        {
+          "path": "results/pri_audit_v21/v21_rebuild_equivalence.csv",
+          "sha256": "bbc03dedc6a46e9c169c0d5f86e593e46c728e9bdf86c74116c45bbd30894f03",
+          "bytes": 285
+        },
+        {
+          "path": "results/pri_audit_v21/v21_measurement_random_split_diagnostic.csv",
+          "sha256": "7bfe6e595a53728556effe0b111e424ee00fd85daf94dfdd1a9f70831393b7b2",
+          "bytes": 19492
+        },
+        {
+          "path": "results/pri_audit_v21/v21_nested_neighborhood_strictness.csv",
+          "sha256": "440443eb18e3b7c9d70be36046a52558d744c6cd7a347f15da63485713c132ad",
+          "bytes": 990
+        },
+        {
+          "path": "results/pri_audit_v21/v21_mismatched_reference_sensitivity.csv",
+          "sha256": "bc5150c1eefa2d3038b546ccbda1bcd5e461c039e9c4315ce386564b0b9204ee",
+          "bytes": 1513
+        },
+        {
+          "path": "results/pri_audit_v21/gse206391_v21_matched_spatial_coordinate_shuffle.json",
+          "sha256": "6bf90215cffa1232f7bf854dc3b4e6cce11dacda69b3a03f2b36c8461a2f2c9b",
+          "bytes": 706
+        },
+        {
+          "path": "results/pri_audit_v21/gse202011_v21_external_strict.json",
+          "sha256": "c95449748d700d0b3777722a8093a3b8bc33eba93aa2ca0c1244ebb3ce34bd19",
+          "bytes": 2582
+        }
+      ],
+      "output_files": [
+        {
+          "path": "results/paper_v21/table3_audit_diagnostics.csv",
+          "sha256": "0a66841d0f63aa98fdd5a8bc278d70a32ae8a8a323be1c701513040b5d242bc0",
+          "bytes": 1381
+        }
+      ],
+      "note": "Generated from reproducibility checks and pre-specified diagnostic contrasts; none are alternative primary models."
+    },
+    {
+      "identifier": "v8 DOCX",
+      "role": "rendered submission manuscript",
+      "source_files": [
+        {
+          "path": "scripts/build_v21_submission_manuscript_docx.py",
+          "sha256": "c3f8dfe68a1a503c2833ea17f109cea103fdceb00ade750a0c6610b0c8e927cb",
+          "bytes": 22186
+        },
+        {
+          "path": "manuscript/PRI_Audit_psoriasis_manuscript_v8_submission_ready.md",
+          "sha256": "1effde36891bef27672b28bf7a9a098e29e7ebc775b0370c6d9659305ccce20f",
+          "bytes": 27370
+        },
+        {
+          "path": "tmp/pri_audit_v8_docx/artifact.md",
+          "sha256": "8950f698a403ba76341e1da28ae4b3ed221069ad1a9668adab652f2345e65df3",
+          "bytes": 2908
+        },
+        {
+          "path": "results/paper_v21/table1_cohort_roles.csv",
+          "sha256": "17c21058071e2878e967076870c476e56e8af4e2d4e057de694d58d31b690bd4",
+          "bytes": 1463
+        },
+        {
+          "path": "results/paper_v21/table2_strict_matched_comparisons.csv",
+          "sha256": "30549cec7cf405959b686a6a7d0df5cec5ebbf3dc1cf480a9db89476f358d0bb",
+          "bytes": 1109
+        },
+        {
+          "path": "results/paper_v21/table3_audit_diagnostics.csv",
+          "sha256": "0a66841d0f63aa98fdd5a8bc278d70a32ae8a8a323be1c701513040b5d242bc0",
+          "bytes": 1381
+        }
+      ],
+      "output_files": [
+        {
+          "path": "manuscript/PRI_Audit_psoriasis_manuscript_v8_submission_ready.docx",
+          "sha256": "2a773be4866bc8f2b21345398ee6de06b20ec245a4b731717f3cb06641fb6ff9",
+          "bytes": 5385668
+        }
+      ],
+      "note": "The document uses the retained reference only for visual language; all scientific content comes from the frozen v21 package."
+    }
+  ]
+}
