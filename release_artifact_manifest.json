@@ -5,8 +5,8 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 4029,
-      "sha256": "4cb79b5e91484466aca34a6a27a0af9576559ac3a7914b3c56ff879d6941dbf7"
+      "bytes": 4203,
+      "sha256": "7233550299ecbb4fc8d801bf1fd77bacf5be12a6c05e6e81e6a35e5a1f9268a9"
     },
     {
       "path": "CHANGELOG.md",
@@ -30,8 +30,8 @@
     },
     {
       "path": "CITATION.cff.template",
-      "bytes": 971,
-      "sha256": "3b9a035374e8e4952b9c95ec179d89f50c90ebc452e7347af0823d57824ed963"
+      "bytes": 963,
+      "sha256": "19b6a059246e934980763a940285b55edaf4a2a2fa3c0794504c4be0330a7e69"
     },
     {
       "path": "docs/pri_audit_v21_experiment_spec.md",
@@ -1290,8 +1290,8 @@
     },
     {
       "path": "submission_package/AUTHOR_AND_RELEASE_METADATA_FORM.md",
-      "bytes": 2116,
-      "sha256": "04c6604d86186f198efa67651f8c76f37452489e86a5a1a585677bda822e7901"
+      "bytes": 2118,
+      "sha256": "44ebdba6ec28299d616309d64baedadfed78faec6564ea2e7e7cf1fd2571a8b9"
     },
     {
       "path": "submission_package/BMC_BIOINFORMATICS_SUBMISSION_PACKAGE.md",
@@ -1370,8 +1370,8 @@
     },
     {
       "path": "submission_package/PUBLIC_RELEASE_CHECKLIST.md",
-      "bytes": 3687,
-      "sha256": "e580ccbad403c1bc294779c11c2a0511be90ffb4935726319ea458b8bbd35496"
+      "bytes": 3655,
+      "sha256": "c0ab47b6e22ab36aa681c076d2fd9409d0fbc9acd9239f4302ac5c28e2380bfc"
     },
     {
       "path": "submission_package/SIMULATED_PEER_REVIEW.md",
@@ -1380,13 +1380,13 @@
     },
     {
       "path": "submission_package/SUBMISSION_READINESS.md",
-      "bytes": 4793,
-      "sha256": "4911a6919bbe5a2ff7e7c67463b9ea6e918ff819826336bdfc2205d41a690e96"
+      "bytes": 4963,
+      "sha256": "ff96797c79178a51c33543f354534f3422d315b1aa339668360048b54b1bb8b5"
     },
     {
       "path": "submission_package/zenodo.json.template",
-      "bytes": 1104,
-      "sha256": "0ec937af62b9880dfdcc399a6770fbfc4730e88900ae25bb39c481125a32677b"
+      "bytes": 1111,
+      "sha256": "26c57ea5f37295ce695c42a3ce66ecf8d1f551a3ad1366e01ed8e2ffbd93b2b8"
     }
   ],
   "excluded": [

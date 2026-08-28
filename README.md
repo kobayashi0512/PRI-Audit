@@ -70,10 +70,13 @@ and [`docs/v22_submission_closure_protocol.md`](docs/v22_submission_closure_prot
 ## Data, code and citation
 
 All biological inputs are public GEO records identified in the manuscript and
-provenance manifests.  Before public release, the authors must replace the
-author/affiliation placeholders, choose a software licence, create a tagged
-public repository release and archive that immutable release to obtain a DOI.
-The ready-to-fill files are in `submission_package/` and the repository root.
+provenance manifests.  The public repository and frozen executable release
+are available at https://github.com/kobayashi0512/PRI-Audit and
+https://github.com/kobayashi0512/PRI-Audit/releases/tag/v1.0.0.  Before formal
+journal submission, the authors must replace the author/affiliation
+placeholders, approve a software licence and archive the unchanged v1.0.0
+release to obtain a version-specific DOI.  The ready-to-fill files are in
+`submission_package/` and the repository root.
 
 Citation metadata intentionally remains a template until the authors approve
 the author order, affiliations and release DOI.  Nothing in this repository

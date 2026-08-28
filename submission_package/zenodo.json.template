@@ -20,7 +20,7 @@
   "access_right": "open",
   "related_identifiers": [
     {
-      "identifier": "https://github.com/[ORGANISATION_OR_USERNAME]/PRI-Audit",
+      "identifier": "https://github.com/kobayashi0512/PRI-Audit/releases/tag/v1.0.0",
       "relation": "isSupplementTo",
       "resource_type": "software"
     }

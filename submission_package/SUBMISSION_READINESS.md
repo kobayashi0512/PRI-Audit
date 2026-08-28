@@ -18,7 +18,7 @@
 | Spot-subsampling sensitivity | complete | 150/300/450 sampled spots; all increments remain non-positive; `results/paper_v21/tableS2_v22_spot_topic_sensitivity.csv` |
 | v22 manuscript visual QA | complete | `manuscript/PRI_Audit_psoriasis_manuscript_v9_submission_ready.docx` rendered to `tmp/pri_audit_v9_docx/rendered/` and page-level checked |
 | Unified v21+v22 release runner | complete | `results/pri_audit_release/complete_reproduction_log.json`: 2026-08-21 09:35–10:27 UTC, 13/13 v21 and 8/8 v22 commands returned 0; 16 v21 and 10 v22 core-output SHA-256 hashes were recorded |
-| Public repository, versioned source and result package | complete | https://github.com/kobayashi0512/PRI-Audit, `main` and `v1.0.0`; 262 files, 35 MB, source tree matched locally; no raw GEO cache or private style reference |
+| Public repository, frozen executable release and BMC submission assembly | complete | https://github.com/kobayashi0512/PRI-Audit; v1.0.0 release: https://github.com/kobayashi0512/PRI-Audit/releases/tag/v1.0.0; current `main` includes the 278-file BMC assembly, whose remote and local Git trees match exactly; no raw GEO cache or private style reference |
 
 ## Information that must be provided by the authors (never fabricated)
 
@@ -29,7 +29,7 @@
 | Funding numbers and funder names | if applicable |
 | Conflicts of interest | yes, including an explicit “none declared” where appropriate |
 | Ethics statement | Public, de-identified GEO reanalysis only; confirm local institutional wording |
-| Code archive URL and immutable DOI | public repository and v1.0.0 tag complete; create an archival DOI from that frozen tag after author licence approval |
+| Code archive URL and immutable DOI | public repository and frozen v1.0.0 GitHub release complete; archive that unchanged tag to obtain a version-specific DOI after author licence approval |
 | Data availability wording | GEO accessions, retrieval date, plus archive checksum manifest |
 
 ## Required final consistency checks
@@ -53,7 +53,7 @@
 ## Remaining author-owned release actions
 
 The experimental and manuscript package is complete, but it is **not yet
-submittable** until authors provide the fields listed above and perform two
-external-state actions that cannot be fabricated locally: create a public code
-repository/release, then obtain an immutable archive DOI. The manuscript keeps
-clear placeholders rather than inventing these details.
+submittable** until authors provide the fields listed above and perform the one
+remaining external-state action that cannot be fabricated locally: archive the
+existing frozen v1.0.0 release and obtain its immutable DOI. The manuscript
+keeps clear placeholders rather than inventing these details.

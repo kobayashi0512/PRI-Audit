@@ -3,10 +3,10 @@ message: "If you use this software, please cite it using the metadata below."
 title: "PRI-Audit: a falsification-first framework for testing patient-level gain from high-resolution transcriptomic representations"
 type: software
 version: "1.0.0"
-date-released: "[YYYY-MM-DD]"
+date-released: "2026-08-28"
 doi: "[ARCHIVE_DOI]"
-url: "https://github.com/[ORGANISATION_OR_USERNAME]/PRI-Audit"
-repository-code: "https://github.com/[ORGANISATION_OR_USERNAME]/PRI-Audit"
+url: "https://github.com/kobayashi0512/PRI-Audit/releases/tag/v1.0.0"
+repository-code: "https://github.com/kobayashi0512/PRI-Audit"
 abstract: >-
   A reproducible framework for testing whether high-resolution
   transcriptomic representations add patient-level discrimination beyond

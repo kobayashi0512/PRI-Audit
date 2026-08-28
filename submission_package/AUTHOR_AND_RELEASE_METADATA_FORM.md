@@ -37,13 +37,13 @@ affiliation, funding, institutional ethics language or conflicts of interest.
 
 | Item | Value |
 |---|---|
-| GitHub organisation/user | `[TO FILL]` |
-| Repository URL | `https://github.com/[ORG_OR_USER]/PRI-Audit` |
+| GitHub organisation/user | `kobayashi0512` |
+| Repository URL | `https://github.com/kobayashi0512/PRI-Audit` |
 | Approved licence | `[MIT / BSD-3-Clause / OTHER APPROVED]` |
 | Release tag | `v1.0.0` unless revised |
 | Archive service | Zenodo or institutional equivalent |
 | Archive DOI | `[TO FILL AFTER ARCHIVING TAG]` |
-| Release date | `[YYYY-MM-DD]` |
+| Release date | `2026-08-28` |
 
 After completing this form, replace the manuscript placeholders, copy
 `CITATION.cff.template` to `CITATION.cff`, populate the archive metadata, and

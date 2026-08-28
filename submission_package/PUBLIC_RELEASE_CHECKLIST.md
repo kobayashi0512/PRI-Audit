@@ -16,6 +16,8 @@ locally from actions that require an author-owned GitHub/Zenodo account.
 - [x] Submission-ready Word draft, data-derived figures, and editable Figure
   1–3 PowerPoint source.
 - [x] Citation and archive-metadata templates with unambiguous placeholders.
+- [x] Public GitHub repository: https://github.com/kobayashi0512/PRI-Audit.
+- [x] Immutable GitHub release: https://github.com/kobayashi0512/PRI-Audit/releases/tag/v1.0.0.
 
 ## Prepare the release staging bundle
 
@@ -28,11 +30,11 @@ locally from actions that require an author-owned GitHub/Zenodo account.
 2. Confirm that `results/pri_audit_release/complete_reproduction_log.json`
    contains two successful commands and that the nested v21/v22 logs contain
    their output hashes.
-3. A verified release staging folder has been prepared at
-   `/Users/tongyue/Documents/ppf/papers/PRI-Audit-v1.0.0-public/` (256 files,
-   29.8 MB, zero manifest hash mismatches). To regenerate it from source after
-   any author-metadata change, create a clean, reviewable folder outside the
-   working repository:
+3. The published v1.0.0 tag freezes the executable numerical analysis. A
+   separate verified BMC submission staging bundle has been prepared outside
+   the working repository (278 tracked files, 49.2 MB, raw GEO cache excluded).
+   To regenerate a clean release bundle from source after an author-metadata
+   change, use:
 
    ```bash
    .venv/bin/python scripts/build_pri_audit_public_release.py \
@@ -53,16 +55,12 @@ locally from actions that require an author-owned GitHub/Zenodo account.
    authors.
 2. Add the authors' chosen real `LICENSE` text and convert
    `CITATION.cff.template` into populated `CITATION.cff`.
-3. Create an empty public GitHub repository named `PRI-Audit`. Commit the
-   staging folder—not the entire historical workspace—and push the approved
-   files.
-4. Create the immutable Git tag `v1.0.0` and a matching GitHub release.
-5. Archive that tagged release with Zenodo (or the approved institutional
+3. Archive the existing frozen `v1.0.0` GitHub release with Zenodo (or the approved institutional
    service), using `zenodo.json.template` as the metadata starting point.
-6. Copy the **version-specific archive DOI** (not only a concept DOI) into
+4. Copy the **version-specific archive DOI** (not only a concept DOI) into
    `CITATION.cff`, the repository README, the manuscript Code availability
    section and the BMC submission fields.
-7. Re-run the source-manifest checker and review GitHub's displayed README,
+5. Re-run the source-manifest checker and review GitHub's displayed README,
    licence, release artifact list and DOI link.
 
 ## Do not release
