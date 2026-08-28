@@ -1,7 +1,7 @@
 {
   "release_name": "PRI-Audit public-release staging bundle",
   "source_workspace": "/Users/tongyue/Documents/ppf/papers/psoriasis_trigger",
-  "n_files": 261,
+  "n_files": 277,
   "files": [
     {
       "path": "README.md",
@@ -55,8 +55,8 @@
     },
     {
       "path": "manuscript/PRI_Audit_psoriasis_manuscript_v8_submission_ready.md",
-      "bytes": 32128,
-      "sha256": "f287fae74604e1fa6ce55da60c6f663e435f2a1122c766413270279cc78bf961"
+      "bytes": 32639,
+      "sha256": "e14d06838f36e14c160e326558c30b4dbeed99b9ab886c887dfd578fba73cacd"
     },
     {
       "path": "manuscript/PRI_Audit_psoriasis_manuscript_v9_submission_ready.docx",
@@ -67,6 +67,11 @@
       "path": "manuscript/PRI_Audit_psoriasis_RegionSuff_template_submission.docx",
       "bytes": 4782473,
       "sha256": "36c0d44c2ec1ec3f3b7ff897ae5b4a0208aed7f53cab425804f1e0ad336c1646"
+    },
+    {
+      "path": "manuscript/PRI_Audit_BMC_Bioinformatics_submission_ready.docx",
+      "bytes": 5632245,
+      "sha256": "e7be423729734ab0e4a693b237d54aa1ac38d466708c226d101c8a7f7ba67f75"
     },
     {
       "path": "ppt_figures_v1/PRI_Audit_data_integrated_figures_v2_audited.pptx",
@@ -139,6 +144,16 @@
       "sha256": "c499cd8781c450bc65f71170865e76e7eb1e16f42eca46e4f6bf756a438b03b5"
     },
     {
+      "path": "scripts/build_bmc_submission_assets.py",
+      "bytes": 4130,
+      "sha256": "fe046f9b6384a9bf1b8b1b5e6d2df118d0202024475e8273853908a8f5bfd6b4"
+    },
+    {
+      "path": "scripts/build_bmc_submission_source_manifest.py",
+      "bytes": 3760,
+      "sha256": "9695bc94ac999f03e62c9116ec10e4167aa53a648295cf498984cb5a0accb3c9"
+    },
+    {
       "path": "scripts/build_final_paper_assets.py",
       "bytes": 9337,
       "sha256": "1976f22b58b3186fb818b82da543a4d9b642af38b098d5db0d3eb1f35e58c57b"
@@ -160,8 +175,8 @@
     },
     {
       "path": "scripts/build_pri_audit_public_release.py",
-      "bytes": 4347,
-      "sha256": "99033ee515e77ee62b2656df386cc5999375fff7d8726430bfdf5da9e537b9c8"
+      "bytes": 4416,
+      "sha256": "9197f8b8a5f5f8fb7de7a24ece055f00e57b8eeef434ea9fb0f1f8e108cb188d"
     },
     {
       "path": "scripts/build_regionsuff_template_submission_manifest.py",
@@ -240,8 +255,8 @@
     },
     {
       "path": "scripts/build_v21_submission_manuscript_docx.py",
-      "bytes": 25413,
-      "sha256": "46993d7898adde6ea3f593ff6d91c35c159efcd6855f931028a74d394ff31bf8"
+      "bytes": 27154,
+      "sha256": "1e1a07decfeb8c733da6ecbe9e120e1a502f8a5d6458eae1921757eb44c637d7"
     },
     {
       "path": "scripts/build_v22_submission_source_manifest.py",
@@ -1144,6 +1159,16 @@
       "sha256": "c7dbcada628252fa9a1fd4449a077bcc306aa0b9c6c6280a66af5df0278b32bf"
     },
     {
+      "path": "results/paper_v21/bmc_submission_source_manifest.csv",
+      "bytes": 2722,
+      "sha256": "319a7b2b488f9f8a0cb01a9aca22001eef97976463ae264072930ce60e62d361"
+    },
+    {
+      "path": "results/paper_v21/bmc_submission_source_manifest.json",
+      "bytes": 4484,
+      "sha256": "1f4cfacb43009e4effec4bd82effd590146a5f5e187bdd0ab1e694e90d88e3a9"
+    },
+    {
       "path": "results/paper_v21/regionsuff_template_submission_source_manifest.csv",
       "bytes": 2448,
       "sha256": "7b65114959a5bfea54578582b9cef14ae793b79612beb3245392345b9da07e60"
@@ -1270,13 +1295,68 @@
     },
     {
       "path": "submission_package/BMC_BIOINFORMATICS_SUBMISSION_PACKAGE.md",
-      "bytes": 4414,
-      "sha256": "6c761ff7e911126c65d601a50db89b49b185099821ef4a0e2a82810e7afebc66"
+      "bytes": 4859,
+      "sha256": "1ce956a63b211bd03f7d4dddd905ac5a5ecae31dbf670e252f96f75deea5f043"
+    },
+    {
+      "path": "submission_package/BMC_Bioinformatics_submission_assets/Additional_file_1_known_truth_simulation.csv",
+      "bytes": 1723,
+      "sha256": "a03e19df7078aede2dd8cf3f19f45a45b3a7bb9b95bcab9e10882ad31e5ecb1f"
+    },
+    {
+      "path": "submission_package/BMC_Bioinformatics_submission_assets/Additional_file_2_spot_topic_sensitivity.csv",
+      "bytes": 434,
+      "sha256": "9ef97af74211235bbcbc0911afa67368adb4003d150f306a6ee152ba985139ad"
+    },
+    {
+      "path": "submission_package/BMC_Bioinformatics_submission_assets/COVER_LETTER_BMC_BIOINFORMATICS.md",
+      "bytes": 2429,
+      "sha256": "5aabe4ddb733cbbeaaa58b5703a5d04dc860cf5e2baf690da2366c8c16b79561"
+    },
+    {
+      "path": "submission_package/BMC_Bioinformatics_submission_assets/Figure_1_dataset_landscape.png",
+      "bytes": 212012,
+      "sha256": "8bd47cffb47642cac8d29589816abf889a52bacdd634ca027d3631aebeebd7c3"
+    },
+    {
+      "path": "submission_package/BMC_Bioinformatics_submission_assets/Figure_2_PRI_Audit_framework.png",
+      "bytes": 478070,
+      "sha256": "8c7d5bc0a40487b78c3a6fc33c522e9e03ca924767ef4651eade8428a3057a34"
+    },
+    {
+      "path": "submission_package/BMC_Bioinformatics_submission_assets/Figure_3_algorithmic_architecture.png",
+      "bytes": 447151,
+      "sha256": "1e22b47ee8a19648e3ea4c3ec3a4885f2fa655bbe1ca6a5c2f05d53d052f81c4"
+    },
+    {
+      "path": "submission_package/BMC_Bioinformatics_submission_assets/Figure_4_strictness_reference_audit.png",
+      "bytes": 252691,
+      "sha256": "1dfb09ca811051e72d6e4012e140af13c1afd27551a8e5b29122f0b7e2b9d612"
+    },
+    {
+      "path": "submission_package/BMC_Bioinformatics_submission_assets/Figure_5_independence_spatial_null.png",
+      "bytes": 208949,
+      "sha256": "2812889abd6f84acb9547fc9f936c48a7f6be46691c289738669b9d5319a4602"
+    },
+    {
+      "path": "submission_package/BMC_Bioinformatics_submission_assets/Figure_6_known_truth_validation.png",
+      "bytes": 277632,
+      "sha256": "f394950e5c7c4187eaa4d1b1ffa6455ffd0412be651a216e4cbc690aa31d6c49"
+    },
+    {
+      "path": "submission_package/BMC_Bioinformatics_submission_assets/PRI_Audit_BMC_Bioinformatics_submission_ready.docx",
+      "bytes": 5632245,
+      "sha256": "e7be423729734ab0e4a693b237d54aa1ac38d466708c226d101c8a7f7ba67f75"
+    },
+    {
+      "path": "submission_package/BMC_Bioinformatics_submission_assets/README.md",
+      "bytes": 2006,
+      "sha256": "6c7ea876b84da70ee9e63a96b689025955368c5442334cb45a4b1c9780188bac"
     },
     {
       "path": "submission_package/COVER_LETTER_BMC_BIOINFORMATICS.md",
-      "bytes": 2309,
-      "sha256": "80c0f228a4581013214c13eb8ca8fb85624ccd4d4d0bb3d795df91ae984890a3"
+      "bytes": 2429,
+      "sha256": "5aabe4ddb733cbbeaaa58b5703a5d04dc860cf5e2baf690da2366c8c16b79561"
     },
     {
       "path": "submission_package/JOURNAL_POSITIONING.md",
@@ -1300,8 +1380,8 @@
     },
     {
       "path": "submission_package/SUBMISSION_READINESS.md",
-      "bytes": 4732,
-      "sha256": "724c859aeb3c9ee10e398a28a1c7d0c0a31d7e72141901bd728f91c1d8514a3f"
+      "bytes": 4793,
+      "sha256": "4911a6919bbe5a2ff7e7c67463b9ea6e918ff819826336bdfc2205d41a690e96"
     },
     {
       "path": "submission_package/zenodo.json.template",

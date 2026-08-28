@@ -38,8 +38,10 @@ participant recruitment, intervention or identifiable data access occurred.
 [INSERT: confirmation that all authors approved the manuscript, that it is not
 under consideration elsewhere, and the final competing-interest statement.]
 
-The public code repository and immutable archive DOI will be supplied in the
-final version: `[REPOSITORY_URL]`; `[VERSION_SPECIFIC_ARCHIVE_DOI]`.
+The public code repository is https://github.com/kobayashi0512/PRI-Audit,
+with the frozen manuscript version at
+https://github.com/kobayashi0512/PRI-Audit/tree/v1.0.0. The authors will add
+the archival DOI for this unchanged tagged release before formal submission.
 
 Thank you for your consideration.
 

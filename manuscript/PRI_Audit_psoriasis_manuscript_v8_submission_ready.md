@@ -174,11 +174,11 @@ PRI-Audit transforms a broad claim—“higher transcriptomic resolution improve
 
 ### Data availability
 
-All analysed datasets are de-identified public GEO records. The all-input registry includes GSE117239, GSE136757, GSE151177, GSE153007, GSE173706, GSE182740, GSE206391, GSE24767, GSE51440, GSE57225 and GSE85034; GSE202011 was independently added for the frozen boundary replication. Raw-input SHA-256 checksums, retrieval paths and analysis roles are in the accompanying reproducibility manifest.
+All analysed datasets are de-identified public Gene Expression Omnibus (GEO) records. The all-input registry includes GSE117239, GSE136757, GSE151177, GSE153007, GSE173706, GSE182740, GSE206391, GSE24767, GSE51440, GSE57225 and GSE85034; GSE202011 was independently added for the frozen boundary replication. The complete cohort-role registry, retrieval paths and raw-input SHA-256 checksums are available in the PRI-Audit repository at https://github.com/kobayashi0512/PRI-Audit (version v1.0.0: https://github.com/kobayashi0512/PRI-Audit/tree/v1.0.0). No controlled participant-level data are redistributed.
 
 ### Code availability
 
-The final public repository URL, archival release and immutable DOI must be inserted after authors freeze and archive the code. The package includes the one-command v21 reproduction runner, version-locked requirements, raw-input manifests, prediction rows, bootstrap arrays, complete null distributions and a figure/table source manifest.
+Project name: PRI-Audit. Project home page: https://github.com/kobayashi0512/PRI-Audit. Version used in this manuscript: v1.0.0 (https://github.com/kobayashi0512/PRI-Audit/tree/v1.0.0). Operating system: platform independent. Programming language: Python. Other requirements: version-locked packages are listed in reproducibility/requirements-v21.lock. The repository contains the one-command v21/v22 reproduction runner, raw-input manifests, prediction rows, bootstrap arrays, complete null distributions and figure/table source manifests. An archival DOI and the final approved software licence will be added before formal submission.
 
 ### Funding
 

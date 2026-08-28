@@ -18,9 +18,10 @@ data-rich use case—not as a clinical decision-support claim.
 
 | Item | Local source | Status |
 |---|---|---|
-| Main manuscript | `manuscript/PRI_Audit_psoriasis_manuscript_v9_submission_ready.docx` | ready after author/DOI fields are replaced |
+| BMC-formatted main manuscript | `manuscript/PRI_Audit_BMC_Bioinformatics_submission_ready.docx` | ready after author, licence and archival-DOI fields are replaced |
+| Compact author-facing manuscript | `manuscript/PRI_Audit_psoriasis_RegionSuff_template_submission.docx` | complete scientific narrative; retain as an author review copy |
 | Editable manuscript source | `manuscript/PRI_Audit_psoriasis_manuscript_v8_submission_ready.md` | ready |
-| Main figures | `figures/paper_v19_fig1_dataset_atlas.png`, `figures/paper_v20_fig2_overall_framework.png`, `figures/paper_v20_fig3_algorithm_architecture.png`, `figures/paper_v21/*.png`, `figures/paper_v22/*.png` | ready |
+| Individual BMC figure files and supplementary CSVs | `submission_package/BMC_Bioinformatics_submission_assets/` | built from hash-bound release assets |
 | Figure source deck | `ppt_figures_v1/PRI_Audit_data_integrated_figures_v2_audited.pptx` | ready |
 | Main and supplementary tables | `results/paper_v21/table*.csv` | ready |
 | Cover letter | `submission_package/COVER_LETTER_BMC_BIOINFORMATICS.md` | replace bracketed fields |
@@ -31,9 +32,9 @@ data-rich use case—not as a clinical decision-support claim.
 1. Complete `AUTHOR_AND_RELEASE_METADATA_FORM.md`.
 2. Insert final author list, affiliations, correspondence details, CRediT,
    funding, acknowledgement, ethics wording and competing-interest statement.
-3. Obtain the tagged public repository URL and version-specific archive DOI;
-   replace their manuscript placeholders.
-4. Regenerate the DOCX and source manifest after those substitutions. Do not
+3. Obtain a version-specific archival DOI from the v1.0.0 GitHub release after
+   authors approve a software licence; insert it into the manuscript.
+4. Regenerate the DOCX and source manifest after author/DOI substitutions. Do not
    revise numerical claims unless a rerun changes the versioned outputs.
 5. On the day of submission, recheck the journal's live pre-submission
    checklist, submission guidelines and fee/funding policy, as these can
@@ -51,13 +52,18 @@ counterfactual null.
 **Data availability:** All analysed biological inputs are de-identified public
 Gene Expression Omnibus records. The 11-cohort provenance registry and the
 separately selected GSE202011 boundary-replication input are documented with
-retrieval paths and SHA-256 checksums in the public repository. No controlled
+retrieval paths and SHA-256 checksums in the public repository:
+https://github.com/kobayashi0512/PRI-Audit (v1.0.0:
+https://github.com/kobayashi0512/PRI-Audit/tree/v1.0.0). No controlled
 participant-level data are redistributed.
 
 **Code availability:** Source code, fixed protocol, locked environment,
 one-command reproduction workflow, generated predictions, complete
-bootstrap/null distributions and figure/table source manifests will be openly
-available at `[REPOSITORY_URL]`, archived at `[VERSION_SPECIFIC_ARCHIVE_DOI]`.
+bootstrap/null distributions and figure/table source manifests are openly
+available at https://github.com/kobayashi0512/PRI-Audit (version v1.0.0:
+https://github.com/kobayashi0512/PRI-Audit/tree/v1.0.0). Insert the final
+archival DOI after the authors approve the software licence and archive this
+unchanged tagged release.
 
 **Ethics:** This study reanalysed de-identified public datasets and involved no
 new participant recruitment, intervention or access to identifiable

@@ -10,7 +10,7 @@
 | Fair spatial graph and 500 coordinate shuffles | complete | Figure 12B and raw distributions |
 | All-11 input/result provenance | complete | `v21_all11_provenance_manifest.json` |
 | Independent high-resolution boundary replication | complete | GSE202011: five paired PSO patients, strict expression/PCA both AUROC 1.000 and increment 0.000; coordinate files unavailable and explicitly not claimed |
-| Final claim freeze and full manuscript rewrite | complete | `manuscript/PRI_Audit_psoriasis_manuscript_v8_submission_ready.docx`; source text and v8 source manifest are hash-linked to v21 artifacts |
+| Final claim freeze and full manuscript rewrite | complete | `manuscript/PRI_Audit_psoriasis_manuscript_v8_submission_ready.md`; source text and release manifests are hash-linked to v21/v22 artifacts |
 | Rendered Word quality assurance | complete | 16-page DOCX rendered to `tmp/pri_audit_v8_docx/rendered_v8_qa3/`; title, equations, all five figures, all three tables, declarations and references visually checked |
 | Simulated peer review and rebuttal plan | complete | `submission_package/SIMULATED_PEER_REVIEW.md`; manuscript locations updated below |
 | Known-truth calibration/power simulation | complete | 400 replicates × 4 fixed scenarios × 3 independent-patient counts; `results/pri_audit_v22/v22_simulation_summary.csv`, Figure 6 |
@@ -18,7 +18,7 @@
 | Spot-subsampling sensitivity | complete | 150/300/450 sampled spots; all increments remain non-positive; `results/paper_v21/tableS2_v22_spot_topic_sensitivity.csv` |
 | v22 manuscript visual QA | complete | `manuscript/PRI_Audit_psoriasis_manuscript_v9_submission_ready.docx` rendered to `tmp/pri_audit_v9_docx/rendered/` and page-level checked |
 | Unified v21+v22 release runner | complete | `results/pri_audit_release/complete_reproduction_log.json`: 2026-08-21 09:35–10:27 UTC, 13/13 v21 and 8/8 v22 commands returned 0; 16 v21 and 10 v22 core-output SHA-256 hashes were recorded |
-| Clean public-release staging bundle | complete | `/Users/tongyue/Documents/ppf/papers/PRI-Audit-v1.0.0-public/`: 256 curated files, 29.8 MB, zero SHA-256 mismatches, no raw GEO cache, private style reference or Python bytecode |
+| Public repository, versioned source and result package | complete | https://github.com/kobayashi0512/PRI-Audit, `main` and `v1.0.0`; 262 files, 35 MB, source tree matched locally; no raw GEO cache or private style reference |
 
 ## Information that must be provided by the authors (never fabricated)
 
@@ -29,7 +29,7 @@
 | Funding numbers and funder names | if applicable |
 | Conflicts of interest | yes, including an explicit “none declared” where appropriate |
 | Ethics statement | Public, de-identified GEO reanalysis only; confirm local institutional wording |
-| Code archive URL and immutable DOI | yes; create only after the final repository is frozen |
+| Code archive URL and immutable DOI | public repository and v1.0.0 tag complete; create an archival DOI from that frozen tag after author licence approval |
 | Data availability wording | GEO accessions, retrieval date, plus archive checksum manifest |
 
 ## Required final consistency checks

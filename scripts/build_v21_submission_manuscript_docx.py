@@ -36,6 +36,7 @@ OUTPUT = Path(os.environ.get("PRI_AUDIT_OUTPUT_DOCX", str(DEFAULT_OUTPUT)))
 TABLES = ROOT / "results" / "paper_v21"
 STYLE_PROFILE = os.environ.get("PRI_AUDIT_STYLE_PROFILE", "submission").strip().lower()
 REGIONSUFF_PROFILE = STYLE_PROFILE == "regionsuff"
+BMC_PROFILE = STYLE_PROFILE == "bmc"
 
 FONT = "Times New Roman"
 BLACK = RGBColor(31, 31, 31)
@@ -108,12 +109,12 @@ def get_or_add_style(doc: Document, name: str):
 
 
 def configure_styles(doc: Document) -> None:
-    normal_size = 12 if REGIONSUFF_PROFILE else 11.5
-    body_after = 0 if REGIONSUFF_PROFILE else 5
-    body_line = 1.0 if REGIONSUFF_PROFILE else 1.12
+    normal_size = 12 if (REGIONSUFF_PROFILE or BMC_PROFILE) else 11.5
+    body_after = 0 if (REGIONSUFF_PROFILE or BMC_PROFILE) else 5
+    body_line = 2.0 if BMC_PROFILE else (1.0 if REGIONSUFF_PROFILE else 1.12)
     heading_tokens = (
         [("Heading 1", 14, 10, 6), ("Heading 2", 12, 8, 4), ("Heading 3", 12, 6, 3)]
-        if REGIONSUFF_PROFILE
+        if (REGIONSUFF_PROFILE or BMC_PROFILE)
         else [("Heading 1", 15, 12, 5), ("Heading 2", 13, 9, 4), ("Heading 3", 11.5, 7, 3)]
     )
     component_tokens = (
@@ -126,6 +127,15 @@ def configure_styles(doc: Document) -> None:
             ("PRI Table Text", 8.5, WD_ALIGN_PARAGRAPH.LEFT),
         ]
         if REGIONSUFF_PROFILE
+        else [
+            ("PRI Abstract", 12, WD_ALIGN_PARAGRAPH.JUSTIFY),
+            ("PRI Caption", 10, WD_ALIGN_PARAGRAPH.JUSTIFY),
+            ("PRI Table Caption", 10, WD_ALIGN_PARAGRAPH.LEFT),
+            ("PRI Equation", 11, WD_ALIGN_PARAGRAPH.CENTER),
+            ("PRI Reference", 10, WD_ALIGN_PARAGRAPH.JUSTIFY),
+            ("PRI Table Text", 8.5, WD_ALIGN_PARAGRAPH.LEFT),
+        ]
+        if BMC_PROFILE
         else [
             ("PRI Abstract", 11.2, WD_ALIGN_PARAGRAPH.JUSTIFY),
             ("PRI Caption", 9.4, WD_ALIGN_PARAGRAPH.JUSTIFY),
@@ -166,9 +176,9 @@ def configure_styles(doc: Document) -> None:
         style.font.size = Pt(size)
         style.font.color.rgb = BLACK
         style.paragraph_format.alignment = alignment
-        style.paragraph_format.line_spacing = 1.0
+        style.paragraph_format.line_spacing = 1.0 if name == "PRI Table Text" else (2.0 if BMC_PROFILE else 1.0)
         style.paragraph_format.space_before = Pt(0)
-        style.paragraph_format.space_after = Pt(2 if name == "PRI Table Text" else (2 if REGIONSUFF_PROFILE else 4))
+        style.paragraph_format.space_after = Pt(2 if name == "PRI Table Text" else (2 if (REGIONSUFF_PROFILE or BMC_PROFILE) else 4))
     doc.styles["PRI Caption"].font.italic = True
     doc.styles["PRI Caption"].paragraph_format.keep_together = True
     doc.styles["PRI Table Caption"].font.bold = True
@@ -198,15 +208,23 @@ def configure_page(doc: Document) -> None:
     for section in doc.sections:
         section.page_width = Inches(8.27)
         section.page_height = Inches(11.69)
-        section.left_margin = Inches(1.25)
-        section.right_margin = Inches(1.25)
+        section.left_margin = Inches(1.0 if BMC_PROFILE else 1.25)
+        section.right_margin = Inches(1.0 if BMC_PROFILE else 1.25)
         section.top_margin = Inches(1.0)
         section.bottom_margin = Inches(1.0)
         section.header_distance = Inches(0.4)
         section.footer_distance = Inches(0.4)
         clear_story(section.header)
         clear_story(section.footer)
-        if not REGIONSUFF_PROFILE:
+        if BMC_PROFILE:
+            add_line_numbering(section)
+            footer = section.footer.paragraphs[0]
+            footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            footer.paragraph_format.space_after = Pt(0)
+            run = footer.add_run()
+            set_run_font(run, 10, color=BLACK)
+            append_page_field(run)
+        elif not REGIONSUFF_PROFILE:
             header = section.header.paragraphs[0]
             header.alignment = WD_ALIGN_PARAGRAPH.RIGHT
             header.paragraph_format.space_after = Pt(0)
@@ -216,13 +234,29 @@ def configure_page(doc: Document) -> None:
             footer.alignment = WD_ALIGN_PARAGRAPH.CENTER
             run = footer.add_run()
             set_run_font(run, 8.5, color=RGBColor(92, 92, 92))
-            for tag, value in (("begin", None), ("instrText", " PAGE "), ("separate", None), ("t", "1"), ("end", None)):
-                node = OxmlElement(f"w:{'fldChar' if tag in {'begin', 'separate', 'end'} else tag}")
-                if tag in {"begin", "separate", "end"}:
-                    node.set(qn("w:fldCharType"), tag)
-                else:
-                    node.text = value
-                run._r.append(node)
+            append_page_field(run)
+
+
+def append_page_field(run) -> None:
+    for tag, value in (("begin", None), ("instrText", " PAGE "), ("separate", None), ("t", "1"), ("end", None)):
+        node = OxmlElement(f"w:{'fldChar' if tag in {'begin', 'separate', 'end'} else tag}")
+        if tag in {"begin", "separate", "end"}:
+            node.set(qn("w:fldCharType"), tag)
+        else:
+            node.text = value
+        run._r.append(node)
+
+
+def add_line_numbering(section) -> None:
+    props = section._sectPr
+    existing = props.find(qn("w:lnNumType"))
+    if existing is not None:
+        props.remove(existing)
+    line_numbers = OxmlElement("w:lnNumType")
+    line_numbers.set(qn("w:countBy"), "1")
+    line_numbers.set(qn("w:start"), "1")
+    line_numbers.set(qn("w:restart"), "newPage")
+    props.append(line_numbers)
 
 
 def add_left_border(paragraph, color="AF7E00", size="18", space="7") -> None:
@@ -249,14 +283,14 @@ def add_inline(paragraph, text: str, size: float) -> None:
 
 def add_body(doc: Document, text: str, *, abstract=False) -> None:
     paragraph = doc.add_paragraph(style="PRI Abstract" if abstract else "Normal")
-    add_inline(paragraph, text, 12 if REGIONSUFF_PROFILE else (11.2 if abstract else 11.5))
+    add_inline(paragraph, text, 12 if (REGIONSUFF_PROFILE or BMC_PROFILE) else (11.2 if abstract else 11.5))
     return paragraph
 
 
 def add_equation(doc: Document, key: str) -> None:
     paragraph = doc.add_paragraph(style="PRI Equation")
     run = paragraph.add_run(EQUATIONS[key])
-    set_run_font(run, 11 if REGIONSUFF_PROFILE else 10.8, italic=True)
+    set_run_font(run, 11 if (REGIONSUFF_PROFILE or BMC_PROFILE) else 10.8, italic=True)
 
 
 def set_picture_alt_text(paragraph, title: str, description: str) -> None:
@@ -278,7 +312,7 @@ def add_figure(doc: Document, key: str) -> None:
     run.add_picture(str(path), width=Inches(5.64))
     set_picture_alt_text(paragraph, key.replace("_", " ").title(), alt)
     cap = doc.add_paragraph(style="PRI Caption")
-    add_inline(cap, caption, 10 if REGIONSUFF_PROFILE else 9.4)
+    add_inline(cap, caption, 10 if (REGIONSUFF_PROFILE or BMC_PROFILE) else 9.4)
 
 
 def set_cell_shading(cell, fill: str) -> None:
@@ -343,8 +377,8 @@ def write_cell(cell, text: str, *, header=False, center=False) -> None:
         if index:
             paragraph.add_run().add_break(WD_BREAK.LINE)
         run = paragraph.add_run(piece)
-        set_run_font(run, 8.5 if REGIONSUFF_PROFILE else 7.2, bold=header)
-    if header:
+        set_run_font(run, 8.5 if (REGIONSUFF_PROFILE or BMC_PROFILE) else 7.2, bold=header)
+    if header and not BMC_PROFILE:
         set_cell_shading(cell, MID_GRAY)
 
 
@@ -364,7 +398,7 @@ def add_csv_table(doc: Document, title: str, filename: str, columns: list[tuple[
     for row_index, row in enumerate(rows):
         cells = table.add_row().cells
         for cell, (_, field, _, centered) in zip(cells, columns):
-            if row_index % 2:
+            if row_index % 2 and not BMC_PROFILE:
                 set_cell_shading(cell, LIGHT_GRAY)
             write_cell(cell, row[field], center=centered)
     set_table_geometry(table, [width for _, _, width, _ in columns])
@@ -422,20 +456,22 @@ def add_table(doc: Document, key: str) -> None:
 
 def add_title_page(doc: Document, lines: list[str]) -> int:
     title = doc.add_paragraph()
-    title.paragraph_format.space_after = Pt(6 if REGIONSUFF_PROFILE else 10)
+    title.paragraph_format.space_after = Pt(6 if (REGIONSUFF_PROFILE or BMC_PROFILE) else 10)
     title.paragraph_format.keep_with_next = True
-    if not REGIONSUFF_PROFILE:
+    if not (REGIONSUFF_PROFILE or BMC_PROFILE):
         add_left_border(title)
     run = title.add_run(lines[0][2:])
-    set_run_font(run, 16 if REGIONSUFF_PROFILE else 17, bold=True, color=BLACK if REGIONSUFF_PROFILE else GOLD)
+    set_run_font(run, 16 if (REGIONSUFF_PROFILE or BMC_PROFILE) else 17, bold=True, color=BLACK if (REGIONSUFF_PROFILE or BMC_PROFILE) else GOLD)
     title_lines = (
         ((lines[2], 16), (lines[4], 16), (lines[6], 16))
         if REGIONSUFF_PROFILE
+        else ((lines[2], 12), (lines[4], 12), (lines[6], 12))
+        if BMC_PROFILE
         else ((lines[2], 11), (lines[4], 10.2), (lines[6], 9.8))
     )
     for text, size in title_lines:
         paragraph = doc.add_paragraph()
-        paragraph.paragraph_format.space_after = Pt(4 if REGIONSUFF_PROFILE else (2 if size > 10 else 8))
+        paragraph.paragraph_format.space_after = Pt(4 if (REGIONSUFF_PROFILE or BMC_PROFILE) else (2 if size > 10 else 8))
         paragraph.paragraph_format.keep_with_next = True
         run = paragraph.add_run(text)
         set_run_font(run, size)
@@ -500,16 +536,16 @@ def build() -> None:
             in_references = heading == "References"
             paragraph = doc.add_heading(heading, level=1)
             for run in paragraph.runs:
-                set_run_font(run, 14 if REGIONSUFF_PROFILE else 15, bold=True)
+                set_run_font(run, 14 if (REGIONSUFF_PROFILE or BMC_PROFILE) else 15, bold=True)
             continue
         if line.startswith("### "):
             paragraph = doc.add_heading(line[4:], level=2)
             for run in paragraph.runs:
-                set_run_font(run, 12 if REGIONSUFF_PROFILE else 13, bold=True)
+                set_run_font(run, 12 if (REGIONSUFF_PROFILE or BMC_PROFILE) else 13, bold=True)
             continue
         if in_references and re.match(r"^\d+\.\s", line):
             paragraph = doc.add_paragraph(style="PRI Reference")
-            add_inline(paragraph, line, 10 if REGIONSUFF_PROFILE else 9.5)
+            add_inline(paragraph, line, 10 if (REGIONSUFF_PROFILE or BMC_PROFILE) else 9.5)
             continue
         add_body(doc, line, abstract=in_abstract)
 

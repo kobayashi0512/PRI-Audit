@@ -32,6 +32,7 @@ FILES = [
     "manuscript/PRI_Audit_psoriasis_manuscript_v8_submission_ready.md",
     "manuscript/PRI_Audit_psoriasis_manuscript_v9_submission_ready.docx",
     "manuscript/PRI_Audit_psoriasis_RegionSuff_template_submission.docx",
+    "manuscript/PRI_Audit_BMC_Bioinformatics_submission_ready.docx",
     "ppt_figures_v1/PRI_Audit_data_integrated_figures_v2_audited.pptx",
     "figures/paper_v19_fig1_dataset_atlas.png",
     "figures/paper_v20_fig2_overall_framework.png",
