@@ -45,8 +45,9 @@ which passes `gzip -t`; its hash is recorded in the manifest.
 
 ## Environment and one-command rerun
 
-Run from the project root with a clean virtual environment.  The exact package
-record is `reproducibility/requirements-v21.lock`; it governs both v21 and v22.
+Run from the project root with a clean virtual environment. The exact package
+record is `reproducibility/requirements-v21.lock`; it governs the v21, v22,
+and v24 reproduction steps.
 
 ```bash
 python -m venv .venv
