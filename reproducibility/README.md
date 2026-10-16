@@ -1,10 +1,10 @@
 # PRI-Audit reproducibility package
 
 This package reproduces the public-data psoriasis PRI-Audit submission set
-without overwriting historical development outputs.  It includes the v21
-real-data audit and the v22 submission-closure analyses: a known-truth
-hierarchical simulation and a fold-local high-resolution spot-topic
-comparison.
+without overwriting historical development outputs. It includes the v21
+real-data audit, the v22 submission-closure analyses, and the v24 corrected
+GSE151177 rerun. The v24 correction uses gene symbols for mitochondrial-gene
+filtering and records its GEO inputs and output hashes in a separate manifest.
 
 ## Scope and claim boundary
 
@@ -51,18 +51,21 @@ record is `reproducibility/requirements-v21.lock`; it governs both v21 and v22.
 ```bash
 python -m venv .venv
 .venv/bin/python -m pip install -r reproducibility/requirements-v21.lock
+.venv/bin/python scripts/fetch_pri_v24_gse151177_inputs.py
 .venv/bin/python scripts/run_pri_audit_complete_reproduction.py
 ```
 
-The umbrella runner invokes the 13-command v21 real-data audit followed by the
-8-command v22 closure suite. It writes an overall release log under
-`results/pri_audit_release/`.  The lower-level runners can also be invoked
-separately when a reviewer needs to inspect one analysis generation:
+The umbrella runner invokes the 13-command v21 real-data audit, the 8-command
+v22 closure suite, and the corrected v24 GSE151177 analysis. It writes an
+overall release log under `results/pri_audit_release/`. The lower-level
+runners can also be invoked separately when a reviewer needs to inspect one
+analysis generation:
 
 ```bash
 .venv/bin/python scripts/run_v21_submission_reproduction.py
 .venv/bin/python scripts/run_v22_submission_reproduction.py \
   --replicates 400 --bootstrap 250 --population-patients 240 --workers 4
+.venv/bin/python scripts/run_pri_audit_v24_gse151177_corrected.py
 ```
 
 The v21 primary analyses use 500 label/coordinate permutations and up to 5,000
@@ -86,6 +89,9 @@ runtime/platform metadata are embedded in the manifests.
 | `results/pri_audit_v21/gse206391_v21_matched_spatial_coordinate_shuffle.*` | complete within-sample coordinate null |
 | `results/pri_audit_v22/v22_simulation_*` | fixed-scenario known-truth simulations and specification |
 | `results/pri_audit_v22/gse206391_v22_spot_topic_*` | fold-local topic results, predictions and distributions |
+| `results/pri_audit_v24_gse151177/reproducibility_manifest.json` | corrected GSE151177 inputs, code versions, and output hashes |
+| `results/pri_audit_v24_gse151177/gse151177_23gsm_roster_audit.csv` | full deposited roster and protocol/QC dispositions |
+| `results/pri_audit_v24_gse151177/predictions_primary.csv` | corrected primary held-out predictions |
 | `results/paper_v21/table[1-3]_*.csv` | manuscript-ready primary tables |
 | `results/paper_v21/tableS[1-2]_v22_*.csv` | simulation and topic-subsampling supplements |
 | `results/paper_v21/*source_manifest.*` | quantitative source links and SHA-256 bindings |

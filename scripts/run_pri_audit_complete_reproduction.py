@@ -56,6 +56,7 @@ def main() -> None:
             "run_v22_submission_reproduction.py",
             ["--replicates", "400", "--bootstrap", "250", "--population-patients", "240", "--workers", "4"],
         ),
+        ("run_pri_audit_v24_gse151177_corrected.py", []),
     ]:
         result = run(script, *args)
         log["commands"].append(result)
@@ -66,6 +67,7 @@ def main() -> None:
     component_logs = [
         ROOT / "results" / "pri_audit_v21" / "v21_submission_reproduction_log.json",
         ROOT / "results" / "pri_audit_v22" / "v22_submission_reproduction_log.json",
+        ROOT / "results" / "pri_audit_v24_gse151177" / "reproducibility_manifest.json",
     ]
     missing = [str(path.relative_to(ROOT)) for path in component_logs if not path.exists()]
     if missing:

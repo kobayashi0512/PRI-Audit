@@ -41,15 +41,18 @@ non-destructive workflow:
 ```bash
 python -m venv .venv
 .venv/bin/python -m pip install -r reproducibility/requirements-v21.lock
+.venv/bin/python scripts/fetch_pri_v24_gse151177_inputs.py
 .venv/bin/python scripts/run_pri_audit_complete_reproduction.py
 ```
 
-The full run executes the v21 real-data audit (13 commands) and the v22
-submission-closure analyses (8 commands). It records an umbrella execution
-log at `results/pri_audit_release/complete_reproduction_log.json`; the v21 and
-v22 logs retain their command-level details and SHA-256 output records.  A
-submission-grade full run takes appreciably longer than a smoke test because
-it retains the planned resampling and null distributions.
+The full run executes the v21 real-data audit (13 commands), the v22
+submission-closure analyses (8 commands), and the corrected v24 GSE151177
+rerun. The v24 fetcher checks public GEO files against the input manifest
+before analysis. The umbrella log at
+`results/pri_audit_release/complete_reproduction_log.json` records each run;
+the v21 and v22 logs and the v24 manifest retain execution or input/output
+checksums. A submission-grade full run takes appreciably longer than a smoke
+test because it retains the planned resampling and null distributions.
 
 For the exact scientific protocol, input roles, checksums and interpretation
 boundaries, start with [the reproducibility guide](reproducibility/README.md)
@@ -70,14 +73,13 @@ and [`docs/v22_submission_closure_protocol.md`](docs/v22_submission_closure_prot
 ## Data, code and citation
 
 All biological inputs are public GEO records identified in the manuscript and
-provenance manifests.  The public repository and frozen executable release
-are available at https://github.com/kobayashi0512/PRI-Audit and
-https://github.com/kobayashi0512/PRI-Audit/releases/tag/v1.0.0.  Before formal
-journal submission, the authors must replace the author/affiliation
-placeholders, approve a software licence and archive the unchanged v1.0.0
-release to obtain a version-specific DOI.  The ready-to-fill files are in
-`submission_package/` and the repository root.
+provenance manifests. The current source snapshot is available at
+https://github.com/kobayashi0512/PRI-Audit. The manuscript identifies the
+authors and affiliation. Before formal journal submission, the authors should
+select a software licence and archive the exact submission snapshot to obtain
+a version-specific DOI. The release template is in `submission_package/` and
+the repository root.
 
-Citation metadata intentionally remains a template until the authors approve
-the author order, affiliations and release DOI.  Nothing in this repository
-should be construed as medical advice or used for individual patient care.
+Citation metadata remains a template until the authors approve the software
+licence and release DOI. Nothing in this repository should be construed as
+medical advice or used for individual patient care.

@@ -1,0 +1,345 @@
+{
+  "analysis": "PRI-Audit v24 GSE151177 corrected mitochondrial-symbol rerun",
+  "run_utc": "2026-10-16T04:10:22.655801+00:00",
+  "script": "scripts/run_pri_audit_v24_gse151177_corrected.py",
+  "analysis_code": [
+    {
+      "path": "scripts/run_pri_audit_v24_gse151177_corrected.py",
+      "bytes": 13943,
+      "sha256": "b38859cbde5ea6a335c8c211dbde6b002bc9366918c12fee205b2189216045d9"
+    },
+    {
+      "path": "scripts/run_pri_audit_v21.py",
+      "bytes": 29786,
+      "sha256": "fb5341a8289d38502cf7fa0665e8d32dbb4e251faa47be28c8b0bf77bee17be4"
+    }
+  ],
+  "specification": "Existing v21 thresholds and learner recipe; mitochondrial mask uses gene symbols from GEO features.tsv.gz.",
+  "protocol": "18 emigrating profiles are candidates; five enzyme-digestion profiles excluded. The primary analysis applies source-level median detected genes >=300 and median mitochondrial fraction <=0.20; per-cell filters are total counts >=500, detected genes >=300, mitochondrial fraction <=0.20.",
+  "sensitivity": "Control05 is included despite failing sample-level QC only as a post-hoc QC robustness check; not the primary estimate.",
+  "independent_unit": "GEO source sample; GSE151177 metadata do not provide validated patient IDs.",
+  "seed": 20261016,
+  "bootstrap_draws": 5000,
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+    "platform": "macOS-14.4-arm64-arm-64bit",
+    "numpy": "2.5.1",
+    "pandas": "3.0.5",
+    "scipy": "1.18.0",
+    "scikit_learn": "1.9.0"
+  },
+  "inputs": [
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567877_Control01_barcodes.tsv.gz",
+      "bytes": 13776,
+      "sha256": "692d555dcae0b6af143b9f8f8ee72e3982091558f50de7c83d8eb9acc885748e"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567877_Control01_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "36814e00962d7e790bc160f4fbd5ba1c39f9994d502aefe216fbb56f64e6ade6"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567877_Control01_matrix.mtx.gz",
+      "bytes": 16419935,
+      "sha256": "884c9ea5271187c4a61b04a19134ac3fcc32f06e5d728b06e92c38934eb4f0b5"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567878_Control02_barcodes.tsv.gz",
+      "bytes": 5829,
+      "sha256": "029a4ec1683c75c51950c7b3ba3dff60ec9ad7798aad95301899348b3a0434d7"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567878_Control02_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "548de079a1b94fdeda8c22dbaee34e82484db1a10e99afd5dca344bfd637956f"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567878_Control02_matrix.mtx.gz",
+      "bytes": 3573641,
+      "sha256": "ed74ed06071daa21e0888d6acc9f1a3f23c33047f0deefad27eeb07fe6ae7c40"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567879_Control03_barcodes.tsv.gz",
+      "bytes": 2155,
+      "sha256": "2bf046212f8308cac7c4534dffac6e0f52a76b870dbb28f9e1fa07bb2e9f7b27"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567879_Control03_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "a4782cdfdea34e4068d49fc1184bfd390bca282be14f539ddf57d7b5efb60b65"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567879_Control03_matrix.mtx.gz",
+      "bytes": 1441746,
+      "sha256": "11b47f186861d0445dbc31daf3d1738e4696b2e5bf086f6893ae028bd8494e49"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567880_Control04_barcodes.tsv.gz",
+      "bytes": 8430,
+      "sha256": "2c211a9d2d7003ea7dd0d52da44ca1a139acd9256bd92154408f50b4c0a86220"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567880_Control04_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "c4ccceef5f9e5c58ed74093f18a06a9eb370b891a97ac2483d320917c2894da7"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567880_Control04_matrix.mtx.gz",
+      "bytes": 6875043,
+      "sha256": "a0a0e7b83eaf586ea905e968a0eea3ccbb66e881615f68644f92f7c0e656a869"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567881_Control05_barcodes.tsv.gz",
+      "bytes": 1669,
+      "sha256": "0b74c1b6a585c2b090adf01ceb22f08f191f22251bab2bd180bc9307edbce996"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567881_Control05_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "1e86f2ecda7ecf61122c0545063be0a188add14fdec3099d96e4b6facb48554f"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567881_Control05_matrix.mtx.gz",
+      "bytes": 489487,
+      "sha256": "3b1e8b1e0394fb4762ca0c333d2b899e061093fb0f68a68d8f65fdaa44b1d4ae"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567883_Psoriasis01_barcodes.tsv.gz",
+      "bytes": 3889,
+      "sha256": "d11890e2b25b4a3296b7f2d12676b616471ee595fef9a8d54ec1133da6f81087"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567883_Psoriasis01_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "a65918d2bd3bd06f0f0d4aca911c4134172b74d012f71d3d71bbaf368a002814"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567883_Psoriasis01_matrix.mtx.gz",
+      "bytes": 3289901,
+      "sha256": "c28c94420b277ecb08ea5dac6f932c74f0020481a657ceef506d5d301a53abd6"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567884_Psoriasis02_barcodes.tsv.gz",
+      "bytes": 3970,
+      "sha256": "9d7384a289eeab83205b7ca9f525d589a373fbc1438fd69a5b89fd19a2bbe929"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567884_Psoriasis02_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "ab0c172ffb4c7bbd637cfe5be3dc5f72760db00cab7997cb7d50a96c0f475307"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567884_Psoriasis02_matrix.mtx.gz",
+      "bytes": 3318396,
+      "sha256": "e2c2d9943bcfb712b36604d523eafadd09e3efc04f12b0222747509da7b5a1b9"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567886_Psoriasis03_barcodes.tsv.gz",
+      "bytes": 6924,
+      "sha256": "7b63cc877e9f8a6cd286c5df59bde66e72c664c89286ed8b22915861a2a7c048"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567886_Psoriasis03_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "afc6404db78a4a77dab78d5cbbf1f2894d20d24b89918a753aa10f8a3522ef7e"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567886_Psoriasis03_matrix.mtx.gz",
+      "bytes": 7062387,
+      "sha256": "187fee6e98a1a293ec737e8d0d1d2cdc43928d1afa4e3e38816705c70927af97"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567888_Psoriasis04_barcodes.tsv.gz",
+      "bytes": 5366,
+      "sha256": "aafd36f2e55a8399d13de9b8b71cbe96eab050070aed0eece2ae70bfd5d86b33"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567888_Psoriasis04_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "aaad320851dafc714fe81c16db9f63ec0644c61006f18d8fc8bd38fa2126cafa"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567888_Psoriasis04_matrix.mtx.gz",
+      "bytes": 5613417,
+      "sha256": "54b3007ebf45a1cb6e31e649655054b6fd35a0ea83a9ba2b111236cf7f49e5c2"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567890_Psoriasis05_barcodes.tsv.gz",
+      "bytes": 5525,
+      "sha256": "3f88bf3c84ad3defa5b529b1723e31eabac9584e2323c1b940024dc8ee284ffb"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567890_Psoriasis05_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "62194c3f2d4ccd11c38c18f20f39d0cfb5ae1d29473ca3cfb8ccc2c908db099d"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567890_Psoriasis05_matrix.mtx.gz",
+      "bytes": 5228209,
+      "sha256": "8ff90ce31c13bb752b2a66ce8b298bf12018b310cb435e5e6b000a6120da5722"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567891_Psoriasis06_barcodes.tsv.gz",
+      "bytes": 7983,
+      "sha256": "57b6d24925643e8d7801c2f226dece37f0e98673ea86758fd65140aee696599e"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567891_Psoriasis06_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "c00b29af45efdba9e96466f89d61335bceb6179bfb4077fb411268a95460bb72"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567891_Psoriasis06_matrix.mtx.gz",
+      "bytes": 7441699,
+      "sha256": "a33dfe578e62ac01d920443b2d72f0b9518e447079048c018e21cf4dca933422"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567893_Psoriasis07_barcodes.tsv.gz",
+      "bytes": 4452,
+      "sha256": "858038bfec2e6c1653f1ceeb3e39b970fb51dfc7d58e9c66183a39b04713964e"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567893_Psoriasis07_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "be91eefbe28f544b17617d248025e57f56515d392503cd717a3706ba6d34bc77"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567893_Psoriasis07_matrix.mtx.gz",
+      "bytes": 4163977,
+      "sha256": "967c524672e11eaf0539d36f940d1d6dedd7431d626e6711f2c85bd20d67fc0c"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567894_Psoriasis08_barcodes.tsv.gz",
+      "bytes": 11775,
+      "sha256": "6fd03f88644826965bbac180258849f0bb50a2dee0a168b16708dbe038a12b4c"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567894_Psoriasis08_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "cb234f213efd0e08a919fc5e95b21ae9432b16a1114aa00f263e53e7b3f7d4ef"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567894_Psoriasis08_matrix.mtx.gz",
+      "bytes": 11177661,
+      "sha256": "fc1313c2c9a0ebb74c67a00c17a170df28104f2bfe43f604cd4a44c82603135a"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567895_Psoriasis09_barcodes.tsv.gz",
+      "bytes": 15318,
+      "sha256": "ed330925983026498057402ff3542f3a12052e59d1e2fd43a53c1e8b0b78acc5"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567895_Psoriasis09_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "364764458b498092e4535c3d27855cc97e6ac849218025df29f6c0a1b4819c03"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567895_Psoriasis09_matrix.mtx.gz",
+      "bytes": 15250717,
+      "sha256": "932f9a70a6c214c78026d080f85c8e8d8b82e34bfb1713af2cea13adde9aba00"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567896_Psoriasis10_barcodes.tsv.gz",
+      "bytes": 10836,
+      "sha256": "05d9e8e7a0f5c08ad1d1aacb949e1e4433acf656aca74f7b8bffa475d55fced6"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567896_Psoriasis10_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "c04c4afcfd9d452a25713d5cafddb883344016947af07e57eb22447081b12b5d"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567896_Psoriasis10_matrix.mtx.gz",
+      "bytes": 11705956,
+      "sha256": "8a5031866027531f8e6a2c1b11778786bf4337a7e22d0de0951a8d24bb564cc7"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567897_Psoriasis11_barcodes.tsv.gz",
+      "bytes": 9814,
+      "sha256": "f5cf63e8a5ba5375d44f3de15555db9fbb0ccd10b985d5468dfdbdc87bdfc08c"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567897_Psoriasis11_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "9fc72442d93c1400793f0611ef77b89f2a2ed482df34b454697de061e074adeb"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567897_Psoriasis11_matrix.mtx.gz",
+      "bytes": 10868239,
+      "sha256": "14778ceb3c6d367684ab7c0fa3dada3a2c9742c9798c71992e4d1cb0aa5f6dc9"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567898_Psoriasis12_barcodes.tsv.gz",
+      "bytes": 23278,
+      "sha256": "765375b993e5b54ac11fa9f2f93cb0cefb5b2b4c63c9bcc1acae201321ec1950"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567898_Psoriasis12_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "80e687638e626ee8c00b7ac6f7b01ac9e223c2df0d8fce1e47e9f3a462830945"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567898_Psoriasis12_matrix.mtx.gz",
+      "bytes": 24708520,
+      "sha256": "1d1f65b9128a93896bc6eda1a00b36250b638e77a7183db9154fcc092cd129a3"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567899_Psoriasis13_barcodes.tsv.gz",
+      "bytes": 12039,
+      "sha256": "d901ea8f2f740b602e1437de059003c57932594810d0f8ad458d67977259bb3e"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567899_Psoriasis13_features.tsv.gz",
+      "bytes": 304728,
+      "sha256": "a13d561df0221d6c68b369ea06e3c4d076e04e63ae19523259035e780020bce1"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_samples/GSM4567899_Psoriasis13_matrix.mtx.gz",
+      "bytes": 9919157,
+      "sha256": "25b13628a522fbaff96f6bf26ea77792d7c7f5681066c596129ca69505347790"
+    },
+    {
+      "path": "data/raw/pri_audit_v24/GSE151177_series_matrix.txt.gz",
+      "bytes": 5275,
+      "sha256": "e8e61e9f76a9c3111e6169b5b449e013733f2b0f51592af37de60086eeb6b29b"
+    }
+  ],
+  "outputs": {
+    "gse151177_23gsm_roster_audit.csv": {
+      "bytes": 5928,
+      "sha256": "ffe1a912765825e1799bcb590d5fb0eb2d82b3a0d0bbfc33862122b18467f45c"
+    },
+    "gse151177_primary_source_qc.csv": {
+      "bytes": 2308,
+      "sha256": "4b43fa2042c73d5dea78d5787955cf63ac288808dcf65638c56ecd5a194edb67"
+    },
+    "gse151177_sample_gene_counts_corrected.npz": {
+      "bytes": 916851,
+      "sha256": "aa6da9939fe01a686d3136b9a4a64385bcc9524b13384bf8b1ce17e13d895cdf"
+    },
+    "gse151177_sample_metadata_corrected.csv": {
+      "bytes": 1271,
+      "sha256": "87639ee73fa4f1c0ed25f78ba0c22a3e929be6bab3135635f7c1a9a68a1440c6"
+    },
+    "predictions_control05_sensitivity.csv": {
+      "bytes": 5883,
+      "sha256": "31445965db25cf319bafe6bc1376d18d8ab343683490b2acbdd70b3993acbd2b"
+    },
+    "predictions_primary.csv": {
+      "bytes": 5562,
+      "sha256": "e46623b67a89b5dcfbcab4d004c1c5cea72f619b035e58d6400cc85b7ebb2b56"
+    },
+    "summary_primary_and_qc_sensitivity.csv": {
+      "bytes": 2190,
+      "sha256": "ae3efd5d470c767fd6653e0cb93c23cefc2c0edb70a2ee1a7817953d82f0be57"
+    }
+  },
+  "sample_counts": {
+    "eligible_emigrating_before_sample_qc": 18,
+    "after_sample_qc": 17,
+    "psoriasis": 13,
+    "control": 4,
+    "retained_cells": 23528
+  }
+}

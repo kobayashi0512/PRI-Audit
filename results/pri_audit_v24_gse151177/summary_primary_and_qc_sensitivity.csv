@@ -1,0 +1,19 @@
+cohort,roster,learner,representation,n_samples,n_groups,n_control,n_psoriasis,auroc,delta_vs_expression,delta_ci95_low,delta_ci95_high,n_valid_bootstrap,probability_delta_ge_0_05
+GSE151177,18 emigrating profiles after source QC,logistic,expression,17,17,4,13,1.0,,,,,
+GSE151177,18 emigrating profiles after source QC,logistic,pca,17,17,4,13,1.0,0.0,0.0,0.0,4944.0,0.0
+GSE151177,18 emigrating profiles after source QC,logistic,nmf,17,17,4,13,1.0,0.0,0.0,0.0,4954.0,0.0
+GSE151177,18 emigrating profiles after source QC,ridge,expression,17,17,4,13,1.0,,,,,
+GSE151177,18 emigrating profiles after source QC,ridge,pca,17,17,4,13,1.0,0.0,0.0,0.0,4946.0,0.0
+GSE151177,18 emigrating profiles after source QC,ridge,nmf,17,17,4,13,0.9807692307692308,-0.019230769230769162,-0.10138888888888888,0.0,4956.0,0.0
+GSE151177,18 emigrating profiles after source QC,linear_svm,expression,17,17,4,13,1.0,,,,,
+GSE151177,18 emigrating profiles after source QC,linear_svm,pca,17,17,4,13,1.0,0.0,0.0,0.0,4959.0,0.0
+GSE151177,18 emigrating profiles after source QC,linear_svm,nmf,17,17,4,13,0.9807692307692308,-0.019230769230769162,-0.11538461538461542,0.0,4951.0,0.0
+GSE151177,18 emigrating profiles incl. Control05 QC sensitivity,logistic,expression,18,18,5,13,1.0,,,,,
+GSE151177,18 emigrating profiles incl. Control05 QC sensitivity,logistic,pca,18,18,5,13,1.0,0.0,0.0,0.0,4986.0,0.0
+GSE151177,18 emigrating profiles incl. Control05 QC sensitivity,logistic,nmf,18,18,5,13,1.0,0.0,0.0,0.0,4990.0,0.0
+GSE151177,18 emigrating profiles incl. Control05 QC sensitivity,ridge,expression,18,18,5,13,1.0,,,,,
+GSE151177,18 emigrating profiles incl. Control05 QC sensitivity,ridge,pca,18,18,5,13,1.0,0.0,0.0,0.0,4991.0,0.0
+GSE151177,18 emigrating profiles incl. Control05 QC sensitivity,ridge,nmf,18,18,5,13,1.0,0.0,0.0,0.0,4976.0,0.0
+GSE151177,18 emigrating profiles incl. Control05 QC sensitivity,linear_svm,expression,18,18,5,13,1.0,,,,,
+GSE151177,18 emigrating profiles incl. Control05 QC sensitivity,linear_svm,pca,18,18,5,13,1.0,0.0,0.0,0.0,4991.0,0.0
+GSE151177,18 emigrating profiles incl. Control05 QC sensitivity,linear_svm,nmf,18,18,5,13,0.9846153846153847,-0.01538461538461533,-0.0888888888888889,0.0,4991.0,0.0
