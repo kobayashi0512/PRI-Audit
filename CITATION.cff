@@ -2,9 +2,9 @@ cff-version: 1.2.0
 message: "If you use this software, please cite the associated manuscript and this tagged release."
 title: "PRI-Audit"
 type: software
-version: "1.33.0"
+version: "1.33.1"
 date-released: "2026-10-19"
-url: "https://github.com/kobayashi0512/PRI-Audit/releases/tag/v1.33.0"
+url: "https://github.com/kobayashi0512/PRI-Audit/releases/tag/v1.33.1"
 repository-code: "https://github.com/kobayashi0512/PRI-Audit"
 license: "MIT"
 keywords:

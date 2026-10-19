@@ -1,6 +1,6 @@
 {
-  "release_name": "PRI-Audit v1.32 reproducibility release",
-  "release_version": "1.32.0",
+  "release_name": "PRI-Audit v1.33.1 reproducibility release",
+  "release_version": "1.33.1",
   "release_date": "2026-10-19",
   "base_commit": "e36202205c34b12ea652a3c46eaca768f577940b",
   "n_files": 317,
@@ -18,7 +18,7 @@
     {
       "path": "CITATION.cff",
       "bytes": 456,
-      "sha256": "0a9679dc1230b3ebd9e1973fb781c6c2dd6800afde90f53f4305f7c76a1d870a"
+      "sha256": "289021b13a9cf6b1d5e67047794fcc133e1969cad88b5eab21184d7c06d70f99"
     },
     {
       "path": "LICENSE",
@@ -138,7 +138,7 @@
     {
       "path": "manuscript/PRI_1.33_submission_ready.docx",
       "bytes": 5303440,
-      "sha256": "c6c1de3e9fa90f033fd0b30b85aa1b63dd8827a7df254e433e8580c2037dc049"
+      "sha256": "504dbaa9ad3c3998741f24c2d2789fd6c253e0f9820bdb608d4b8bc05f1487a2"
     },
     {
       "path": "manuscript/PRI_Audit_BMC_Bioinformatics_submission_ready.docx",
