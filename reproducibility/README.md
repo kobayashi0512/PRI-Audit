@@ -32,8 +32,7 @@ The runner verifies and records SHA-256 digests for local public input files.
 * **GSE47751** freshly retrieved official GEO series matrix — independent paired
   bulk boundary replication.
 * **GSE202011** official Visium H5 archive — independent paired PSO
-  high-resolution boundary replication. The archive lacks coordinate files, so
-  it is intentionally restricted to strict expression/PCA comparison.
+  high-resolution boundary replication. The H5 archive lacks its spatial folder. The v1.32 revision package reconstructs array coordinates by an exact barcode join to a versioned Visium V1 map; it is an independent spatial-graph boundary analysis and not image registration.
 * **Seven additional bulk GEO cohorts plus GSE24767 perturbation data** — their
   raw input hashes, frozen scientific roles, executable scripts and expected
   artifacts are listed in `v21_all11_provenance_manifest.json`. They are not
@@ -131,5 +130,10 @@ SHA-256 identity is recorded in the template-submission source manifest.
 A public release should include source Markdown, the generated DOCX/PDF,
 scripts, locked environment, data-derived PNG/PDF figures, tables and both
 source manifests.  It must not depend on the private style reference.  The
-author-owned release checklist, DOI metadata template and citation template
-are in `submission_package/` and the repository root.
+author-facing release checklist is in `submission_package/`; the repository
+root contains the active `LICENSE` and `CITATION.cff`.
+
+
+## v1.32 revision analyses
+
+Run the additional scripts documented in [`docs/pri132_revision_protocol.md`](../docs/pri132_revision_protocol.md) after the core v21/v22 workflow. These analyses are revision-stage sensitivity and boundary checks; their results are stored under `results/pri_1_32_revision/`.

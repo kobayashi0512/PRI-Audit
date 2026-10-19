@@ -75,11 +75,13 @@ and [`docs/v22_submission_closure_protocol.md`](docs/v22_submission_closure_prot
 All biological inputs are public GEO records identified in the manuscript and
 provenance manifests. The current source snapshot is available at
 https://github.com/kobayashi0512/PRI-Audit. The manuscript identifies the
-authors and affiliation. Before formal journal submission, the authors should
-select a software licence and archive the exact submission snapshot to obtain
-a version-specific DOI. The release template is in `submission_package/` and
-the repository root.
+authors and affiliation. The v1.32 release is licensed under MIT and contains
+machine-readable citation metadata. The tagged release is the manuscript-linked
+code snapshot; a DOI may be added through a future archival service without
+changing this tag. Nothing in this repository should be construed as medical
+advice or used for individual patient care.
 
-Citation metadata remains a template until the authors approve the software
-licence and release DOI. Nothing in this repository should be construed as
-medical advice or used for individual patient care.
+
+## Revision package v1.32
+
+The v1.32 release adds the independent GSE202011 barcode-to-coordinate graph analysis, grouped full-pipeline resampling, and fixed-candidate reference-sensitivity analysis. Reproduction instructions and result boundaries are in [`docs/pri132_revision_protocol.md`](docs/pri132_revision_protocol.md).

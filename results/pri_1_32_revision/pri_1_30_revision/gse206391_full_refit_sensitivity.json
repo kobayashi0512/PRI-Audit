@@ -1,0 +1,40 @@
+{
+  "dataset": "GSE206391",
+  "n_patients": 12,
+  "n_samples": 48,
+  "seed": 20261017,
+  "draws": 400,
+  "design": "Each bootstrap draw resamples paired held-out patients and, for each selected patient, resamples the remaining patients for training. HVG selection, scaling, representation fitting, and the classifier are refit in that training resample.",
+  "pca": {
+    "conditional_saved_prediction_bootstrap": {
+      "median_delta_auroc": 0.0034722222222221544,
+      "ci95_low": -0.02430555555555558,
+      "ci95_high": 0.03823784722222227,
+      "proportion_positive": 0.545,
+      "proportion_at_or_above_0_05": 0.01
+    },
+    "nested_full_refit_group_bootstrap": {
+      "median_delta_auroc": 0.00347222222222221,
+      "ci95_low": -0.03129340277777777,
+      "ci95_high": 0.04869791666666663,
+      "proportion_positive": 0.565,
+      "proportion_at_or_above_0_05": 0.025
+    }
+  },
+  "nmf": {
+    "conditional_saved_prediction_bootstrap": {
+      "median_delta_auroc": -0.031249999999999944,
+      "ci95_low": -0.09383680555555544,
+      "ci95_high": 0.00347222222222221,
+      "proportion_positive": 0.035,
+      "proportion_at_or_above_0_05": 0.0
+    },
+    "nested_full_refit_group_bootstrap": {
+      "median_delta_auroc": -0.029513888888888784,
+      "ci95_low": -0.09032118055555556,
+      "ci95_high": 0.017404513888888896,
+      "proportion_positive": 0.0875,
+      "proportion_at_or_above_0_05": 0.0
+    }
+  }
+}

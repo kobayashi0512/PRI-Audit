@@ -1,0 +1,77 @@
+{
+  "dataset": "GSE202011",
+  "role": "independent spatial-graph boundary replication",
+  "n_patients": 5,
+  "n_samples": 10,
+  "coordinate_reconstruction": {
+    "source": "Space Ranger v1.3.1 Visium V1 barcode-to-array-coordinate reference",
+    "reference_rows": 4992,
+    "joined_barcodes": 3563,
+    "join_rate": 1.0,
+    "coordinate_type": "array-row and array-column; image registration was not used"
+  },
+  "feature_construction": {
+    "outer_split": "leave-one-patient-out",
+    "spatial_graph_reference": "500 training-fold pseudobulk HVGs",
+    "combined_reference": "1,500 training-fold pseudobulk HVGs",
+    "spatial_features": "Moran-like six-neighbour agreement and local contrast per 500 HVGs",
+    "learner": "class-balanced logistic regression (C=1, liblinear)"
+  },
+  "methods": {
+    "expression_500": {
+      "auroc": 1.0,
+      "group_bootstrap_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "expression_1500": {
+      "auroc": 1.0,
+      "group_bootstrap_ci95": [
+        1.0,
+        1.0
+      ]
+    },
+    "spatial_graph": {
+      "auroc": 1.0,
+      "group_bootstrap_ci95": [
+        1.0,
+        1.0
+      ],
+      "matched_reference": "expression_500",
+      "delta_vs_expression": 0.0,
+      "delta_bootstrap_ci95": [
+        0.0,
+        0.0
+      ],
+      "coordinate_null_mean_auroc": 0.9929600000000001,
+      "coordinate_null_ci95": [
+        0.8590000000000002,
+        1.0
+      ],
+      "coordinate_shuffle_p_observed_ge_null": 0.9401197604790419
+    },
+    "expression_plus_spatial": {
+      "auroc": 1.0,
+      "group_bootstrap_ci95": [
+        1.0,
+        1.0
+      ],
+      "matched_reference": "expression_1500",
+      "delta_vs_expression": 0.0,
+      "delta_bootstrap_ci95": [
+        0.0,
+        0.0
+      ],
+      "coordinate_null_mean_auroc": 0.9974400000000001,
+      "coordinate_null_ci95": [
+        1.0,
+        1.0
+      ],
+      "coordinate_shuffle_p_observed_ge_null": 0.9820359281437125
+    }
+  },
+  "coordinate_shuffles": 500,
+  "bootstrap_draws": 5000,
+  "seed": 20261017
+}

@@ -1,0 +1,210 @@
+{
+  "dataset": "GSE206391",
+  "n_patients": 12,
+  "n_samples": 48,
+  "candidate_hvg_budget_fixed": 2000,
+  "candidate_components": 8,
+  "reference_hvg_budgets": [
+    16,
+    50,
+    100,
+    200,
+    500,
+    1000,
+    2000
+  ],
+  "seed": 20261017,
+  "interpretation": "Exploratory comparator-sensitivity analysis; 2,000-HVG matched comparison remains primary.",
+  "pca": [
+    {
+      "candidate": "PCA-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 16,
+      "candidate_auroc": 0.9097222222222222,
+      "reference_auroc": 0.8281250000000001,
+      "delta_auroc": 0.0815972222222221,
+      "conditional_ci95_low": 0.0,
+      "conditional_ci95_high": 0.2222222222222222,
+      "bootstrap_draws": 5000,
+      "passes_primary_gate": false
+    },
+    {
+      "candidate": "PCA-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 50,
+      "candidate_auroc": 0.9097222222222222,
+      "reference_auroc": 0.7986111111111112,
+      "delta_auroc": 0.11111111111111105,
+      "conditional_ci95_low": 0.03125,
+      "conditional_ci95_high": 0.20659722222222232,
+      "bootstrap_draws": 5000,
+      "passes_primary_gate": false
+    },
+    {
+      "candidate": "PCA-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 100,
+      "candidate_auroc": 0.9097222222222222,
+      "reference_auroc": 0.8020833333333334,
+      "delta_auroc": 0.10763888888888884,
+      "conditional_ci95_low": 0.01388888888888895,
+      "conditional_ci95_high": 0.20138888888888884,
+      "bootstrap_draws": 5000,
+      "passes_primary_gate": false
+    },
+    {
+      "candidate": "PCA-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 200,
+      "candidate_auroc": 0.9097222222222222,
+      "reference_auroc": 0.8541666666666667,
+      "delta_auroc": 0.05555555555555547,
+      "conditional_ci95_low": 0.0,
+      "conditional_ci95_high": 0.1527777777777778,
+      "bootstrap_draws": 5000,
+      "passes_primary_gate": false
+    },
+    {
+      "candidate": "PCA-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 500,
+      "candidate_auroc": 0.9097222222222222,
+      "reference_auroc": 0.876736111111111,
+      "delta_auroc": 0.03298611111111116,
+      "conditional_ci95_low": -1.1102230246251565e-16,
+      "conditional_ci95_high": 0.09722222222222221,
+      "bootstrap_draws": 5000,
+      "passes_primary_gate": false
+    },
+    {
+      "candidate": "PCA-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 1000,
+      "candidate_auroc": 0.9097222222222222,
+      "reference_auroc": 0.890625,
+      "delta_auroc": 0.01909722222222221,
+      "conditional_ci95_low": -0.00694444444444442,
+      "conditional_ci95_high": 0.08854166666666663,
+      "bootstrap_draws": 5000,
+      "passes_primary_gate": false
+    },
+    {
+      "candidate": "PCA-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 2000,
+      "candidate_auroc": 0.9097222222222222,
+      "reference_auroc": 0.9079861111111112,
+      "delta_auroc": 0.0017361111111110494,
+      "conditional_ci95_low": -0.02430555555555558,
+      "conditional_ci95_high": 0.03645833333333337,
+      "bootstrap_draws": 5000,
+      "passes_primary_gate": false
+    }
+  ],
+  "nmf": [
+    {
+      "candidate": "NMF-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 16,
+      "candidate_auroc": 0.8715277777777777,
+      "reference_auroc": 0.8281250000000001,
+      "delta_auroc": 0.04340277777777757,
+      "conditional_ci95_low": -0.04340277777777779,
+      "conditional_ci95_high": 0.15798611111111105,
+      "bootstrap_draws": 5000,
+      "passes_primary_gate": false
+    },
+    {
+      "candidate": "NMF-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 50,
+      "candidate_auroc": 0.8715277777777777,
+      "reference_auroc": 0.7986111111111112,
+      "delta_auroc": 0.07291666666666652,
+      "conditional_ci95_low": 0.01736111111111105,
+      "conditional_ci95_high": 0.1424045138888883,
+      "bootstrap_draws": 5000,
+      "passes_primary_gate": false
+    },
+    {
+      "candidate": "NMF-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 100,
+      "candidate_auroc": 0.8715277777777777,
+      "reference_auroc": 0.8020833333333334,
+      "delta_auroc": 0.06944444444444431,
+      "conditional_ci95_low": 0.00868055555555547,
+      "conditional_ci95_high": 0.14930555555555536,
+      "bootstrap_draws": 5000,
+      "passes_primary_gate": false
+    },
+    {
+      "candidate": "NMF-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 200,
+      "candidate_auroc": 0.8715277777777777,
+      "reference_auroc": 0.8541666666666667,
+      "delta_auroc": 0.01736111111111094,
+      "conditional_ci95_low": -0.02777777777777768,
+      "conditional_ci95_high": 0.08159722222222221,
+      "bootstrap_draws": 5000,
+      "passes_primary_gate": false
+    },
+    {
+      "candidate": "NMF-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 500,
+      "candidate_auroc": 0.8715277777777777,
+      "reference_auroc": 0.876736111111111,
+      "delta_auroc": -0.00520833333333337,
+      "conditional_ci95_low": -0.04166666666666652,
+      "conditional_ci95_high": 0.04166666666666674,
+      "bootstrap_draws": 5000,
+      "passes_primary_gate": false
+    },
+    {
+      "candidate": "NMF-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 1000,
+      "candidate_auroc": 0.8715277777777777,
+      "reference_auroc": 0.890625,
+      "delta_auroc": -0.01909722222222232,
+      "conditional_ci95_low": -0.0625,
+      "conditional_ci95_high": 0.03125000000000011,
+      "bootstrap_draws": 5000,
+      "passes_primary_gate": false
+    },
+    {
+      "candidate": "NMF-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 2000,
+      "candidate_auroc": 0.8715277777777777,
+      "reference_auroc": 0.9079861111111112,
+      "delta_auroc": -0.03645833333333348,
+      "conditional_ci95_low": -0.09722222222222232,
+      "conditional_ci95_high": 0.0017795138888884105,
+      "bootstrap_draws": 5000,
+      "passes_primary_gate": false
+    }
+  ],
+  "full_refit_endpoints": [
+    {
+      "candidate": "PCA-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 16,
+      "median_delta_auroc": 0.06770833333333348,
+      "full_refit_ci95_low": -0.013932291666666504,
+      "full_refit_ci95_high": 0.15972222222222232,
+      "draws": 400
+    },
+    {
+      "candidate": "PCA-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 2000,
+      "median_delta_auroc": 0.003472222222222099,
+      "full_refit_ci95_low": -0.027777777777777683,
+      "full_refit_ci95_high": 0.05381944444444442,
+      "draws": 400
+    },
+    {
+      "candidate": "NMF-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 16,
+      "median_delta_auroc": 0.029513888888889006,
+      "full_refit_ci95_low": -0.048697916666666605,
+      "full_refit_ci95_high": 0.11809895833333321,
+      "draws": 400
+    },
+    {
+      "candidate": "NMF-8 fixed at 2,000 HVGs",
+      "reference_hvgs": 2000,
+      "median_delta_auroc": -0.03125,
+      "full_refit_ci95_low": -0.08684895833333335,
+      "full_refit_ci95_high": 0.012152777777777794,
+      "draws": 400
+    }
+  ]
+}

@@ -109,3 +109,10 @@ increment 0.000) and is reported with that limitation.
 * If a raw source is inaccessible or fails integrity checks, record the reason
   and continue with the remaining pre-specified analysis; do not silently
   substitute a different accession.
+
+> **v1.32 update.** The preceding v21 plan correctly describes the original
+> expression/PCA boundary replication. The revision package adds a separate,
+> post-v21 spatial-graph boundary analysis after recovering array coordinates by
+> an exact barcode join to a versioned Visium V1 map. Its protocol and claim
+> boundary are in `docs/pri132_revision_protocol.md`; it does not alter the
+> original pre-specified v21 estimand.

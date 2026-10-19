@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800px" height="1320px" viewBox="0 0 1800 1320" role="img" aria-label="Fold-local paired evaluation and pre-specified criteria">
+<defs><filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#183d2e" flood-opacity="0.10"/></filter><marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M1,1 L10,6 L1,11 Z" fill="#557964"/></marker><marker id="goldArrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto"><path d="M1,1 L10,6 L1,11 Z" fill="#B38F4D"/></marker></defs>
+<rect width="1800" height="1320" fill="#FCFDFB"/>
+<text x="58" y="68" font-family="Arial,Helvetica,sans-serif" font-size="49.0px" font-weight="700" fill="#174F3B" text-anchor="start" letter-spacing="0px">Fold-local paired evaluation and pre-specified criteria</text>
+<text x="60" y="111" font-family="Arial,Helvetica,sans-serif" font-size="29.2px" font-weight="400" fill="#63766A" text-anchor="start" letter-spacing="0px">The same held-out biological units are scored by a candidate representation and its matched expression reference</text>
+<line x1="60" y1="133" x2="1740" y2="133" stroke="#C8D8CC" stroke-width="2"/>
+<rect x="60" y="151" width="290" height="42" rx="21.0" fill="#174F3B" stroke="none" stroke-width="2"/>
+<text x="205.0" y="179.56" font-family="Arial,Helvetica,sans-serif" font-size="22.7px" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.8px">GROUPED OUTER SPLIT</text>
+<rect x="368" y="151" width="310" height="42" rx="21.0" fill="#2F6B50" stroke="none" stroke-width="2"/>
+<text x="523.0" y="179.56" font-family="Arial,Helvetica,sans-serif" font-size="22.7px" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.8px">TRAINING-ONLY FIT</text>
+<rect x="696" y="151" width="300" height="42" rx="21.0" fill="#B38F4D" stroke="none" stroke-width="2"/>
+<text x="846.0" y="179.56" font-family="Arial,Helvetica,sans-serif" font-size="22.7px" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.8px">FROZEN AT TEST</text>
+<rect x="1014" y="151" width="330" height="42" rx="21.0" fill="#174F3B" stroke="none" stroke-width="2"/>
+<text x="1179.0" y="179.56" font-family="Arial,Helvetica,sans-serif" font-size="22.7px" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.8px">SAME HELD-OUT UNITS</text>
+<rect x="1362" y="151" width="376" height="42" rx="21.0" fill="#B95B4D" stroke="none" stroke-width="2"/>
+<text x="1550.0" y="179.56" font-family="Arial,Helvetica,sans-serif" font-size="20.0px" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.4px">PRE-SPECIFIED CRITERIA</text>
+<rect x="50" y="224" width="304" height="452" rx="18" fill="#FFFFFF" stroke="#C8D8CC" stroke-width="2" filter="url(#shadow)"/>
+<rect x="50" y="224" width="304" height="12" rx="6" fill="#174F3B" stroke="#174F3B" stroke-width="0"/>
+<circle cx="86" cy="266" r="24" fill="#174F3B" stroke="none" stroke-width="0"/>
+<text x="86" y="275" font-family="Arial,Helvetica,sans-serif" font-size="29.2px" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0px">1</text>
+<text x="122" y="275" font-family="Arial,Helvetica,sans-serif" font-size="29.2px" font-weight="700" fill="#174F3B" text-anchor="start" letter-spacing="0px">Define unit</text>
+<text x="76" y="325" font-family="Arial,Helvetica,sans-serif" font-size="21.6px" font-weight="700" fill="#6E8978" text-anchor="start" letter-spacing="0.8px">OUTER UNIT BY COHORT</text>
+<rect x="76" y="343" width="252" height="39" rx="10" fill="#F5F8F5" stroke="#C8D8CC" stroke-width="1"/>
+<text x="88" y="369" font-family="Arial,Helvetica,sans-serif" font-size="18.4px" font-weight="700" fill="#2F6B50" text-anchor="start" letter-spacing="0px">GSE151177</text>
+<text x="330" y="369" font-family="Arial,Helvetica,sans-serif" font-size="18.4px" font-weight="400" fill="#22352B" text-anchor="end" letter-spacing="0px">source sample</text>
+<rect x="76" y="396" width="252" height="39" rx="10" fill="#F5F8F5" stroke="#C8D8CC" stroke-width="1"/>
+<text x="88" y="422" font-family="Arial,Helvetica,sans-serif" font-size="18.4px" font-weight="700" fill="#2F6B50" text-anchor="start" letter-spacing="0px">GSE173706</text>
+<text x="330" y="422" font-family="Arial,Helvetica,sans-serif" font-size="18.4px" font-weight="400" fill="#22352B" text-anchor="end" letter-spacing="0px">donor</text>
+<rect x="76" y="449" width="252" height="39" rx="10" fill="#F5F8F5" stroke="#C8D8CC" stroke-width="1"/>
+<text x="88" y="475" font-family="Arial,Helvetica,sans-serif" font-size="18.4px" font-weight="700" fill="#2F6B50" text-anchor="start" letter-spacing="0px">GSE206391</text>
+<text x="330" y="475" font-family="Arial,Helvetica,sans-serif" font-size="18.4px" font-weight="400" fill="#22352B" text-anchor="end" letter-spacing="0px">patient</text>
+<line x1="78" y1="510" x2="326" y2="510" stroke="#E4ECE6" stroke-width="2"/>
+<text x="78" y="551" font-family="Arial,Helvetica,sans-serif" font-size="25.9px" font-weight="700" fill="#22352B" text-anchor="start" letter-spacing="0px">Nested measurements</text>
+<text x="78" y="586" font-family="Arial,Helvetica,sans-serif" font-size="24.8px" font-weight="400" fill="#63766A" text-anchor="start" letter-spacing="0px">inside source groups.</text>
+<circle cx="93" cy="632" r="8" fill="#2F6B50" stroke="none" stroke-width="0"/>
+<circle cx="128" cy="632" r="8" fill="#2F6B50" stroke="none" stroke-width="0"/>
+<circle cx="163" cy="632" r="8" fill="#2F6B50" stroke="none" stroke-width="0"/>
+<circle cx="198" cy="632" r="8" fill="#B38F4D" stroke="none" stroke-width="0"/>
+<circle cx="233" cy="632" r="8" fill="#B38F4D" stroke="none" stroke-width="0"/>
+<circle cx="268" cy="632" r="8" fill="#B38F4D" stroke="none" stroke-width="0"/>
+<text x="78" y="663" font-family="Arial,Helvetica,sans-serif" font-size="20.5px" font-weight="400" fill="#63766A" text-anchor="start" letter-spacing="0px">Groups define labels and folds</text>
+<line x1="358" y1="440" x2="386" y2="440" stroke="#2F6B50" stroke-width="5" marker-end="url(#arrow)"/>
+<rect x="397" y="224" width="303" height="452" rx="18" fill="#FFFFFF" stroke="#C8D8CC" stroke-width="2" filter="url(#shadow)"/>
+<rect x="397" y="224" width="303" height="12" rx="6" fill="#174F3B" stroke="#174F3B" stroke-width="0"/>
+<circle cx="433" cy="266" r="24" fill="#174F3B" stroke="none" stroke-width="0"/>
+<text x="433" y="275" font-family="Arial,Helvetica,sans-serif" font-size="29.2px" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0px">2</text>
+<text x="469" y="275" font-family="Arial,Helvetica,sans-serif" font-size="29.2px" font-weight="700" fill="#174F3B" text-anchor="start" letter-spacing="0px">Split by group</text>
+<text x="421" y="325" font-family="Arial,Helvetica,sans-serif" font-size="21.6px" font-weight="700" fill="#6E8978" text-anchor="start" letter-spacing="0.8px">LEAVE ONE GROUP OUT</text>
+<text x="421" y="367" font-family="Arial,Helvetica,sans-serif" font-size="23.8px" font-weight="700" fill="#2F6B50" text-anchor="start" letter-spacing="0px">TRAINING GROUPS</text>
+<rect x="422" y="382" width="29" height="22" rx="5" fill="#8EAA96" stroke="#8EAA96" stroke-width="0"/>
+<rect x="461" y="382" width="29" height="22" rx="5" fill="#8EAA96" stroke="#8EAA96" stroke-width="0"/>
+<rect x="500" y="382" width="29" height="22" rx="5" fill="#8EAA96" stroke="#8EAA96" stroke-width="0"/>
+<rect x="539" y="382" width="29" height="22" rx="5" fill="#8EAA96" stroke="#8EAA96" stroke-width="0"/>
+<rect x="578" y="382" width="29" height="22" rx="5" fill="#8EAA96" stroke="#8EAA96" stroke-width="0"/>
+<rect x="422" y="420" width="29" height="22" rx="5" fill="#8EAA96" stroke="#8EAA96" stroke-width="0"/>
+<rect x="461" y="420" width="29" height="22" rx="5" fill="#8EAA96" stroke="#8EAA96" stroke-width="0"/>
+<rect x="500" y="420" width="29" height="22" rx="5" fill="#8EAA96" stroke="#8EAA96" stroke-width="0"/>
+<rect x="539" y="420" width="29" height="22" rx="5" fill="#8EAA96" stroke="#8EAA96" stroke-width="0"/>
+<rect x="578" y="420" width="29" height="22" rx="5" fill="#8EAA96" stroke="#8EAA96" stroke-width="0"/>
+<rect x="422" y="458" width="29" height="22" rx="5" fill="#8EAA96" stroke="#8EAA96" stroke-width="0"/>
+<rect x="461" y="458" width="29" height="22" rx="5" fill="#8EAA96" stroke="#8EAA96" stroke-width="0"/>
+<rect x="500" y="458" width="29" height="22" rx="5" fill="#8EAA96" stroke="#8EAA96" stroke-width="0"/>
+<rect x="539" y="458" width="29" height="22" rx="5" fill="#8EAA96" stroke="#8EAA96" stroke-width="0"/>
+<rect x="578" y="458" width="29" height="22" rx="5" fill="#8EAA96" stroke="#8EAA96" stroke-width="0"/>
+<text x="421" y="526" font-family="Arial,Helvetica,sans-serif" font-size="23.8px" font-weight="700" fill="#B38F4D" text-anchor="start" letter-spacing="0px">HELD-OUT GROUP</text>
+<rect x="422" y="542" width="225" height="42" rx="8" fill="#F5EEDA" stroke="#D7C38D" stroke-width="1"/>
+<circle cx="440" cy="563" r="7" fill="#B38F4D" stroke="none" stroke-width="0"/>
+<circle cx="483" cy="563" r="7" fill="#B38F4D" stroke="none" stroke-width="0"/>
+<circle cx="526" cy="563" r="7" fill="#B38F4D" stroke="none" stroke-width="0"/>
+<circle cx="569" cy="563" r="7" fill="#B38F4D" stroke="none" stroke-width="0"/>
+<circle cx="612" cy="563" r="7" fill="#B38F4D" stroke="none" stroke-width="0"/>
+<line x1="421" y1="607" x2="674" y2="607" stroke="#E4ECE6" stroke-width="2"/>
+<text x="421" y="640" font-family="Arial,Helvetica,sans-serif" font-size="23.8px" font-weight="700" fill="#22352B" text-anchor="start" letter-spacing="0px">Split fixed before fitting</text>
+<text x="421" y="668" font-family="Arial,Helvetica,sans-serif" font-size="22.7px" font-weight="400" fill="#63766A" text-anchor="start" letter-spacing="0px">using outcomes.</text>
+<line x1="705" y1="440" x2="733" y2="440" stroke="#2F6B50" stroke-width="5" marker-end="url(#arrow)"/>
+<rect x="744" y="224" width="583" height="452" rx="18" fill="#FFFFFF" stroke="#C8D8CC" stroke-width="2" filter="url(#shadow)"/>
+<rect x="744" y="224" width="583" height="12" rx="6" fill="#2F6B50" stroke="#2F6B50" stroke-width="0"/>
+<circle cx="780" cy="266" r="24" fill="#2F6B50" stroke="none" stroke-width="0"/>
+<text x="780" y="275" font-family="Arial,Helvetica,sans-serif" font-size="29.2px" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0px">3</text>
+<text x="816" y="275" font-family="Arial,Helvetica,sans-serif" font-size="29.2px" font-weight="700" fill="#174F3B" text-anchor="start" letter-spacing="0px">Fit within training fold</text>
+<text x="770" y="325" font-family="Arial,Helvetica,sans-serif" font-size="21.6px" font-weight="700" fill="#6E8978" text-anchor="start" letter-spacing="0.7px">ADAPTIVE STEPS · TRAINING GROUPS ONLY</text>
+<rect x="770" y="342" width="531" height="70" rx="12" fill="#F5F8F5" stroke="#C8D8CC" stroke-width="1.5"/>
+<rect x="786" y="359" width="135" height="36" rx="18.0" fill="#174F3B" stroke="none" stroke-width="2"/>
+<text x="853.5" y="383.48" font-family="Arial,Helvetica,sans-serif" font-size="20.5px" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.8px">HVGs</text>
+<text x="940" y="383" font-family="Arial,Helvetica,sans-serif" font-size="24.8px" font-weight="700" fill="#22352B" text-anchor="start" letter-spacing="0px">select genes  →  scale  →  fit map</text>
+<rect x="770" y="437" width="163" height="133" rx="12" fill="#FFFFFF" stroke="#174F3B" stroke-width="2"/>
+<rect x="770" y="437" width="163" height="35" rx="10" fill="#174F3B" stroke="#174F3B" stroke-width="0"/>
+<rect x="770" y="457" width="163" height="14" fill="#174F3B"/>
+<text x="851.5" y="464" font-family="Arial,Helvetica,sans-serif" font-size="20.5px" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0px">Expression</text>
+<text x="851.5" y="516" font-family="Arial,Helvetica,sans-serif" font-size="19.4px" font-weight="400" fill="#22352B" text-anchor="middle" letter-spacing="0px">matched reference</text>
+<rect x="949" y="437" width="163" height="133" rx="12" fill="#FFFFFF" stroke="#2F6B50" stroke-width="2"/>
+<rect x="949" y="437" width="163" height="35" rx="10" fill="#2F6B50" stroke="#2F6B50" stroke-width="0"/>
+<rect x="949" y="457" width="163" height="14" fill="#2F6B50"/>
+<text x="1030.5" y="464" font-family="Arial,Helvetica,sans-serif" font-size="20.5px" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0px">PCA / NMF</text>
+<text x="1030.5" y="516" font-family="Arial,Helvetica,sans-serif" font-size="19.4px" font-weight="400" fill="#22352B" text-anchor="middle" letter-spacing="0px">low-rank features</text>
+<rect x="1128" y="437" width="163" height="133" rx="12" fill="#FFFFFF" stroke="#B38F4D" stroke-width="2"/>
+<rect x="1128" y="437" width="163" height="35" rx="10" fill="#B38F4D" stroke="#B38F4D" stroke-width="0"/>
+<rect x="1128" y="457" width="163" height="14" fill="#B38F4D"/>
+<text x="1209.5" y="464" font-family="Arial,Helvetica,sans-serif" font-size="20.5px" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0px">Spatial models</text>
+<text x="1209.5" y="516" font-family="Arial,Helvetica,sans-serif" font-size="19.4px" font-weight="400" fill="#22352B" text-anchor="middle" letter-spacing="0px">topics / graph*</text>
+<rect x="770" y="589" width="531" height="58" rx="12" fill="#F5EEDA" stroke="#D9C99C" stroke-width="1.5"/>
+<text x="1035" y="613" font-family="Arial,Helvetica,sans-serif" font-size="23.8px" font-weight="700" fill="#22352B" text-anchor="middle" letter-spacing="0px">Fit classifier on training groups</text>
+<text x="1035" y="638" font-family="Arial,Helvetica,sans-serif" font-size="20.5px" font-weight="400" fill="#63766A" text-anchor="middle" letter-spacing="0px">save fold-specific genes, maps and parameters</text>
+<text x="770" y="669" font-family="Arial,Helvetica,sans-serif" font-size="19.4px" font-weight="700" fill="#B38F4D" text-anchor="start" letter-spacing="0px">* Topics and spatial graph apply to GSE206391 only.</text>
+<line x1="1332" y1="440" x2="1360" y2="440" stroke="#B38F4D" stroke-width="5" marker-end="url(#goldArrow)"/>
+<rect x="1370" y="224" width="380" height="452" rx="18" fill="#FFFFFF" stroke="#C8D8CC" stroke-width="2" filter="url(#shadow)"/>
+<rect x="1370" y="224" width="380" height="12" rx="6" fill="#B38F4D" stroke="#B38F4D" stroke-width="0"/>
+<circle cx="1406" cy="266" r="24" fill="#B38F4D" stroke="none" stroke-width="0"/>
+<text x="1406" y="275" font-family="Arial,Helvetica,sans-serif" font-size="29.2px" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0px">4</text>
+<text x="1442" y="275" font-family="Arial,Helvetica,sans-serif" font-size="29.2px" font-weight="700" fill="#174F3B" text-anchor="start" letter-spacing="0px">Score held-out units</text>
+<text x="1396" y="324" font-family="Arial,Helvetica,sans-serif" font-size="21.6px" font-weight="700" fill="#6E8978" text-anchor="start" letter-spacing="0.7px">HELD-OUT GROUP ENTERS</text>
+<rect x="1395" y="344" width="330" height="48" rx="12" fill="#F5EEDA" stroke="#DCCB9A" stroke-width="1.5"/>
+<text x="1560" y="375" font-family="Arial,Helvetica,sans-serif" font-size="24.8px" font-weight="700" fill="#22352B" text-anchor="middle" letter-spacing="0px">test observations</text>
+<line x1="1560" y1="395" x2="1560" y2="419" stroke="#B38F4D" stroke-width="3" marker-end="url(#goldArrow)"/>
+<rect x="1395" y="426" width="150" height="58" rx="10" fill="#F5F8F5" stroke="#C8D8CC" stroke-width="1.5"/>
+<text x="1470" y="453" font-family="Arial,Helvetica,sans-serif" font-size="22.7px" font-weight="700" fill="#174F3B" text-anchor="middle" letter-spacing="0px">Expression</text>
+<text x="1470" y="474" font-family="Arial,Helvetica,sans-serif" font-size="20.5px" font-weight="400" fill="#63766A" text-anchor="middle" letter-spacing="0px">reference</text>
+<rect x="1570" y="426" width="155" height="58" rx="10" fill="#F5F8F5" stroke="#B9CFC0" stroke-width="1.5"/>
+<text x="1647" y="453" font-family="Arial,Helvetica,sans-serif" font-size="22.7px" font-weight="700" fill="#2F6B50" text-anchor="middle" letter-spacing="0px">Candidate</text>
+<text x="1647" y="474" font-family="Arial,Helvetica,sans-serif" font-size="19.4px" font-weight="400" fill="#63766A" text-anchor="middle" letter-spacing="0px">representation</text>
+<line x1="1470" y1="491" x2="1470" y2="510" stroke="#C8D8CC" stroke-width="2"/>
+<line x1="1647" y1="491" x2="1647" y2="510" stroke="#C8D8CC" stroke-width="2"/>
+<text x="1470" y="539" font-family="Arial,Helvetica,sans-serif" font-size="23.8px" font-weight="700" fill="#174F3B" text-anchor="middle" letter-spacing="0px">AUROC</text>
+<text x="1647" y="539" font-family="Arial,Helvetica,sans-serif" font-size="23.8px" font-weight="700" fill="#2F6B50" text-anchor="middle" letter-spacing="0px">AUROC</text>
+<rect x="1415" y="576" width="290" height="62" rx="11" fill="#FFFFFF" stroke="#C8D8CC" stroke-width="1.5"/>
+<text x="1560" y="603" font-family="Arial,Helvetica,sans-serif" font-size="21.6px" font-weight="700" fill="#22352B" text-anchor="middle" letter-spacing="0px">ΔAUROC = candidate − reference</text>
+<text x="1560" y="628" font-family="Arial,Helvetica,sans-serif" font-size="19.4px" font-weight="400" fill="#63766A" text-anchor="middle" letter-spacing="0px">paired on identical held-out units</text>
+<rect x="50" y="702" width="1700" height="46" rx="14" fill="#EAF2EC" stroke="#C7D8CC" stroke-width="1.5"/>
+<text x="900" y="732" font-family="Arial,Helvetica,sans-serif" font-size="22.7px" font-weight="700" fill="#174F3B" text-anchor="middle" letter-spacing="0.7px">HELD-OUT OBSERVATIONS ENTER ONLY AFTER TRAINING-FOLD FITS ARE FROZEN</text>
+<rect x="50" y="777" width="530" height="443" rx="22" fill="#FFFFFF" stroke="#C8D8CC" stroke-width="2"/>
+<rect x="50" y="777" width="530" height="58" rx="18" fill="#2F6B50" stroke="#2F6B50" stroke-width="1"/>
+<rect x="50" y="813" width="530" height="22" fill="#2F6B50"/>
+<text x="74" y="816" font-family="Arial,Helvetica,sans-serif" font-size="34.6px" font-weight="700" fill="#FFFFFF" text-anchor="start" letter-spacing="0px">SOURCE TESTS</text>
+<text x="558" y="814" font-family="Arial,Helvetica,sans-serif" font-size="20.5px" font-weight="400" fill="#E7F0E9" text-anchor="end" letter-spacing="0px">where applicable</text>
+<text x="78" y="875" font-family="Arial,Helvetica,sans-serif" font-size="22.7px" font-weight="700" fill="#2F6B50" text-anchor="start" letter-spacing="0.8px">COORDINATE SHUFFLE</text>
+<text x="78" y="914" font-family="Arial,Helvetica,sans-serif" font-size="23.8px" font-weight="700" fill="#22352B" text-anchor="start" letter-spacing="0px">Within-sample coordinate permutation</text>
+<text x="78" y="947" font-family="Arial,Helvetica,sans-serif" font-size="21.6px" font-weight="400" fill="#63766A" text-anchor="start" letter-spacing="0px">tests spatial-specific signal in GSE206391</text>
+<rect x="78" y="972" width="474" height="68" rx="10" fill="#F5F8F5" stroke="#C8D8CC" stroke-width="1"/>
+<text x="95" y="1001" font-family="Arial,Helvetica,sans-serif" font-size="21.6px" font-weight="700" fill="#174F3B" text-anchor="start" letter-spacing="0px">Graph branches only</text>
+<text x="95" y="1029" font-family="Arial,Helvetica,sans-serif" font-size="19.4px" font-weight="400" fill="#63766A" text-anchor="start" letter-spacing="0px">pass if observed &gt; null (one-sided P &lt; 0.05)</text>
+<line x1="78" y1="1055" x2="552" y2="1055" stroke="#E4ECE6" stroke-width="2"/>
+<text x="78" y="1088" font-family="Arial,Helvetica,sans-serif" font-size="22.7px" font-weight="700" fill="#B38F4D" text-anchor="start" letter-spacing="0.8px">DESIGN SENSITIVITY</text>
+<text x="78" y="1125" font-family="Arial,Helvetica,sans-serif" font-size="21.6px" font-weight="700" fill="#22352B" text-anchor="start" letter-spacing="0px">Random spot split / weakened reference</text>
+<text x="78" y="1157" font-family="Arial,Helvetica,sans-serif" font-size="20.5px" font-weight="400" fill="#63766A" text-anchor="start" letter-spacing="0px">reported as diagnostics; outside primary criteria</text>
+<rect x="600" y="777" width="505" height="443" rx="22" fill="#FFFFFF" stroke="#C8D8CC" stroke-width="2"/>
+<rect x="600" y="777" width="505" height="58" rx="18" fill="#B38F4D" stroke="#B38F4D" stroke-width="1"/>
+<rect x="600" y="813" width="505" height="22" fill="#B38F4D"/>
+<text x="624" y="816" font-family="Arial,Helvetica,sans-serif" font-size="34.6px" font-weight="700" fill="#FFFFFF" text-anchor="start" letter-spacing="0px">PAIRED CI</text>
+<text x="1083" y="814" font-family="Arial,Helvetica,sans-serif" font-size="20.5px" font-weight="400" fill="#E7F0E9" text-anchor="end" letter-spacing="0px">unit-level resampling</text>
+<text x="630" y="875" font-family="Arial,Helvetica,sans-serif" font-size="24.8px" font-weight="700" fill="#22352B" text-anchor="start" letter-spacing="0px">Bootstrap source groups, not cells/spots</text>
+<circle cx="654" cy="944" r="10" fill="#174F3B" stroke="none" stroke-width="0"/>
+<circle cx="654" cy="1007" r="10" fill="#B38F4D" stroke="none" stroke-width="0"/>
+<line x1="654" y1="956" x2="654" y2="995" stroke="#A6B7AA" stroke-width="2" stroke-dasharray="5 5"/>
+<circle cx="734" cy="944" r="10" fill="#174F3B" stroke="none" stroke-width="0"/>
+<circle cx="734" cy="1007" r="10" fill="#B38F4D" stroke="none" stroke-width="0"/>
+<line x1="734" y1="956" x2="734" y2="995" stroke="#A6B7AA" stroke-width="2" stroke-dasharray="5 5"/>
+<circle cx="814" cy="944" r="10" fill="#174F3B" stroke="none" stroke-width="0"/>
+<circle cx="814" cy="1007" r="10" fill="#B38F4D" stroke="none" stroke-width="0"/>
+<line x1="814" y1="956" x2="814" y2="995" stroke="#A6B7AA" stroke-width="2" stroke-dasharray="5 5"/>
+<circle cx="894" cy="944" r="10" fill="#174F3B" stroke="none" stroke-width="0"/>
+<circle cx="894" cy="1007" r="10" fill="#B38F4D" stroke="none" stroke-width="0"/>
+<line x1="894" y1="956" x2="894" y2="995" stroke="#A6B7AA" stroke-width="2" stroke-dasharray="5 5"/>
+<circle cx="974" cy="944" r="10" fill="#174F3B" stroke="none" stroke-width="0"/>
+<circle cx="974" cy="1007" r="10" fill="#B38F4D" stroke="none" stroke-width="0"/>
+<line x1="974" y1="956" x2="974" y2="995" stroke="#A6B7AA" stroke-width="2" stroke-dasharray="5 5"/>
+<text x="630" y="1060" font-family="Arial,Helvetica,sans-serif" font-size="20.5px" font-weight="700" fill="#174F3B" text-anchor="start" letter-spacing="0px">Expression</text>
+<text x="630" y="1090" font-family="Arial,Helvetica,sans-serif" font-size="20.5px" font-weight="700" fill="#B38F4D" text-anchor="start" letter-spacing="0px">Candidate</text>
+<rect x="630" y="1110" width="440" height="62" rx="12" fill="#FFFFFF" stroke="#C8D8CC" stroke-width="1.5"/>
+<text x="850" y="1138" font-family="Arial,Helvetica,sans-serif" font-size="21.6px" font-weight="700" fill="#22352B" text-anchor="middle" letter-spacing="0px">paired ΔAUROC + 95% group-bootstrap CI</text>
+<text x="850" y="1164" font-family="Arial,Helvetica,sans-serif" font-size="19.4px" font-weight="400" fill="#63766A" text-anchor="middle" letter-spacing="0px">intervals use saved out-of-fold predictions</text>
+<rect x="1125" y="777" width="625" height="443" rx="22" fill="#FFFFFF" stroke="#C8D8CC" stroke-width="2"/>
+<rect x="1125" y="777" width="625" height="58" rx="18" fill="#B95B4D" stroke="#B95B4D" stroke-width="1"/>
+<rect x="1125" y="813" width="625" height="22" fill="#B95B4D"/>
+<text x="1149" y="816" font-family="Arial,Helvetica,sans-serif" font-size="27.0px" font-weight="700" fill="#FFFFFF" text-anchor="start" letter-spacing="0px">PRE-SPECIFIED CRITERIA</text>
+
+<circle cx="1160" cy="876" r="14" fill="#FFFFFF" stroke="#B95B4D" stroke-width="3"/>
+<text x="1190" y="884" font-family="Arial,Helvetica,sans-serif" font-size="24.8px" font-weight="700" fill="#22352B" text-anchor="start" letter-spacing="0px">ΔAUROC ≥ 0.05</text>
+<text x="1190" y="913" font-family="Arial,Helvetica,sans-serif" font-size="20.5px" font-weight="400" fill="#63766A" text-anchor="start" letter-spacing="0px">pre-specified gain threshold</text>
+<circle cx="1160" cy="946" r="14" fill="#FFFFFF" stroke="#B95B4D" stroke-width="3"/>
+<text x="1190" y="954" font-family="Arial,Helvetica,sans-serif" font-size="24.8px" font-weight="700" fill="#22352B" text-anchor="start" letter-spacing="0px">Lower 95% CI &gt; 0</text>
+<text x="1190" y="983" font-family="Arial,Helvetica,sans-serif" font-size="20.5px" font-weight="400" fill="#63766A" text-anchor="start" letter-spacing="0px">positive uncertainty bound</text>
+<circle cx="1160" cy="1016" r="14" fill="#FFFFFF" stroke="#2F6B50" stroke-width="3"/>
+<text x="1190" y="1024" font-family="Arial,Helvetica,sans-serif" font-size="24.8px" font-weight="700" fill="#22352B" text-anchor="start" letter-spacing="0px">F = 1</text>
+<text x="1190" y="1053" font-family="Arial,Helvetica,sans-serif" font-size="20.5px" font-weight="400" fill="#63766A" text-anchor="start" letter-spacing="0px">all fitting confined to training folds</text>
+<circle cx="1160" cy="1086" r="14" fill="#FFFFFF" stroke="#2F6B50" stroke-width="3"/>
+<text x="1190" y="1094" font-family="Arial,Helvetica,sans-serif" font-size="24.8px" font-weight="700" fill="#22352B" text-anchor="start" letter-spacing="0px">S = 1 when applicable</text>
+<text x="1190" y="1123" font-family="Arial,Helvetica,sans-serif" font-size="20.5px" font-weight="400" fill="#63766A" text-anchor="start" letter-spacing="0px">source diagnostic passes; NA is neutral</text>
+<rect x="1155" y="1164" width="563" height="36" rx="10" fill="#F8ECE8" stroke="#E4B8AE" stroke-width="1"/>
+<text x="1436" y="1189" font-family="Arial,Helvetica,sans-serif" font-size="19.4px" font-weight="700" fill="#B95B4D" text-anchor="middle" letter-spacing="0px">ALL CRITERIA MET → report incremental evidence</text>
+<text x="1740" y="1290" font-family="Arial,Helvetica,sans-serif" font-size="19.4px" font-weight="400" fill="#63766A" text-anchor="end" letter-spacing="0px">AUROC, area under the receiver operating characteristic curve; CI, confidence interval; HVG, highly variable gene.</text>
+</svg>

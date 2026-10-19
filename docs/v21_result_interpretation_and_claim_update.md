@@ -153,3 +153,10 @@ than inflate the independent validation count.
 * Run an adversarial simulated peer review, select journals, and render and
   visually inspect the revised `.docx` after all numerical substitutions are
   complete.
+
+> **v1.32 update.** This historical statement applies to the v21 H5-only
+> workflow. The revision package subsequently recovers Visium array coordinates
+> by exact barcode joining and reports a separate independent spatial-graph
+> boundary analysis. That revision-stage analysis is documented in
+> `docs/pri132_revision_protocol.md`; it does not change the interpretation of
+> the saturated v21 expression/PCA comparison.
