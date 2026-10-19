@@ -1,4 +1,4 @@
-# PRI-Audit revision package v1.32
+# PRI-Audit revision package v1.33
 
 This package brings the public repository into correspondence with the revised manuscript. It preserves the paper's single primary question: whether a candidate representation adds patient-level discrimination beyond a fold-matched expression reference.
 

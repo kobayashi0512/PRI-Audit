@@ -3,7 +3,7 @@
   "release_version": "1.32.0",
   "release_date": "2026-10-19",
   "base_commit": "e36202205c34b12ea652a3c46eaca768f577940b",
-  "n_files": 316,
+  "n_files": 317,
   "files": [
     {
       "path": ".gitignore",
@@ -18,7 +18,7 @@
     {
       "path": "CITATION.cff",
       "bytes": 456,
-      "sha256": "a302e61c13d50af68a417d3ed07cfe2f5c43fa5fe5004515d630d5ea4654aad7"
+      "sha256": "0a9679dc1230b3ebd9e1973fb781c6c2dd6800afde90f53f4305f7c76a1d870a"
     },
     {
       "path": "LICENSE",
@@ -28,12 +28,12 @@
     {
       "path": "README.md",
       "bytes": 4494,
-      "sha256": "8aa356eeaa2843172d0749bf52bb0778e08a4c68d2fd299591d7f1a22d17a963"
+      "sha256": "40aa29e62ab40dc7022599ed0a5b94b8be7745fc74e05436b5ed7b79fc32a2b9"
     },
     {
       "path": "docs/pri132_revision_protocol.md",
       "bytes": 2397,
-      "sha256": "2e4a703a1bb73acaead4efdf6e5d930a5fc0d73d3a484f54a79bfa4a3f38501d"
+      "sha256": "0d091dc512ffa8cd1095e827753128554f959b019b5d31a244dfb2eea0c9f7cc"
     },
     {
       "path": "docs/pri_audit_v21_experiment_spec.md",
@@ -136,6 +136,11 @@
       "sha256": "d7a675baf172e97562fd090bca938aa3588d854593fd9a7f3d7ccf33b276f5f6"
     },
     {
+      "path": "manuscript/PRI_1.33_submission_ready.docx",
+      "bytes": 5303440,
+      "sha256": "c6c1de3e9fa90f033fd0b30b85aa1b63dd8827a7df254e433e8580c2037dc049"
+    },
+    {
       "path": "manuscript/PRI_Audit_BMC_Bioinformatics_submission_ready.docx",
       "bytes": 5632245,
       "sha256": "e7be423729734ab0e4a693b237d54aa1ac38d466708c226d101c8a7f7ba67f75"
@@ -163,7 +168,7 @@
     {
       "path": "reproducibility/README.md",
       "bytes": 8290,
-      "sha256": "8fd3e85db2eaf3d8e6fdace7e9da0c281659fc8a8b74470d4ce89f9fc340970d"
+      "sha256": "8c0ac21b843042e5746f702176c680cf3a236cb0e67c55564bf33a293242a15f"
     },
     {
       "path": "reproducibility/requirements-v21.lock",
